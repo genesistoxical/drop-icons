@@ -17,7 +17,7 @@
 
 ## Features
 * Clean and intuitive interface.
-* Allows you to quickly convert many images to icons at once, with the Drag and Drop feature.
+* Quickly convert multiple images to icons at once, with Drag and Drop feature.
 * Switch between English and Spanish language.
 * Customize theme color.
 * Number of images to convert, subtracting three that are shown as preview.
@@ -58,7 +58,7 @@ To choose whether Drop Icons is on top of all windows (TopMost) or not, right-cl
 <a href="#"><img src="docs/assets/Drop-Icons-Options.gif"/></a>
 
 ## Installer
-To compile the installer you need [Inno Setup](https://jrsoftware.org/isinfo.php), the files are located in the [Installer src](Installer-src) folder. You just need to open the project (Installer.iss) and compile it, unless you want to make a change. When finished, it will leave a folder called Output in the same location.
+To compile the installer you need [Inno Setup](https://jrsoftware.org/isinfo.php), the files are located in the [installer src](/installer%20src) folder. You just need to open the project (Installer.iss) and compile it, unless you want to make a change. When finished, it will leave a folder called Output in the same location.
 
 **Portable with 7zip.bat** allows you to quickly zip the portable version and remove unnecessary files. It only works with [7zip](https://www.7-zip.org/).
 
@@ -87,6 +87,10 @@ TopMost = true
 >Note: The two switch-type options are not saved because they are not options that are typically activated all the time.
 
 The custom color palette is saved in the `Colors.dat` file.
+
+Drop Icons first looks for both files in the same folder where the executable is located, so if you had the portable and installable version, there would be no problem.
+
+If it doesn't find the files, that means it's installed and will look in *%AppData%\Drop Icons*
 
 ## Controls
 If you need to add more or different controls, right-click anywhere in the Toolbox, select Add Tab and type *AltoControls*.

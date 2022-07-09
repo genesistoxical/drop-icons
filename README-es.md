@@ -17,10 +17,10 @@
 
 ## Características
 * Interfaz limpia e intuitiva.
-* Permite convertir rápidamente muchas imágenes en iconos a la vez, con la función de arrastrar y soltar.
+* Convierte rápidamente muchas imágenes en iconos a la vez, con la función de arrastrar y soltar.
 * Cambiar entre el idioma English y Español.
 * Personalizar el color del tema.
-* Número de las imágenes convertir, restando tres que se muestran como vista previa.
+* Número de las imágenes a convertir, restando tres que se muestran como vista previa.
 * Guardar los iconos en la misma carpeta (por defecto).
 * Guardar los iconos en una carpeta específica.
 * Guarda la configuración en un archivo .ini (excepto para los switches).
@@ -57,7 +57,7 @@ Para elegir que Drop Icons esté encima de todas las ventanas (TopMost) o no, da
 <a href="#"><img src="docs/assets/Drop-Icons-Options.gif"/></a>
 
 ## Instalador
-Para compilar el instalador es necesario [Inno Setup](https://jrsoftware.org/isinfo.php), los archivos se encuentran en la carpeta [Installer src](Installer-src). Solo debes abrir el proyecto (Installer.iss) y compilarlo, a menos que desees hacer una modificación. Al finalizar, en la misma ubicación dejará una carpeta llamada Output.
+Para compilar el instalador es necesario [Inno Setup](https://jrsoftware.org/isinfo.php), los archivos se encuentran en la carpeta [installer src](/installer%20src). Solo debes abrir el proyecto (Installer.iss) y compilarlo, a menos que desees hacer una modificación. Al finalizar, en la misma ubicación dejará una carpeta llamada Output.
 
 **Portable with 7zip.bat** permite comprimir en .zip rápidamente la versión portable y elimina archivos innecesarios. Únicamente funciona con [7zip](https://www.7-zip.org/).
 
@@ -86,6 +86,10 @@ TopMost = true
 >Nota: las dos opciones de tipo switch no se guardan porque no son opciones que suelan activarse todo el tiempo.
 
 En el archivo `Colors.dat` se guarda la paleta de colores personalizados.
+
+Drop Icons primero busca ambos archivos en la misma carpeta donde se ubica el ejecutable, así que, si tuvieras la versión portable e instalable, no habría problemas.
+
+Si no encuentra los archivos, eso significa decir que está instalado y buscará en *%AppData%\Drop Icons*
 
 ## Controles
 Si necesitas agregar más o diferentes controles, haz clic derecho en cualquier parte del Cuadro de herramientas, cliquea en Agregar pestaña y escribe *AltoControls*.
