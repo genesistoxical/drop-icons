@@ -4,11 +4,13 @@ Drop Icons is a open source utility to convert images to icons (.ico) for Window
 * Clean and intuitive interface.
 * Allows you to quickly convert many images to icons at once, with the Drag and Drop feature.
 * Switch between English and Spanish language.
-* Shows a preview with three images and the total amount to convert (subtracting three from the preview).
+* Customize theme color.
+* Number of images to convert, subtracting three that are shown as preview.
 * Save icons in the same folder (default).
 * Save icons in a specific folder.
+* Saves the configuration to an .ini file (except for switches).
 * Enable and disable TopMost.
-* Generated icons are 16px but include sizes of 16, 32, 48, 64, 128, 256 pixels for a high quality icon.
+* Generated icons are 16px but include 16, 32, 48, 64, 128, 256 pixel sizes for a high quality icon.
 * Prevents duplication of an image that has been previously added.
 * Option to generate tiny icon.
 
@@ -22,13 +24,23 @@ Leave the first switch on if you want to save them in the same folder, if you pr
 
 If you need to delete the images you have added by mistake, click on the arrows icon. Remember that you can drag images as many times as you want even before clicking the `Convert` button.
 
-You can disable or enable the **TopMost** option (Drop Icons on top of all windows) from the context menu, by right clicking anywhere and `Enable TopMost` or `Disable TopMost`.
+<br>
 
-To change the language you must click on the top Info button, a new window will appear. In the lower section that says **Drop Icons Language** click on the little arrows icon to switch between Español or English, then click on the back button and it will restart with the language you have chosen.
+By clicking on the upper Info button, a new window will appear in which you can:
+
+- **Change language:** In the lower section that says Language, click on the little arrows icon to switch between Español or English, then click on the back button and it will restart with the language you have chosen.
+
+- **Change theme:** At the bottom, click on `Change Theme...` and choose your custom color in the small window that appears, you can also add it to your "custom colors" to use later, then select OK. To return to the default one, repeat the previous steps, choose one of the many purples (or don't choose any color) and click OK.
+
+- **Find information about third-party content:** In the upper section are the names of each library, project, icons or fonts that were used, as well as Drop Icons.
+Click on one of them to read its license, which includes the author(s). You can read a short description below or click on the link icon to go to the repository or official site.
+
+<br>
+
+To choose whether Drop Icons is on top of all windows (TopMost) or not, right-click anywhere in the main window and choose Enable TopMost or Disable TopMost.
 
 ## Options
 <a href="#"><img src="assets/Drop-Icons-Options.gif"/></a>
-
 
 ## Info
 * Drop Icons is based on [Iconizer](https://github.com/willnode/Iconizer){:target="_blank"}. Read more credits [here](https://github.com/genesistoxical/release-prueba#credits){:target="_blank"}.

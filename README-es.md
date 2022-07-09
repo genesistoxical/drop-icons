@@ -5,9 +5,9 @@
 
 <p align="center">
  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-MIT-9280FF?style=flat-square&labelColor=343B45"/></a>
- <a href="releases/latest"><img src="https://img.shields.io/github/v/release/genesistoxical/release-prueba.svg?color=9280FF&label=Release&style=flat-square&labelColor=343B45"/></a>
+ <a href="https://github.com/genesistoxical/drop-icons/releases/tag/1.0.0"><img src="https://img.shields.io/github/v/release/genesistoxical/drop-icons.svg?color=9280FF&label=Release&style=flat-square&labelColor=343B45"/></a>
  <a href="#"><img alt="NET" src="https://img.shields.io/badge/.NET_Framework-4.8-9280FF?style=flat-square&labelColor=343B45"/></a> 
- <a href="Installer-src"><img alt="Installer" src="https://img.shields.io/badge/Installer-ISS-9280FF?style=flat-square&labelColor=343B45"/></a>
+ <a href="/installer%20src"><img alt="Installer" src="https://img.shields.io/badge/Installer-ISS-9280FF?style=flat-square&labelColor=343B45"/></a>
  <a href="#"><img alt="Languages" src="https://img.shields.io/badge/Idiomas-2-9280FF?style=flat-square&labelColor=343B45"/></a>
 </p>
 
@@ -18,12 +18,14 @@
 ## Características
 * Interfaz limpia e intuitiva.
 * Permite convertir rápidamente muchas imágenes en iconos a la vez, con la función de arrastrar y soltar.
-* Cambia entre el idioma English y Español.
-* Muestra una vista previa con tres imágenes y la cantidad total a convertir (restando tres de la previa).
+* Cambiar entre el idioma English y Español.
+* Personalizar el color del tema.
+* Número de las imágenes convertir, restando tres que se muestran como vista previa.
 * Guardar los iconos en la misma carpeta (por defecto).
 * Guardar los iconos en una carpeta específica.
+* Guarda la configuración en un archivo .ini (excepto para los switches).
 * Habilitar y deshabilitar TopMost.
-* Los iconos generados son de 16 píxeles pero incluyen tamaños de 16, 32, 48, 64, 128, 256 píxeles para un icono de alta calidad.
+* Los iconos generados son de 16 píxeles pero incluyen tamaños de 16, 32, 48, 64, 128, 256 píxeles para un ícono de alta calidad.
 * Evita la duplicación de una imagen que se ha añadido previamente.
 * Opción para generar un icono mini.
 
@@ -37,19 +39,29 @@ Deja el primer switch activado si deseas guardarlos en la misma carpeta, si pref
 
 Si necesitas eliminar las imágenes que agregaste por error, haz clic en el icono de las flechas. Recuerda que puedes arrastrar imágenes tantas veces como quieras incluso antes de hacer clic en el botón `Convertir`.
 
-Puede deshabilitar o habilitar la opción **TopMost** (Drop Icons sobre todas las ventanas) desde el menú contextual, haciendo clic derecho en cualquier lugar y `Habilitar TopMost` o `Deshabilitar TopMost`.
+<br>
 
-Para cambiar el idioma debes cliquear el botón superior de Info, aparecerá una nueva ventana. En la sección inferior que dice **Idioma de Drop Icons** haz clic en el icono de las flechitas para cambiar entre Español o English, luego clic en el botón de regresar y se reiniciará con el idioma que hayas elegido.
+Dando click en el botón superior de Info, aparecerá una nueva ventana en la que puedes:
+
+- **Cambiar el idioma:** En la sección inferior que dice **Idioma de Drop Icons** haz clic en el icono de las flechitas para cambiar entre Español o English, luego clic en el botón de regresar y se reiniciará con el idioma que hayas elegido.
+
+- **Cambiar el tema:** En la parte inferior, clic sobre `Change Theme...` y elige tu color personalizado en la pequeña ventana que aparece, también puedes agregarlo a tus "colores personalizados" para usarlo después, luego selecciona Aceptar. Para regresar al que venía por defecto repite los pasos anteriores, elige uno de los tantos morados (o no elijas ningún color) y cliquea en Aceptar.
+
+- **Encontrar información sobre el contenido de terceros:** En la sección superior están los nombres de cada librería, proyecto, iconos o tipografías que fueron utilizados, al igual que Drop Icons. Cliquea en uno de ellos para leer su licencia, la cual incluye el autor(a) o autores(as). Puedes leer una corta descripción más abajo o hacer clic sobre el icono del enlace para ir al repositorio o sitio oficial.
+
+<br>
+
+Para elegir que Drop Icons esté encima de todas las ventanas (TopMost) o no, da clic derecho en cualquier lugar de la ventana principal y elige Habilitar TopMost o Deshabilitar TopMost.
 
 ## Opciones
 <a href="#"><img src="docs/assets/Drop-Icons-Options.gif"/></a>
 
 ## Instalador
-Para compilar el instalador es necesario [Inno Setup](https://jrsoftware.org/isinfo.php), los archivos se encuentran en la carpeta [Installer src](Installer-src).
+Para compilar el instalador es necesario [Inno Setup](https://jrsoftware.org/isinfo.php), los archivos se encuentran en la carpeta [Installer src](Installer-src). Solo debes abrir el proyecto (Installer.iss) y compilarlo, a menos que desees hacer una modificación. Al finalizar, en la misma ubicación dejará una carpeta llamada Output.
 
-Solo es necesario abrir el proyecto .iss y compilarlo, a menos que desees hacer una modificación; éste automáticamente obtiene los archivos que necesita dentro de su carpeta y la carpeta **Release** (debido a las rutas relativas), pero se recomienda no mover las carpetas o reenombrarlas.
+**Portable with 7zip.bat** permite comprimir en .zip rápidamente la versión portable y elimina archivos innecesarios. Únicamente funciona con [7zip](https://www.7-zip.org/).
 
-Al finalizar, donde se encuentra el proyecto dejará una carpeta llamada **Output**.
+Ambos .iss y .bat obtienen los archivos que son necesarios dentro de su carpeta y/o la carpeta Release (debido a las rutas relativas).
 
 ## Contribuciones
 * Si haces comentarios en el código, preferiblemente en Español, por favor.
@@ -57,10 +69,28 @@ Al finalizar, donde se encuentra el proyecto dejará una carpeta llamada **Outpu
 * Si abres un **Issue**, puede ser en Inglés o Español.
 * **Pull request** en Inglés, en la descripción puedes agregar detalles en Inglés o Español.
 
-## Controles
-Si necesitas agregar más o diferentes controles, haz clic derecho en cualquier parte del **Cuadro de herramientas**, cliquea en `Agregar pestaña` y escribe **AltoControls**.
+## Configuración
+El archivo `Config.ini` almacena información del lenguaje, color del tema y si está activada o no la opción TopMost.
 
-Haz clic derecho en cualquier lugar dentro de la pestaña AltoControls y cliquea en `Elegir elementos...`. Selecciona **Componentes de .NET Framework**, presiona `Examinar...`, agrega **AltoControls.dll** que se ubica en la carpeta Lib y luego `Aceptar`.
+~~~
+[Options]
+Language = en
+TopMost = true
+
+[Theme]
+146
+128
+255
+~~~
+
+>Nota: las dos opciones de tipo switch no se guardan porque no son opciones que suelan activarse todo el tiempo.
+
+En el archivo `Colors.dat` se guarda la paleta de colores personalizados.
+
+## Controles
+Si necesitas agregar más o diferentes controles, haz clic derecho en cualquier parte del Cuadro de herramientas, cliquea en Agregar pestaña y escribe *AltoControls*.
+
+Da clic derecho en cualquier lugar dentro de la pestaña que creaste, cliquea en `Elegir elementos...` y selecciona **Componentes de .NET Framework**. Ahora desde `Examinar...` agrega **AltoControls.dll** que se ubica en la carpeta Lib y por último Aceptar.
 
 ## Creditos
 Drop Icons está basado en [Iconizer](https://github.com/willnode/Iconizer) bajo [MIT License](https://github.com/willnode/Iconizer/blob/master/LICENSE), y como un reconocimiento, mantiene un archivo con ese nombre.
@@ -81,9 +111,9 @@ Contiene toda la familia de [Noto Sans](https://fonts.google.com/noto/specimen/N
 
 Los iconos son parte de [Teenyicons](https://github.com/teenyicons/teenyicons) bajo [MIT License](https://github.com/teenyicons/teenyicons/blob/master/LICENSE).
 
-*Puedes encontrar todas las licencias aquí.*
+*Puedes encontrar todas las licencias [aquí](/src/DropIcons/Docsocs).*
 
 ## Licencia
 **MIT License**
 
-Copyright (c) 2022 Génesis Toxical ([read here](https://github.com/genesistoxical/DropIcons/LICENSE)).
+Copyright (c) 2022 Génesis Toxical ([read here](LICENSE)).
