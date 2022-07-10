@@ -30,7 +30,8 @@ WizardImageFile=Wizard Image File.bmp
 ;DisableWelcomePage=no
 ;WizardSizePercent=114,100
 WizardSizePercent=110,100 
-DisableProgramGroupPage=yes                                     
+DisableProgramGroupPage=yes
+UninstallDisplayIcon={uninstallexe}                                     
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
