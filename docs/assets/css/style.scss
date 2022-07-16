@@ -29,7 +29,7 @@ a {
     border-bottom: solid 1px #e1e1e1;
     margin-bottom: 3rem;
     border-top: 10px solid $accent-primary;
-    background-image: url(/release-prueba/assets/Background.png);
+    background-image: url(/drop-icons/assets/Background.png);
     background-size: cover;
 }
 
@@ -68,7 +68,7 @@ a.btn:nth-child(4):hover {
 }
 
 h1.project-name::before {
-    background-image: url(/release-prueba/assets/Logo-120px.png);
+    background-image: url(/drop-icons/assets/Logo-120px.png);
     background-size: 120px;
     content: "";
     background-position: 50%;
