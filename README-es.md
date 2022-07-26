@@ -28,6 +28,7 @@
 * Los iconos generados son de 16 píxeles pero incluyen tamaños de 16, 32, 48, 64, 128, 256 píxeles para un ícono de alta calidad.
 * Evita la duplicación de una imagen que se ha añadido previamente.
 * Opción para generar un icono mini.
+* Cambia el tamaño a 1:1 sin estirar la imagen.
 
 ## Previa
 <a href="#"><img src="docs/assets/Drop-Icons.gif"/></a>

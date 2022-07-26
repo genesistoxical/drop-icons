@@ -13,6 +13,7 @@ Drop Icons is a open source utility to convert images to icons (.ico) for Window
 * Generated icons are 16px but include 16, 32, 48, 64, 128, 256 pixel sizes for a high quality icon.
 * Prevents duplication of an image that has been previously added.
 * Option to generate tiny icon.
+* Resize to 1:1 without stretching the image.
 
 ## Preview
 <a href="#"><img alt="Image to Ico" src="assets/Drop-Icons.gif"/></a>
@@ -43,8 +44,8 @@ To choose whether Drop Icons is on top of all windows (TopMost) or not, right-cl
 <a href="#"><img src="assets/Drop-Icons-Options.gif"/></a>
 
 ## Info
-* Drop Icons is based on [Iconizer](https://github.com/willnode/Iconizer){:target="_blank"}. Read more credits [here](https://github.com/genesistoxical/release-prueba#credits){:target="_blank"}.
-* This software is under **MIT License** ([read full license](https://github.com/genesistoxical/release-prueba/blob/master/LICENSE){:target="_blank"}).
+* Drop Icons is based on [Iconizer](https://github.com/willnode/Iconizer){:target="_blank"}. Read more credits [here](https://github.com/genesistoxical/drop-icons#credits){:target="_blank"}.
+* This software is under **MIT License** ([read full license](https://github.com/genesistoxical/drop-icons/blob/master/LICENSE){:target="_blank"}).
 * Copyright (c) 2022 Génesis Toxical.
 <br>
 <style>

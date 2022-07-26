@@ -28,6 +28,7 @@
 * Generated icons are 16px but include 16, 32, 48, 64, 128, 256 pixel sizes for a high quality icon.
 * Prevents duplication of an image that has been previously added.
 * Option to generate tiny icon.
+* Resize to 1:1 without stretching the image.
 
 ## Preview
 <a href="#"><img src="docs/assets/Drop-Icons.gif"/></a>
