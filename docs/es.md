@@ -48,7 +48,7 @@ Para elegir que Drop Icons esté encima de todas las ventanas (TopMost) o no, da
 * Copyright (c) 2022 Génesis Toxical.
 <br>
 <style>
-    h2.project-tagline:before {content: "Aplicación para convertir imagenes en iconos ";}
+    h2.project-tagline:before {content: "Aplicación para convertir imágenes en iconos ";}
     a.btn:nth-child(3):after {content: "escargar Portable";}
     a.btn:nth-child(4):after {content: "escargar Instalable";}
 </style>
