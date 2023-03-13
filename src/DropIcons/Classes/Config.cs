@@ -171,10 +171,10 @@ namespace DropIcons
         internal static void SetTheme()
         {
             // Establece un nuevo color del tema, remplazando dígitos
-            var pattern = new Regex(@"\d{1,}");
-            iniLines[5] = pattern.Replace(iniLines[5], R.ToString());
-            iniLines[6] = pattern.Replace(iniLines[6], G.ToString());
-            iniLines[7] = pattern.Replace(iniLines[7], B.ToString());
+            Regex digits = new Regex(@"\d{1,}");
+            iniLines[5] = digits.Replace(iniLines[5], R.ToString());
+            iniLines[6] = digits.Replace(iniLines[6], G.ToString());
+            iniLines[7] = digits.Replace(iniLines[7], B.ToString());
 
             File.WriteAllLines(iniPath, iniLines);
             Restart = true;
