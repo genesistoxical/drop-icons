@@ -116,7 +116,7 @@ Contiene toda la familia de [Noto Sans](https://fonts.google.com/noto/specimen/N
 
 Los iconos son parte de [Teenyicons](https://github.com/teenyicons/teenyicons) bajo [MIT License](https://github.com/teenyicons/teenyicons/blob/master/LICENSE).
 
-*Puedes encontrar todas las licencias [aquí](/src/DropIcons/Docsocs).*
+*Puedes encontrar todas las licencias [aquí](/src/DropIcons/Docs).*
 
 ## Licencia
 **MIT License**
