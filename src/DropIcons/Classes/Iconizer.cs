@@ -16,7 +16,6 @@ using System.Runtime.InteropServices;
 /// </summary>
 public class Utility
 {
-
     /// <summary>
     /// Resize the image to the specified width and height.
     /// </summary>

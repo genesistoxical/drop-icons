@@ -22,7 +22,7 @@ namespace DropIcons.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace DropIcons.Properties {
         ///   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DropIcons.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace DropIcons.Properties {
         ///   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,144 +61,117 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a About:.
+        /// </summary>
+        public static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a About.
+        /// </summary>
+        public static string AboutTitle {
+            get {
+                return ResourceManager.GetString("AboutTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Add Images.
         /// </summary>
-        internal static string AddImages {
+        public static string AddImages {
             get {
                 return ResourceManager.GetString("AddImages", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a ancel.
         /// </summary>
-        internal static System.Drawing.Bitmap arrow_left_circle {
+        public static string ancel {
             get {
-                object obj = ResourceManager.GetObject("arrow_left_circle", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("ancel", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Change Theme....
         /// </summary>
-        internal static System.Drawing.Bitmap arrow_left_circle_72 {
+        public static string ChangeTheme {
             get {
-                object obj = ResourceManager.GetObject("arrow_left_circle_72", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("ChangeTheme", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Choose same folder.
         /// </summary>
-        internal static System.Drawing.Bitmap border {
+        public static string ChooseSameFolder {
             get {
-                object obj = ResourceManager.GetObject("border", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("ChooseSameFolder", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Disable Topmost.
         /// </summary>
-        internal static System.Drawing.Bitmap border_about {
+        public static string DisableTopmost {
             get {
-                object obj = ResourceManager.GetObject("border-about", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("DisableTopmost", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Enable Topmost.
         /// </summary>
-        internal static System.Drawing.Bitmap caret_vertical_small {
+        public static string EnableTopmost {
             get {
-                object obj = ResourceManager.GetObject("caret-vertical-small", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("EnableTopmost", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Generate tiny icon.
         /// </summary>
-        internal static System.Drawing.Bitmap caret_vertical_small_72 {
+        public static string GenerateTinyIcon {
             get {
-                object obj = ResourceManager.GetObject("caret_vertical_small_72", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Disable TopMost.
-        /// </summary>
-        internal static string DisableTopMost {
-            get {
-                return ResourceManager.GetString("DisableTopMost", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dots {
-            get {
-                object obj = ResourceManager.GetObject("dots", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Enable TopMost.
-        /// </summary>
-        internal static string EnableTopMost {
-            get {
-                return ResourceManager.GetString("EnableTopMost", resourceCulture);
+                return ResourceManager.GetString("GenerateTinyIcon", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Image.
         /// </summary>
-        internal static string Image {
+        public static string Image {
             get {
                 return ResourceManager.GetString("Image", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Image Files.
+        /// </summary>
+        public static string ImageFiles {
+            get {
+                return ResourceManager.GetString("ImageFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Images.
         /// </summary>
-        internal static string Images {
+        public static string Images {
             get {
                 return ResourceManager.GetString("Images", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap info_circle {
-            get {
-                object obj = ResourceManager.GetObject("info_circle", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap info_circle_72 {
-            get {
-                object obj = ResourceManager.GetObject("info_circle_72", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Language: English.
         /// </summary>
-        internal static string LanguageEnglish {
+        public static string LanguageEnglish {
             get {
                 return ResourceManager.GetString("LanguageEnglish", resourceCulture);
             }
@@ -207,78 +180,45 @@ namespace DropIcons.Properties {
         /// <summary>
         ///   Busca una cadena traducida similar a Language: Español.
         /// </summary>
-        internal static string LanguageEspañol {
+        public static string LanguageEspañol {
             get {
                 return ResourceManager.GetString("LanguageEspañol", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a onvert.
         /// </summary>
-        internal static System.Drawing.Bitmap link {
+        public static string onvert {
             get {
-                object obj = ResourceManager.GetObject("link", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("onvert", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Options:.
         /// </summary>
-        internal static System.Drawing.Bitmap link_72 {
+        public static string Options {
             get {
-                object obj = ResourceManager.GetObject("link_72", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("Options", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a pply.
         /// </summary>
-        internal static System.Drawing.Bitmap refresh_alt {
+        public static string pply {
             get {
-                object obj = ResourceManager.GetObject("refresh_alt", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("pply", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Utility to convert images to icons (.ico) - v2.0.0.
         /// </summary>
-        internal static System.Drawing.Bitmap refresh_alt_72 {
+        public static string UtilityToConvertImagesToIcons {
             get {
-                object obj = ResourceManager.GetObject("refresh_alt_72", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Select a folder.
-        /// </summary>
-        internal static string SelectAFolder {
-            get {
-                return ResourceManager.GetString("SelectAFolder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap x_circle {
-            get {
-                object obj = ResourceManager.GetObject("x_circle", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap x_circle_72 {
-            get {
-                object obj = ResourceManager.GetObject("x_circle_72", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("UtilityToConvertImagesToIcons", resourceCulture);
             }
         }
     }

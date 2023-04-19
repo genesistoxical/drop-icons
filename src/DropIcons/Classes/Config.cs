@@ -1,20 +1,23 @@
-﻿using System;
-using System.Drawing;
+﻿using HandyControl.Themes;
+using System;
 using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading;
-using System.Windows.Forms;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+using Application = System.Windows.Application;
 
 namespace DropIcons
 {
     /// <summary>
-    /// Config.ini & Colors.dat
+    /// Config.ini
     /// </summary>
     internal class Config
     {
         internal static bool isIntalled;
-        internal static string iniPath, datPath;
+        internal static string iniPath;
         internal static string[] iniLines;
         internal static bool Restart = false;
 
@@ -28,21 +31,9 @@ namespace DropIcons
             // Establece las rutas de ini y dat, dependiendo de lo anterior
             string appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Drop Icons";
             iniPath = isIntalled ? appdata + "\\Config.ini" : "Config.ini";
-            datPath = isIntalled ? appdata + "\\Colors.dat" : "Colors.dat";
             iniLines = File.ReadAllLines(iniPath);
 
             Console.WriteLine("Drop Icons is installed? " + isIntalled + " - ¿Drop Icons está instalado? " + isIntalled);
-        }
-
-        internal static void Restarting(FormClosingEventArgs e)
-        {
-            // Condicional que ayuda a que no se inicie dos veces la aplicacion
-#if !DEBUG
-            if (e.CloseReason != CloseReason.ApplicationExitCall)
-            {
-               Application.Restart();
-            }
-#endif
         }
 
         #region Language
@@ -72,8 +63,8 @@ namespace DropIcons
 
         internal static void CheckLanguage()
         {
-            // Si el idioma seleccionado no es el mismo que el actual
-            // modificar el archivo .ini para cambiarlo
+            // Si el idioma seleccionado no es el mismo que el actual,
+            // cambiarlo y modificar el archivo .ini
             if (selecLan == currentLan == false)
             {
                 switch (selecLan)
@@ -81,11 +72,15 @@ namespace DropIcons
                     case "en":
                         iniLines[1] = iniLines[1].Replace("es", "en");
                         File.WriteAllLines(iniPath, iniLines);
+                        Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("");
+                        currentLan = "en";
                         break;
 
                     case "es":
                         iniLines[1] = iniLines[1].Replace("en", "es");
                         File.WriteAllLines(iniPath, iniLines);
+                        Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("es-419");
+                        currentLan = "es";
                         break;
                 }
 
@@ -95,111 +90,85 @@ namespace DropIcons
         }
         #endregion
 
-        #region TopMost
-        internal static ContextMenu menu = new ContextMenu();
-
-        internal static MenuItem item = new MenuItem();
-
-        internal static bool isTopMost;
-
-        internal static void TopMost(Form form)
-        {
-            // Modificar la propiedad TopMost en base a Config.ini y
-            // establecer el valor en un bool para no volver a leer el archivo 
-            if (iniLines[2].Contains("TopMost = true"))
-            {
-                form.TopMost = true;
-                isTopMost = true;
-            }
-            else
-            {
-                isTopMost = false;
-            }
-        }
-
-        internal static void ChangeTopMost(Form form)
-        {
-            // Cambiar la propiedad de TopMost en el form
-            // y actualizar el archivo Config.ini
-            switch (isTopMost)
-            {
-                case false:
-                    form.TopMost = true;
-                    isTopMost = true;
-                    iniLines[2] = iniLines[2].Replace("false", "true");
-                    File.WriteAllLines(iniPath, iniLines);
-                    break;
-
-                default:
-                    form.TopMost = false;
-                    isTopMost = false;
-                    iniLines[2] = iniLines[2].Replace("true", "false");
-                    File.WriteAllLines(iniPath, iniLines);
-                    break;
-            }
-
-            Console.WriteLine("TopMost " + isTopMost.ToString());
-        }
-
-        internal static void TopDialog(Form form)
-        {
-            if (isTopMost)
-            {
-                form.TopMost = !form.TopMost;
-            }
-        }
-        #endregion
-
         #region Theme
-        internal static int R, G, B;
-
-        internal static Color customH, custom;
+        internal static string HEX;
+        internal static SolidColorBrush colorBrush;
+        internal static string winvers;
 
         internal static void GetTheme()
         {
-            // Obtiene los valores de R G B desde
-            // Config.ini y lo conviertes a int
-            R = int.Parse(iniLines[5]);
-            G = int.Parse(iniLines[6]);
-            B = int.Parse(iniLines[7]);
+            // Obtiene el color HEX de Config.ini
+            HEX = iniLines[5];
 
-            // Crea los colores para aplicarlos
-            custom = Color.FromArgb(255, R, G, B);
-            customH = Color.FromArgb(229, R, G, B);
+            // Crear brush de nuevo color y aplicarlo al tema
+            colorBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString(HEX));
+            ThemeManager.Current.AccentColor = colorBrush;
+            Application.Current.Resources["Primary"] = colorBrush;
         }
 
         internal static void SetTheme()
         {
             // Establece un nuevo color del tema, remplazando dígitos
-            Regex digits = new Regex(@"\d{1,}");
-            iniLines[5] = digits.Replace(iniLines[5], R.ToString());
-            iniLines[6] = digits.Replace(iniLines[6], G.ToString());
-            iniLines[7] = digits.Replace(iniLines[7], B.ToString());
-
+            iniLines[5] = iniLines[5].Replace(iniLines[5], HEX);
             File.WriteAllLines(iniPath, iniLines);
-            Restart = true;
+
+            // Crear brush de nuevo color y aplicarlo al tema
+            ThemeManager.Current.AccentColor = colorBrush;
+            Application.Current.Resources["Primary"] = colorBrush;
         }
 
-        internal static void SaveColors(ColorDialog colordialog)
+        internal static void RoundCorners(Border bg, Border border, Border deco)
         {
-            // Obtener los colores personalizados y guardarlos
-            // en el archivo Colors.dat
-            int[] customs = (int[])colordialog.CustomColors.Clone();
-            string[] list = new string[16];
-
-            for (int i = 0; i < 16; i++)
+            // Desactivar bordes redondeados en las versiones METRO de Win
+            if (winvers.Contains("10") || winvers.Contains("8"))
             {
-                list[i] = customs[i].ToString();
-                File.WriteAllLines(datPath, list);
+                bg.CornerRadius = new CornerRadius(0, 0, 0, 0);
+                border.CornerRadius = new CornerRadius(0, 0, 0, 0);
+                deco.CornerRadius = new CornerRadius(0, 0, 0, 0);
             }
         }
         #endregion
 
-        #region DisposeAll
-        internal static void DisposeAll()
+        #region Topmost
+        internal static bool isTopmost;
+
+        internal static void Topmost(Window window)
         {
-            menu.Dispose();
-            item.Dispose();
+            // Modificar la propiedad TopMost en base a Config.ini y
+            // establecer el valor en un bool para no volver a leer el archivo 
+            if (iniLines[2].Contains("Topmost = true"))
+            {
+                window.Topmost = true;
+                isTopmost = true;
+            }
+            else
+            {
+                isTopmost = false;
+            }
+        }
+
+        internal static void ChangeTopmost(Window window)
+        {
+            // Cambiar la propiedad de TopMost en el form
+            // y actualizar el archivo Config.ini
+            switch (isTopmost)
+            {
+                case false:
+                    window.Topmost = true;
+                    isTopmost = true;
+                    iniLines[2] = iniLines[2].Replace("false", "true");
+                    File.WriteAllLines(iniPath, iniLines);
+                    break;
+
+                default:
+                    window.Topmost = false;
+                    isTopmost = false;
+                    iniLines[2] = iniLines[2].Replace("true", "false");
+                    File.WriteAllLines(iniPath, iniLines);
+                    break;
+            }
+
+            Console.WriteLine("Topmost " + isTopmost.ToString());
         }
         #endregion
     }

@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,7 +60,6 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -69,10 +68,9 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -87,10 +85,9 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -112,79 +109,63 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LanguageEnglish" xml:space="preserve">
-    <value>Language: English</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="arrow_left_circle_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow-left-circle-72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="info_circle_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info-circle-72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="refresh_alt_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh-alt-72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="caret-vertical-small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caret-vertical-small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="border" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Border.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="border-about" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\border-about.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="link_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\link-72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AddImages" xml:space="preserve">
     <value>Add Images</value>
-  </data>
-  <data name="Image" xml:space="preserve">
-    <value>Image</value>
-  </data>
-  <data name="DisableTopMost" xml:space="preserve">
-    <value>Disable TopMost</value>
   </data>
   <data name="Images" xml:space="preserve">
     <value>Images</value>
   </data>
-  <data name="x_circle_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\x-circle-72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
   </data>
-  <data name="EnableTopMost" xml:space="preserve">
-    <value>Enable TopMost</value>
+  <data name="ImageFiles" xml:space="preserve">
+    <value>Image Files</value>
   </data>
-  <data name="dots" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dots.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ChooseSameFolder" xml:space="preserve">
+    <value>Choose same folder</value>
   </data>
-  <data name="SelectAFolder" xml:space="preserve">
-    <value>Select a folder</value>
+  <data name="GenerateTinyIcon" xml:space="preserve">
+    <value>Generate tiny icon</value>
   </data>
-  <data name="x_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\x-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LanguageEnglish" xml:space="preserve">
+    <value>Language: English</value>
   </data>
-  <data name="arrow_left_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow-left-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ChangeTheme" xml:space="preserve">
+    <value>Change Theme...</value>
   </data>
-  <data name="caret_vertical_small_72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caret-vertical-small-72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Options" xml:space="preserve">
+    <value>Options:</value>
   </data>
-  <data name="info_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="link" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\link.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="refresh_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh-alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="About" xml:space="preserve">
+    <value>About:</value>
   </data>
   <data name="LanguageEspañol" xml:space="preserve">
     <value>Language: Español</value>
+  </data>
+  <data name="UtilityToConvertImagesToIcons" xml:space="preserve">
+    <value>Utility to convert images to icons (.ico) - v2.0.0</value>
+  </data>
+  <data name="onvert" xml:space="preserve">
+    <value>onvert</value>
+  </data>
+  <data name="pply" xml:space="preserve">
+    <value>pply</value>
+  </data>
+  <data name="ancel" xml:space="preserve">
+    <value>ancel</value>
+  </data>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="DisableTopmost" xml:space="preserve">
+    <value>Disable Topmost</value>
+  </data>
+  <data name="EnableTopmost" xml:space="preserve">
+    <value>Enable Topmost</value>
   </data>
 </root>

@@ -1,0 +1,58 @@
+﻿<Window x:Class="DropIcons.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns:properties="clr-namespace:DropIcons.Properties"
+        mc:Ignorable="d"
+        Title="Drop Icons" FontFamily="{DynamicResource NotoMusic}" FontSize="11" TextOptions.TextRenderingMode="ClearType" TextOptions.TextFormattingMode="Display" SizeToContent="WidthAndHeight" Loaded="Window_Loaded" AllowDrop="True" Drop="Window_Drop" Activated="Window_Activated" ResizeMode="NoResize" WindowStyle="None" MouseDown="Window_MouseDown" Height="263" Width="249" MouseRightButtonUp="Window_MouseRightButtonUp" Foreground="#FF131313" Background="{x:Null}" WindowStartupLocation="CenterScreen" UseLayoutRounding="True" AllowsTransparency="True" Icon="/Resources/Icon.ico">
+    <Grid x:Name="Grid" Height="263" VerticalAlignment="Center" Width="249">
+        <Border x:Name="Backg" Grid.Row="0" CornerRadius="0,0,8,8" BorderBrush="#FFE3E3E3" Background="White" Margin="0,5,0,0"/>
+        <Border x:Name="Border" BorderThickness="1,0,1,1" Grid.Row="0" CornerRadius="0,0,7,7" BorderBrush="#FFE3E3E3" Margin="0,5,0,0"/>
+        <Border x:Name="Decoration" Grid.Row="0" CornerRadius="7,7,0,0" BorderBrush="#FFB5B5B5" Background="{DynamicResource Primary}" Margin="0,0,0,258"/>
+        <Button x:Name="Info" Content="Button" hc:BorderElement.CornerRadius="0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="15" Height="15" UseLayoutRounding="True" Background="#FF747474" Margin="164,18,0,0" Click="Info_Click">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/Resources/info-circle.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button x:Name="Reload" Content="Button" hc:BorderElement.CornerRadius="0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Reload_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="15" Height="15" UseLayoutRounding="True" Background="#FF747474" Margin="189,18,0,0">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/Resources/refresh-alt.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Button x:Name="Exit" Content="Button" hc:BorderElement.CornerRadius="0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Exit_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="15" Height="15" UseLayoutRounding="True" Background="#FF747474" Margin="214,18,0,0">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/Resources/x-circle.png"/>
+            </Button.OpacityMask>
+        </Button>
+        <Image x:Name="Img1" HorizontalAlignment="Left" Height="63" Margin="21,46,0,0" VerticalAlignment="Top" Width="63" SnapsToDevicePixels="True" UseLayoutRounding="True"/>
+        <Image x:Name="Img2" HorizontalAlignment="Left" Height="63" Margin="93,46,0,0" VerticalAlignment="Top" Width="63" SnapsToDevicePixels="True" UseLayoutRounding="True"/>
+        <Image x:Name="Img3" HorizontalAlignment="Left" Height="63" Margin="165,46,0,0" VerticalAlignment="Top" Width="63" SnapsToDevicePixels="True" UseLayoutRounding="True"/>
+        <Label x:Name="NoImages" Content="{x:Static properties:Resources.AddImages}" HorizontalAlignment="Left" Margin="143,117,0,0" BorderThickness="0,0,0,0" Height="24" Padding="0,0,0,0" Width="82" HorizontalContentAlignment="Right" Background="{x:Null}" Foreground="#FF747474" MouseEnter="AddImages_MouseEnter" MouseLeave="AddImages_MouseLeave" MouseDown="NoImages_MouseDown" VerticalAlignment="Top"/>
+        <Button x:Name="Convert" Style="{StaticResource ButtonPrimary}" Margin="0,151,0,0" VerticalAlignment="Top" Width="209" Click="Convert_Click" Height="24" Padding="10,-1,10,7" BorderThickness="0,0,0,0" Foreground="White" FontSize="11">
+            <TextBlock>
+                <Run FontSize="12" Text="C"/><Run Text="{x:Static properties:Resources.onvert}" FontSize="11"/>
+            </TextBlock>
+        </Button>
+        <ToggleButton x:Name="SlideTiny" Content="" Style="{StaticResource ToggleButtonSwitch}" HorizontalAlignment="Left" Margin="19,223,0,0" VerticalAlignment="Top" Height="18" Width="27" Foreground="#FF212121"/>
+        <ToggleButton x:Name="SlideFolder" Content="" Style="{StaticResource ToggleButtonSwitch}" HorizontalAlignment="Left" Margin="19,194,0,0" VerticalAlignment="Top" Height="18" Width="27" Foreground="#FF212121" IsChecked="True"/>
+        <Label Content="{x:Static properties:Resources.ChooseSameFolder}" HorizontalAlignment="Left" Margin="56,192,0,0" BorderThickness="0,0,0,0" Height="18" Padding="0,0,0,0" Width="120" HorizontalContentAlignment="Left" Background="{x:Null}" VerticalAlignment="Top" Foreground="#FF131313"/>
+        <Label Content="{x:Static properties:Resources.GenerateTinyIcon}" HorizontalAlignment="Left" Margin="56,221,0,0" BorderThickness="0,0,0,0" Height="18" Padding="0,0,0,0" Width="118" HorizontalContentAlignment="Left" Background="{x:Null}" VerticalAlignment="Top" Foreground="#FF131313"/>
+        <Rectangle x:Name="Loading" HorizontalAlignment="Left" Height="27" Margin="201,213,0,0" VerticalAlignment="Top" Width="28" StrokeThickness="0" Fill="LightGray" Visibility="Hidden">
+            <Rectangle.OpacityMask>
+                <ImageBrush ImageSource="/Resources/Wait.png" Stretch="None"/>
+            </Rectangle.OpacityMask>
+        </Rectangle>
+    </Grid>
+    <Window.ContextMenu>
+        <ContextMenu Width="186">
+            <ContextMenu.Resources>
+                <DataTemplate x:Key="HeaderControlTemplate">
+                    <TextBlock HorizontalAlignment="Center" Text="{Binding}"/>
+                </DataTemplate>
+            </ContextMenu.Resources>
+            <MenuItem Name="MenuTopmost" HeaderTemplate="{StaticResource HeaderControlTemplate}" Header="{x:Static properties:Resources.DisableTopmost}" Height="Auto" Padding="0,3,0,3" Click="Topmost_Click" Margin="-22,0,0,2"/>
+        </ContextMenu>
+    </Window.ContextMenu>
+</Window>

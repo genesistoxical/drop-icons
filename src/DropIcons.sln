@@ -1,31 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.1.32319.34
+VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropIcons", "DropIcons\DropIcons.csproj", "{A6F0F5BA-D098-4885-86B4-B3E96BB0C633}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropIcons", "DropIcons\DropIcons.csproj", "{EE3A8E4D-2C32-466A-8AFF-0024435D27E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
-		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A6F0F5BA-D098-4885-86B4-B3E96BB0C633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6F0F5BA-D098-4885-86B4-B3E96BB0C633}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6F0F5BA-D098-4885-86B4-B3E96BB0C633}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{A6F0F5BA-D098-4885-86B4-B3E96BB0C633}.Debug|x64.Build.0 = Debug|Any CPU
-		{A6F0F5BA-D098-4885-86B4-B3E96BB0C633}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6F0F5BA-D098-4885-86B4-B3E96BB0C633}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A6F0F5BA-D098-4885-86B4-B3E96BB0C633}.Release|x64.ActiveCfg = Release|Any CPU
-		{A6F0F5BA-D098-4885-86B4-B3E96BB0C633}.Release|x64.Build.0 = Release|Any CPU
+		{EE3A8E4D-2C32-466A-8AFF-0024435D27E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE3A8E4D-2C32-466A-8AFF-0024435D27E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE3A8E4D-2C32-466A-8AFF-0024435D27E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE3A8E4D-2C32-466A-8AFF-0024435D27E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9F881309-EFF6-4C56-9183-B0A0BF49171F}
+		SolutionGuid = {D07D3C5C-F091-442C-9F48-159FF253582C}
 	EndGlobalSection
 EndGlobal

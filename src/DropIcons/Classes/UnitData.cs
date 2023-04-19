@@ -1,10 +1,11 @@
-﻿using AltoControls;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Windows.Controls.Primitives;
 
 namespace DropIcons
 {
+    /// <summary>
     /// <summary>
     /// Each options data
     /// </summary>
@@ -13,10 +14,10 @@ namespace DropIcons
         public List<Size> sizes = new List<Size>();
         public bool keepAspect;
 
-        public static OptionsData FromSlideButton(SlideButton box)
+        public static OptionsData FromSlideButton(ToggleButton slide)
         {
             OptionsData data = new OptionsData();
-            switch (box.IsOn)
+            switch (slide.IsChecked)
             {
                 // Icono con dimensiones de 16px a 256px
                 case false:

@@ -117,28 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Acerca de:</value>
+  </data>
   <data name="AddImages" xml:space="preserve">
     <value>Agregar</value>
   </data>
-  <data name="Images" xml:space="preserve">
-    <value>Imágenes</value>
+  <data name="ChangeTheme" xml:space="preserve">
+    <value>Cambiar Tema...</value>
+  </data>
+  <data name="ChooseSameFolder" xml:space="preserve">
+    <value>Elegir misma carpeta</value>
+  </data>
+  <data name="GenerateTinyIcon" xml:space="preserve">
+    <value>Generar icono mini</value>
   </data>
   <data name="Image" xml:space="preserve">
     <value>Imagen</value>
   </data>
-  <data name="SelectAFolder" xml:space="preserve">
-    <value>Selecciona una carpeta</value>
+  <data name="ImageFiles" xml:space="preserve">
+    <value>Archivos de Imagen</value>
   </data>
-  <data name="DisableTopMost" xml:space="preserve">
-    <value>Deshabilitar TopMost</value>
+  <data name="Images" xml:space="preserve">
+    <value>Imágenes</value>
   </data>
-  <data name="EnableTopMost" xml:space="preserve">
-    <value>Habilitar TopMost</value>
+  <data name="LanguageEnglish" xml:space="preserve">
+    <value>Idioma: English</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Opciones:</value>
   </data>
   <data name="LanguageEspañol" xml:space="preserve">
     <value>Idioma: Español</value>
   </data>
-  <data name="LanguageEnglish" xml:space="preserve">
-    <value>Idioma: English</value>
+  <data name="UtilityToConvertImagesToIcons" xml:space="preserve">
+    <value>Aplicación para convertir imágenes a iconos (.ico) - v2.0.0</value>
+  </data>
+  <data name="onvert" xml:space="preserve">
+    <value>onvertir</value>
+  </data>
+  <data name="pply" xml:space="preserve">
+    <value>plicar</value>
+  </data>
+  <data name="ancel" xml:space="preserve">
+    <value>ancelar</value>
+  </data>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
+  <data name="DisableTopmost" xml:space="preserve">
+    <value>Deshabilitar Topmost</value>
+  </data>
+  <data name="EnableTopmost" xml:space="preserve">
+    <value>Habilitar Topmost</value>
   </data>
 </root>

@@ -9,14 +9,14 @@ Drop Icons is a open source utility to convert images to icons (.ico) for Window
 * Save icons in the same folder (default).
 * Save icons in a specific folder.
 * Saves the configuration to an .ini file (except for switches).
-* Enable and disable TopMost.
+* Enable and disable Topmost.
 * Generated icons are 16px but include 16, 32, 48, 64, 128, 256 pixel sizes for a high quality icon.
 * Prevents duplication of an image that has been previously added.
 * Option to generate tiny icon.
-* Resize to 1:1 without stretching the image.
+* Adaptive corners (rounded or simple), depending on the OS version. 🆕
 
 ## Preview
-<a href="#"><img alt="Image to Ico" src="assets/Drop-Icons.gif"/></a>
+<a href="#"><img src="docs/assets/Drop-Icons-v2.gif"/></a>
 
 ## Usage
 Drag and drop your images into the empty space, you will preview three images, except if you only drag one or two. Below you can see the total amount of images to convert (subtracting three from preview). If you cannot drag, click on `Add images`.
@@ -31,22 +31,22 @@ By clicking on the upper Info button, a new window will appear in which you can:
 
 - **Change language:** In the lower section that says Language, click on the little arrows icon to switch between Español or English, then click on the back button and it will restart with the language you have chosen.
 
-- **Change theme:** At the bottom, click on `Change Theme...` and choose your custom color in the small window that appears, you can also add it to your "custom colors" to use later, then select OK. To return to the default one, repeat the previous steps, choose one of the many purples (or don't choose any color) and click OK.
+- **Change theme:** At the bottom, click on `Change Theme...` and choose your custom color in the small window that appears (you can help with the color palette or type in a HEX color), then select Apply. To return to the default one, repeat the previous steps and click the purple button below the tone selector, finally press Apply.
 
-- **Find information about third-party content:** In the upper section are the names of each library, project, icons or fonts that were used, as well as Drop Icons.
+- **Find information about third-party content:** In the left section are the names of each library, project, icons or fonts that were used, as well as Drop Icons.
 Click on one of them to read its license, which includes the author(s). You can read a short description below or click on the link icon to go to the repository or official site.
 
 <br>
 
-To choose whether Drop Icons is on top of all windows (TopMost) or not, right-click anywhere in the main window and choose Enable TopMost or Disable TopMost.
+To choose whether Drop Icons is on top of all windows (Topmost) or not, right-click anywhere in the main window and choose Enable Topmost or Disable Topmost.
 
 ## Options
-<a href="#"><img src="assets/Drop-Icons-Options.gif"/></a>
+<a href="#"><img src="docs/assets/Drop-Icons-Options-v2.gif"/></a>
 
 ## Info
-* Drop Icons is based on [Iconizer](https://github.com/willnode/Iconizer){:target="_blank"}. Read more credits [here](https://github.com/genesistoxical/drop-icons#credits){:target="_blank"}.
-* This software is under **MIT License** ([read full license](https://github.com/genesistoxical/drop-icons/blob/master/LICENSE){:target="_blank"}).
-* Copyright (c) 2022 Génesis Toxical.
+* Drop Icons is based on [Iconizer](https://github.com/willnode/Iconizer){:target="_blank"}. Read more credits [here](https://github.com/genesistoxical/release-prueba#credits){:target="_blank"}.
+* This software is under **MIT License** ([read full license](https://github.com/genesistoxical/release-prueba/blob/master/LICENSE){:target="_blank"}).
+* Copyright (c) 2022 - 2023 Génesis Toxical.
 <br>
 <style>
     h2.project-tagline:before {content: "Utility to convert images to icons ";}

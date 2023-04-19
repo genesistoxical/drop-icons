@@ -5,7 +5,7 @@
 
 <p align="center">
  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-MIT-9280FF?style=flat-square&labelColor=343B45"/></a>
- <a href="https://github.com/genesistoxical/drop-icons/releases/tag/1.0.0"><img src="https://img.shields.io/github/v/release/genesistoxical/drop-icons.svg?color=9280FF&label=Release&style=flat-square&labelColor=343B45"/></a>
+ <a href="https://github.com/genesistoxical/drop-icons/releases/tag/2.0.0"><img src="https://img.shields.io/github/v/release/genesistoxical/drop-icons.svg?color=9280FF&label=Release&style=flat-square&labelColor=343B45"/></a>
  <a href="#"><img alt="NET" src="https://img.shields.io/badge/.NET_Framework-4.8-9280FF?style=flat-square&labelColor=343B45"/></a> 
  <a href="/installer%20src"><img alt="Installer" src="https://img.shields.io/badge/Installer-ISS-9280FF?style=flat-square&labelColor=343B45"/></a>
  <a href="#"><img alt="Languages" src="https://img.shields.io/badge/Idiomas-2-9280FF?style=flat-square&labelColor=343B45"/></a>
@@ -24,14 +24,14 @@
 * Guardar los iconos en la misma carpeta (por defecto).
 * Guardar los iconos en una carpeta específica.
 * Guarda la configuración en un archivo .ini (excepto para los switches).
-* Habilitar y deshabilitar TopMost.
+* Habilitar y deshabilitar Topmost.
 * Los iconos generados son de 16 píxeles pero incluyen tamaños de 16, 32, 48, 64, 128, 256 píxeles para un ícono de alta calidad.
 * Evita la duplicación de una imagen que se ha añadido previamente.
 * Opción para generar un icono mini.
-* Cambia el tamaño a 1:1 sin estirar la imagen.
+* Esquinas adaptables (redondeadas o simples), dependiendo la versión del sistema operativo. 🆕
 
 ## Previa
-<a href="#"><img src="docs/assets/Drop-Icons.gif"/></a>
+<a href="#"><img src="docs/assets/Drop-Icons-v2.gif"/></a>
 
 ## Uso
 Arrastra y suelta tus imágenes en el espacio vacío, obtendrás una vista previa de tres imágenes, excepto si solo arrastras una o dos. Más abajo puedes ver la cantidad total de imágenes para convertir (restando tres de la previa). Si no puedes arrastrar, cliquea en `Agregar`.
@@ -46,21 +46,21 @@ Dando click en el botón superior de Info, aparecerá una nueva ventana en la qu
 
 - **Cambiar el idioma:** En la sección inferior que dice **Idioma de Drop Icons** haz clic en el icono de las flechitas para cambiar entre Español o English, luego clic en el botón de regresar y se reiniciará con el idioma que hayas elegido.
 
-- **Cambiar el tema:** En la parte inferior, clic sobre `Change Theme...` y elige tu color personalizado en la pequeña ventana que aparece, también puedes agregarlo a tus "colores personalizados" para usarlo después, luego selecciona Aceptar. Para regresar al que venía por defecto repite los pasos anteriores, elige uno de los tantos morados (o no elijas ningún color) y cliquea en Aceptar.
+- **Cambiar el tema:** En la parte inferior, haz clic sobre `Change Theme...` y elige tu color personalizado en la pequeña ventana que aparece (puedes ayudarte con la paleta de colores o escribir un color HEX), después selecciona Aplicar. Para regresar al que venía por defecto repite los pasos anteriores y cliquea el botón morado debajo del selector de tono, finalmente oprime Aplicar.
 
-- **Encontrar información sobre el contenido de terceros:** En la sección superior están los nombres de cada librería, proyecto, iconos o tipografías que fueron utilizados, al igual que Drop Icons. Cliquea en uno de ellos para leer su licencia, la cual incluye el autor(a) o autores(as). Puedes leer una corta descripción más abajo o hacer clic sobre el icono del enlace para ir al repositorio o sitio oficial.
+- **Encontrar información sobre el contenido de terceros:** En la sección izquierda están los nombres de cada librería, proyecto, iconos o tipografías que fueron utilizados, al igual que Drop Icons. Cliquea en uno de ellos para leer su licencia, la cual incluye el autor(a) o autores(as). Puedes leer una corta descripción más abajo o hacer clic sobre el icono del enlace para ir al repositorio o sitio oficial.
 
 <br>
 
-Para elegir que Drop Icons esté encima de todas las ventanas (TopMost) o no, da clic derecho en cualquier lugar de la ventana principal y elige Habilitar TopMost o Deshabilitar TopMost.
+Para elegir que Drop Icons esté encima de todas las ventanas (Topmost) o no, da clic derecho en cualquier lugar de la ventana principal y elige Habilitar Topmost o Deshabilitar Topmost.
 
 ## Opciones
-<a href="#"><img src="docs/assets/Drop-Icons-Options.gif"/></a>
+<a href="#"><img src="docs/assets/Drop-Icons-Options-v2.gif"/></a>
 
 ## Instalador
 Para compilar el instalador es necesario [Inno Setup](https://jrsoftware.org/isinfo.php), los archivos se encuentran en la carpeta [installer src](/installer%20src). Solo debes abrir el proyecto (Installer.iss) y compilarlo, a menos que desees hacer una modificación. Al finalizar, en la misma ubicación dejará una carpeta llamada Output.
 
-**Portable with 7zip.bat** permite comprimir en .zip rápidamente la versión portable y elimina archivos innecesarios. Únicamente funciona con [7zip](https://www.7-zip.org/).
+**Portable.bat** permite comprimir en .zip rápidamente la versión portable y elimina archivos innecesarios. Solo funciona en Windows 11 y 10.
 
 Ambos .iss y .bat obtienen los archivos que son necesarios dentro de su carpeta y/o la carpeta Release (debido a las rutas relativas).
 
@@ -76,49 +76,44 @@ El archivo `Config.ini` almacena información del lenguaje, color del tema y si 
 ~~~
 [Options]
 Language = en
-TopMost = true
+Topmost = true
 
 [Theme]
-146
-128
-255
+#FF9280FF
 ~~~
 
 >Nota: las dos opciones de tipo switch no se guardan porque no son opciones que suelan activarse todo el tiempo.
 
-En el archivo `Colors.dat` se guarda la paleta de colores personalizados.
+## Esquinas adaptables
+<a href="#"><img src="docs/assets/Drop-Icons-Corners-v2.png"/></a>
 
-Drop Icons primero busca ambos archivos en la misma carpeta donde se ubica el ejecutable, así que, si tuvieras la versión portable e instalable, no habría problemas.
+# Creditos
+Drop Icons está basado en [Iconizer](https://github.com/willnode/Iconizer) bajo [MIT License](https://github.com/willnode/Iconizer/blob/master/LICENSE).
 
-Si no encuentra los archivos, eso significa decir que está instalado y buscará en *%AppData%\Drop Icons*
+* [HandyControls](https://github.com/ghost1372/HandyControls) bajo [MIT License](https://github.com/ghost1372/HandyControls/blob/develop/LICENSE).
 
-## Controles
-Si necesitas agregar más o diferentes controles, haz clic derecho en cualquier parte del Cuadro de herramientas, cliquea en Agregar pestaña y escribe *AltoControls*.
+* [FolderBrowserEx](https://github.com/evaristocuesta/FolderBrowserEx) library bajo [MIT License](https://github.com/evaristocuesta/FolderBrowserEx/blob/master/LICENSE).
 
-Da clic derecho en cualquier lugar dentro de la pestaña que creaste, cliquea en `Elegir elementos...` y selecciona **Componentes de .NET Framework**. Ahora desde `Examinar...` agrega **AltoControls.dll** que se ubica en la carpeta Lib y por último Aceptar.
-
-## Creditos
-Drop Icons está basado en [Iconizer](https://github.com/willnode/Iconizer) bajo [MIT License](https://github.com/willnode/Iconizer/blob/master/LICENSE), y como un reconocimiento, mantiene un archivo con ese nombre.
-
-Incluye una version compilada de [AltoControls](https://github.com/aalitor/AltoControls) bajo [MIT License](https://github.com/aalitor/AltoControls/blob/on-development/license.txt), con dos archivos modificados:
-* **SlideButton**: Borde y colores para darle un estilo aún más moderno.
-* **AltoButton**: Reemplazo de DrawString con una Label, para que detecte la fuente utilizada sin estar instalada.
-
-*Puedes encontrar los archivos modificados [aquí](https://github.com/genesistoxical/modified-files/tree/main/AltoControls).*
-~~~
-SwitchButton.cs
-AltoButton.cs
-~~~
-
-[FolderBrowserEx](https://github.com/evaristocuesta/FolderBrowserEx) library bajo [MIT License](https://github.com/evaristocuesta/FolderBrowserEx/blob/master/LICENSE).
-
-Contiene toda la familia de [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) bajo [SIL Open Font License](#), aunque solo utiliza la versión Regular.
+* [Noto Music](https://fonts.google.com/noto/specimen/Noto+Music) bajo [SIL Open Font License](#).
 
 Los iconos son parte de [Teenyicons](https://github.com/teenyicons/teenyicons) bajo [MIT License](https://github.com/teenyicons/teenyicons/blob/master/LICENSE).
 
 *Puedes encontrar todas las licencias [aquí](/src/DropIcons/Docs).*
 
+## ¿Qué hay de nuevo?
+`Versión 1.0.0` se creó en Windows Forms. Drop Icons ya no se desarrollará con esa tecnología, sin embargo, todavía puedes encontrar y/o descargar la última versión oficial aquí:
+<br>
+🏷️ [winforms-v1-final](https://github.com/genesistoxical/drop-icons/tree/winforms-v1-final)
+
+<br>
+
+`Versión 2.0.0` está desarrollada con Windows Presentation Foundation (WPF) para mejorar la interfaz e incluir esquinas redondeadas adaptables, según la versión del sistema operativo.
+
+En esta última versión se ha mejorado la ventana "Acerca de", el archivo Config.ini se ha modificado para usar solo el color del tema en HEX y no en RGB, además que se ha reemplazado el selector de color (para el tema) por uno mucho más moderno.
+
+Debido a este último cambio, se eliminó Colors.dat ya que no existe botón para guardar los personalizados, en su lugar hay una paleta de colores.
+
 ## Licencia
 **MIT License**
 
-Copyright (c) 2022 Génesis Toxical ([read here](LICENSE)).
+Copyright (c) 2022 - 2023 Génesis Toxical ([read here](LICENSE)).
