@@ -16,7 +16,7 @@ Drop Icons es una aplicación para convertir imágenes a iconos (.ico) para Wind
 * Esquinas adaptables (redondeadas o simples), dependiendo la versión del sistema operativo. 🆕
 
 ## Previa
-<a href="#"><img src="docs/assets/Drop-Icons-v2.gif"/></a>
+<a href="#"><img src="assets/Drop-Icons-v2.gif"/></a>
 
 ## Uso
 Arrastra y suelta tus imágenes en el espacio vacío, obtendrás una vista previa de tres imágenes, excepto si solo arrastras una o dos. Más abajo puedes ver la cantidad total de imágenes para convertir (restando tres de la previa). Si no puedes arrastrar, cliquea en `Agregar`.
@@ -40,7 +40,7 @@ Dando click en el botón superior de Info, aparecerá una nueva ventana en la qu
 Para elegir que Drop Icons esté encima de todas las ventanas (Topmost) o no, da clic derecho en cualquier lugar de la ventana principal y elige Habilitar Topmost o Deshabilitar Topmost.
 
 ## Opciones
-<a href="#"><img src="docs/assets/Drop-Icons-Options-v2.gif"/></a>
+<a href="#"><img src="assets/Drop-Icons-Options-v2.gif"/></a>
 
 ## Info
 * Drop Icons está basado en [Iconizer](https://github.com/willnode/Iconizer){:target="_blank"}. Lee más creditos ([aquí](https://github.com/genesistoxical/release-prueba#credits){:target="_blank"}).

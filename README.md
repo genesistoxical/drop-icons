@@ -94,9 +94,11 @@ Drop Icons is based on [Iconizer](https://github.com/willnode/Iconizer) under [M
 
 * [FolderBrowserEx](https://github.com/evaristocuesta/FolderBrowserEx) library under [MIT License](https://github.com/evaristocuesta/FolderBrowserEx/blob/master/LICENSE).
 
-* [Noto Music](https://fonts.google.com/noto/specimen/Noto+Music) under [SIL Open Font License](https://github.com/genesistoxical/drop-icons#).
+* [Noto Music](https://fonts.google.com/noto/specimen/Noto+Music) under [SIL Open Font License](/src/DropIcons/Docs/Noto%20Music/OFL.txt).
 
 * Icons are part of [Teenyicons](https://github.com/teenyicons/teenyicons) under [MIT License](https://github.com/teenyicons/teenyicons/blob/master/LICENSE).
+
+* [WinVersion](https://github.com/shaovoon/win_version_detection) detection under [MIT License](https://github.com/shaovoon/win_version_detection/blob/main/LICENSE).
 
 *You can find all licenses [here](/src/DropIcons/Docs).*
 
