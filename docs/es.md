@@ -43,8 +43,8 @@ Para elegir que Drop Icons esté encima de todas las ventanas (Topmost) o no, da
 <a href="#"><img src="assets/Drop-Icons-Options-v2.gif"/></a>
 
 ## Info
-* Drop Icons está basado en [Iconizer](https://github.com/willnode/Iconizer){:target="_blank"}. Lee más creditos ([aquí](https://github.com/genesistoxical/release-prueba#credits){:target="_blank"}).
-* Este software se encuentra bajo **MIT License** ([leer licencia completa](https://github.com/genesistoxical/release-prueba/blob/master/LICENSE){:target="_blank"}).
+* Drop Icons está basado en [Iconizer](https://github.com/willnode/Iconizer){:target="_blank"}. Lee más creditos [aquí](https://github.com/genesistoxical/drop-icons#credits){:target="_blank"}.
+* Este software se encuentra bajo **MIT License** ([leer texto completo](https://github.com/genesistoxical/drop-icons/blob/master/LICENSE){:target="_blank"}).
 * Copyright (c) 2022 - 2023 Génesis Toxical.
 <br>
 <style>

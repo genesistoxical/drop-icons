@@ -111,7 +111,7 @@ Drop Icons is based on [Iconizer](https://github.com/willnode/Iconizer) under [M
 
 `Version 2.0.0` is developed with Windows Presentation Foundation (WPF) to improve the interface and include adaptive rounded corners, depending on the OS version.
 
-In this latest version the "About" window has been improved, the Config.ini file has been modified to use only the theme color in HEX and not in RGB, also the color picker (for the theme) has been replaced for a much more modern one.
+In this second release the "About" window has been improved, the Config.ini file has been modified to use only the theme color in HEX and not in RGB, also the color picker (for the theme) has been replaced for a much more modern one.
 
 Due to this last change, Colors.dat was removed since there is no button to save the custom ones, instead there is a color palette.
 
