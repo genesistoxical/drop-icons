@@ -16,7 +16,7 @@ Drop Icons is a open source utility to convert images to icons (.ico) for Window
 * Adaptive corners (rounded or simple), depending on the OS version. 🆕
 
 ## Preview
-<a href="#"><img src="assets/Drop-Icons-v2.gif"/></a>
+<picture><img alt="Drop Icons" src="assets/Drop-Icons-v2.gif"/></picture>
 
 ## Usage
 Drag and drop your images into the empty space, you will preview three images, except if you only drag one or two. Below you can see the total amount of images to convert (subtracting three from preview). If you cannot drag, click on `Add images`.
@@ -41,7 +41,7 @@ Click on one of them to read its license, which includes the author(s). You can 
 To choose whether Drop Icons is on top of all windows (Topmost) or not, right-click anywhere in the main window and choose Enable Topmost or Disable Topmost.
 
 ## Options
-<a href="#"><img src="assets/Drop-Icons-Options-v2.gif"/></a>
+<picture><img src="assets/Drop-Icons-Options-v2.gif"/></picture>
 
 ## Info
 * Drop Icons is based on [Iconizer](https://github.com/willnode/Iconizer){:target="_blank"}. Read more credits [here](https://github.com/genesistoxical/drop-icons#credits){:target="_blank"}.
