@@ -61,7 +61,7 @@ To choose whether Drop Icons is on top of all windows (Topmost) or not, right-cl
 ## Installer
 To compile the installer you need [Inno Setup](https://jrsoftware.org/isinfo.php), the files are located in the [installer src](/installer%20src) folder. You just need to open the project (Installer.iss) and compile it, unless you want to make a change. When finished, it will leave a folder called Output in the same location.
 
-**Portable.bat** allows you to quickly zip the portable version and remove unnecessary files. It only works on Windows 11 and 10.
+**Portable with 7zip.bat** allows you to quickly zip the portable version and remove unnecessary files. It only works with [7zip](https://www.7-zip.org/).
 
 Both .iss and .bat get the files that are needed within their folder and/or the Release folder (because of relative paths).
 
@@ -111,9 +111,9 @@ Drop Icons is based on [Iconizer](https://github.com/willnode/Iconizer) under [M
 
 `Version 2.0.0` is developed with Windows Presentation Foundation (WPF) to improve the interface and include adaptive rounded corners, depending on the OS version.
 
-In this second release the "About" window has been improved, the Config.ini file has been modified to use only the theme color in HEX and not in RGB, also the color picker (for the theme) has been replaced for a much more modern one.
+In this second release the **About** window has been improved, the **Config.ini** file has been modified to use only theme color HEX and not RGB, also the color picker (for theme) has been replaced for a much more modern one.
 
-Due to this last change, Colors.dat was removed since there is no button to save the custom ones, instead there is a color palette.
+Due to this last change, **Colors.dat** was removed since there is no button to save the custom ones, instead there is a color palette.
 
 ## License
 **MIT License**

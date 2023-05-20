@@ -8,7 +8,7 @@
 AppId={{A072B914-4E3D-4DAD-9F9B-D1D38965482E}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-VersionInfoVersion={#MyAppVersion}
+VersionInfoVersion=2.0.0.0
 AppPublisher={#MyAppPublisher}
 AppCopyright={#MyAppPublisher} © 2022 - 2023
 AppPublisherURL={#MyAppURL}

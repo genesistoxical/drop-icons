@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 using System.Resources;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
 
@@ -10,7 +9,7 @@ using System.Windows;
 [assembly: AssemblyTitle("Drop Icons")]
 [assembly: AssemblyDescription("Utility to convert images to icons (.ico)")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Génesis Toxical")]
 [assembly: AssemblyProduct("Drop Icons")]
 [assembly: AssemblyCopyright("Génesis Toxical © 2022 - 2023")]
 [assembly: AssemblyTrademark("")]
@@ -54,3 +53,4 @@ using System.Windows;
 [assembly: AssemblyVersion("2.0.0.0")]
 [assembly: AssemblyFileVersion("2.0.0.0")]
 [assembly: NeutralResourcesLanguage("")]
+[assembly: Guid("CE5E07BD-C4F7-4DF2-A1A2-C2D8686784B7")]
