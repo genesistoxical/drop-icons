@@ -124,7 +124,7 @@
     <value>Agregar</value>
   </data>
   <data name="ChangeTheme" xml:space="preserve">
-    <value>Cambiar Tema...</value>
+    <value>Cambiar Tema</value>
   </data>
   <data name="ChooseSameFolder" xml:space="preserve">
     <value>Elegir misma carpeta</value>
@@ -151,7 +151,7 @@
     <value>Idioma: Español</value>
   </data>
   <data name="UtilityToConvertImagesToIcons" xml:space="preserve">
-    <value>Aplicación para convertir imágenes a iconos (.ico) - v2.0.0</value>
+    <value>Aplicación para convertir imágenes a iconos (.ico) - v2.1.1</value>
   </data>
   <data name="onvert" xml:space="preserve">
     <value>onvertir</value>
@@ -170,5 +170,17 @@
   </data>
   <data name="EnableTopmost" xml:space="preserve">
     <value>Habilitar Topmost</value>
+  </data>
+  <data name="Icons" xml:space="preserve">
+    <value>Icono</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Siguiente   🢖🢖</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>🢔🢔   Regresar</value>
+  </data>
+  <data name="Multiple" xml:space="preserve">
+    <value>Múltiple</value>
   </data>
 </root>

@@ -1,5 +1,5 @@
 ﻿#define MyAppName "Drop Icons"
-#define MyAppVersion "2.0.0"
+#define MyAppVersion "2.1.1"
 #define MyAppPublisher "Génesis Toxical"
 #define MyAppURL "https://genesistoxical.github.io/drop-icons/"
 #define MyAppExeName "Drop Icons.exe"
@@ -8,7 +8,7 @@
 AppId={{A072B914-4E3D-4DAD-9F9B-D1D38965482E}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-VersionInfoVersion=2.0.0.0
+VersionInfoVersion=2.1.1.0
 AppPublisher={#MyAppPublisher}
 AppCopyright={#MyAppPublisher} © 2022 - 2023
 AppPublisherURL={#MyAppURL}
@@ -28,13 +28,15 @@ WizardImageFile=Wizard Image File.bmp
 ;WizardSizePercent=114,100
 WizardSizePercent=110,100 
 DisableProgramGroupPage=yes
-UninstallDisplayIcon={uninstallexe}                                     
+UninstallDisplayIcon={uninstallexe}
+UsedUserAreasWarning=no                                    
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
 
 [InstallDelete]
+Type: files; Name: "{userappdata}\Drop Icons\Colors.dat";
 Type: files; Name: "{app}\AltoControls.dll";
 Type: files; Name: "{app}\Docs\AltoControls.txt";
 Type: files; Name: "{app}\Docs\Noto Sans\*";
@@ -44,7 +46,7 @@ Type: filesandordirs; Name: "{app}\Docs\Noto Sans";
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}";
 
 [Files]
-Source: "..\src\DropIcons\bin\Release\*"; DestDir: "{app}"; Excludes: "*.config,*.pdb,*.xml,*.ini"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\src\DropIcons\bin\Release\*"; DestDir: "{app}"; Excludes: "*.ini"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\src\DropIcons\bin\Release\Config.ini*"; DestDir: "{userappdata}\{#MyAppName}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

@@ -136,7 +136,7 @@
     <value>Language: English</value>
   </data>
   <data name="ChangeTheme" xml:space="preserve">
-    <value>Change Theme...</value>
+    <value>Change Theme</value>
   </data>
   <data name="Options" xml:space="preserve">
     <value>Options:</value>
@@ -148,7 +148,7 @@
     <value>Language: Español</value>
   </data>
   <data name="UtilityToConvertImagesToIcons" xml:space="preserve">
-    <value>Utility to convert images to icons (.ico) - v2.0.0</value>
+    <value>Utility to convert images to icons (.ico) - v2.1.1</value>
   </data>
   <data name="onvert" xml:space="preserve">
     <value>onvert</value>
@@ -167,5 +167,17 @@
   </data>
   <data name="EnableTopmost" xml:space="preserve">
     <value>Enable Topmost</value>
+  </data>
+  <data name="Icons" xml:space="preserve">
+    <value>Icons</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next   🢖🢖</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>🢔🢔   Back</value>
+  </data>
+  <data name="Multiple" xml:space="preserve">
+    <value>Multiple</value>
   </data>
 </root>

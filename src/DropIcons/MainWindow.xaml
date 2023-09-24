@@ -29,7 +29,7 @@
         <Image x:Name="Img1" HorizontalAlignment="Left" Height="63" Margin="21,46,0,0" VerticalAlignment="Top" Width="63" SnapsToDevicePixels="True" UseLayoutRounding="True"/>
         <Image x:Name="Img2" HorizontalAlignment="Left" Height="63" Margin="93,46,0,0" VerticalAlignment="Top" Width="63" SnapsToDevicePixels="True" UseLayoutRounding="True"/>
         <Image x:Name="Img3" HorizontalAlignment="Left" Height="63" Margin="165,46,0,0" VerticalAlignment="Top" Width="63" SnapsToDevicePixels="True" UseLayoutRounding="True"/>
-        <Label x:Name="NoImages" Content="{x:Static properties:Resources.AddImages}" HorizontalAlignment="Left" Margin="143,117,0,0" BorderThickness="0,0,0,0" Height="24" Padding="0,0,0,0" Width="82" HorizontalContentAlignment="Right" Background="{x:Null}" Foreground="#FF747474" MouseEnter="AddImages_MouseEnter" MouseLeave="AddImages_MouseLeave" MouseDown="NoImages_MouseDown" VerticalAlignment="Top"/>
+        <Label x:Name="NoImages" Content="{x:Static properties:Resources.AddImages}" HorizontalAlignment="Left" Margin="143,117,0,0" BorderThickness="0,0,0,0" Height="24" Padding="0,0,0,0" Width="82" HorizontalContentAlignment="Right" Background="{x:Null}" Foreground="#FF747474" MouseEnter="AddImages_MouseEnter" MouseLeave="AddImages_MouseLeave" MouseDown="AddImages_MouseDown" VerticalAlignment="Top"/>
         <Button x:Name="Convert" Style="{StaticResource ButtonPrimary}" Margin="0,151,0,0" VerticalAlignment="Top" Width="209" Click="Convert_Click" Height="24" Padding="10,-1,10,7" BorderThickness="0,0,0,0" Foreground="White" FontSize="11">
             <TextBlock>
                 <Run FontSize="12" Text="C"/><Run Text="{x:Static properties:Resources.onvert}" FontSize="11"/>

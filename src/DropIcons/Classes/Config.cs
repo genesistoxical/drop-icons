@@ -18,7 +18,8 @@ namespace DropIcons
         internal static bool isIntalled;
         internal static string iniPath;
         internal static string[] iniLines;
-        internal static bool Restart = false;
+        internal static bool restart = false;
+        internal static string size = "";
 
         internal static void CheckPath()
         {
@@ -84,7 +85,7 @@ namespace DropIcons
                 }
 
                 Console.WriteLine("Selected language: " + selecLan + " - Idioma seleccionado: " + selecLan);
-                Restart = true;
+                restart = true;
             }
         }
         #endregion
@@ -148,7 +149,7 @@ namespace DropIcons
 
         internal static void ChangeTopmost(Window window)
         {
-            // Cambiar la propiedad de TopMost en el form
+            // Cambiar la propiedad de TopMost en la ventana
             // y actualizar el archivo Config.ini
             switch (isTopmost)
             {
@@ -168,6 +169,46 @@ namespace DropIcons
             }
 
             Console.WriteLine("Topmost " + isTopmost.ToString());
+        }
+        #endregion
+
+        #region Size
+        internal static void GetSize()
+        {
+            // Obtener la configuración del tamaño del icono
+            // y establecer el valor en un string
+            switch (iniLines[8])
+            {
+                case "Icons = multiple":
+                    size = "multiple";
+                    break;
+
+                case "Icons = 256":
+                    size = "256";
+                    break;
+            }
+        }
+
+        internal static void SetSize(string type)
+        {
+            // Aplicar la configuración del tamaño del icono
+            // y actualizar el archivo Config.ini
+            size = type;
+
+            switch (type)
+            {
+                case "multiple":
+                    iniLines[8] = iniLines[8].Replace("256", "multiple");
+                    File.WriteAllLines(iniPath, iniLines);
+                    break;
+
+                case "256":
+                    iniLines[8] = iniLines[8].Replace("multiple", "256");
+                    File.WriteAllLines(iniPath, iniLines);
+                    break;
+            }
+
+            Console.WriteLine("Size is " + size);
         }
         #endregion
     }

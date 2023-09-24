@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
+using SharpVectors.Converters;
+using SharpVectors.Renderers.Wpf;
 
 namespace DropIcons
 {
@@ -17,6 +19,8 @@ namespace DropIcons
     public partial class MainWindow : Window
     {
         public List<BitmapData> bitmaps = new List<BitmapData>();
+        private readonly string tmp = Path.GetTempPath() + "dp-output\\";
+        private bool svgdelete = false;
 
         // This trick is used for invalidating folder caches...
         private bool triggerInvalidating = false;
@@ -49,7 +53,34 @@ namespace DropIcons
         private static bool CheckIfImage(string path)
         {
             string ext = Path.GetExtension(path);
-            return ext == ".png" || ext == ".jpg" || ext == ".jpeg" || ext == ".bmp";
+            return ext == ".png" || ext == ".jpg" || ext == ".jpeg" || ext == ".jfif" || ext == ".svg" || ext == ".gif" || ext == ".bmp";
+        }
+
+        private void AddConvertedSVG(string path)
+        {
+            // Rasterizar SVG (a PNG) y guardarlos en una carpeta temporal
+            svgdelete = true;
+
+            WpfDrawingSettings settings = new WpfDrawingSettings
+            {
+                IncludeRuntime = true,
+                TextAsGeometry = false
+            };
+
+            using (ImageSvgConverter converter = new ImageSvgConverter(settings)
+            {
+                EncoderType = ImageEncoderType.PngBitmap
+            })
+            {
+                string name = Path.GetFileNameWithoutExtension(path) + ".png";
+                converter.Convert(path, tmp + name);
+
+                // Agregar los PNG de la carpeta temporal, conservando la ruta
+                // original de los SVG
+                AddImage(Image.FromFile(tmp + name), path);
+
+                converter.Dispose();
+            }
         }
 
         private void AddImage(Image bitmap, string path)
@@ -64,7 +95,7 @@ namespace DropIcons
             bitmaps.Add(data);
         }
 
-        BitmapImage BitmapToSource(Bitmap bitmap)
+        private BitmapImage BitmapToSource(Bitmap bitmap)
         {
             using (MemoryStream ms = new MemoryStream())
             {
@@ -95,6 +126,13 @@ namespace DropIcons
             }
 
             NoImages.Content = Properties.Resources.AddImages;
+
+            // Si la conversión fue SVG a ICO, borrar carpeta temporal de PNG's
+            if (svgdelete)
+            {
+                Directory.Delete(tmp, true);
+                svgdelete = false;
+            }
         }
 
         private void SaveIcons(string folder = default)
@@ -121,6 +159,19 @@ namespace DropIcons
                 foreach (Bitmap img in images)
                 {
                     img?.Dispose();
+                }
+            }
+
+            if (Directory.Exists(tmp))
+            {
+                foreach (FileInfo file in new DirectoryInfo(tmp).GetFiles())
+                {
+                    if (file.Extension == ".ico")
+                    {
+                        string source = tmp + file;
+                        string dest = folder + file;
+                        Console.WriteLine("output: " + dest + " - " + source);
+                    }
                 }
             }
         }
@@ -207,7 +258,16 @@ namespace DropIcons
                     if (CheckIfExist(path)) { }
                     else if (CheckIfImage(path))
                     {
-                        AddImage(Image.FromFile(path), path);
+                        string ext = Path.GetExtension(path);
+
+                        if (ext == ".svg")
+                        {
+                            AddConvertedSVG(path); // Agregar SVG convertido a PNG
+                        }
+                        else
+                        {
+                            AddImage(Image.FromFile(path), path);
+                        }
                     }
                 }
 
@@ -294,14 +354,14 @@ namespace DropIcons
                 NoImages.Cursor = Cursors.Arrow;
         }
 
-        private void NoImages_MouseDown(object sender, MouseButtonEventArgs e)
+        private void AddImages_MouseDown(object sender, MouseButtonEventArgs e)
         {
             // Label para agregar imágenes si no funciona el Drag and Drop
             if (NoImages.Content.ToString() == Properties.Resources.AddImages)
             {
                 Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog
                 {
-                    Filter = Properties.Resources.ImageFiles + " (*.png, *.jpg, *.jpeg, *.bmp)|*.png;*.jpg;*.jpeg;*.bmp",
+                    Filter = Properties.Resources.ImageFiles + " (*.png, *.jpg, *.jpeg, *.jfif, *.svg, *.gif; *.bmp)|*.png;*.jpg;*.jpeg;*.jfif;*.svg;*.gif;*.bmp",
                     Multiselect = true
                 };
 
@@ -313,7 +373,16 @@ namespace DropIcons
                     {
                         if (CheckIfImage(path))
                         {
-                            AddImage(System.Drawing.Image.FromFile(path), path);
+                            string ext = Path.GetExtension(path);
+
+                            if (ext == ".svg")
+                            {
+                                AddConvertedSVG(path);
+                            }
+                            else
+                            {
+                                AddImage(Image.FromFile(path), path);
+                            }
                         }
                     }
 

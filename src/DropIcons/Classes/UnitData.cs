@@ -19,16 +19,24 @@ namespace DropIcons
             OptionsData data = new OptionsData();
             switch (slide.IsChecked)
             {
-                // Icono con dimensiones de 16px a 256px
-                case false:
-                    data.sizes.Add(new Size(16, 16));
-                    data.sizes.Add(new Size(32, 32));
-                    data.sizes.Add(new Size(48, 48));
-                    data.sizes.Add(new Size(64, 64));
-                    data.sizes.Add(new Size(128, 128));
-                    data.sizes.Add(new Size(256, 256));
-                    data.keepAspect = true;
-                    return data;
+                case false:  // Icono con dimensiones de 256px
+                    if (Config.size == "256")
+                    {
+                        data.sizes.Add(new Size(256, 256));
+                        data.keepAspect = true;
+                        return data;
+                    }
+                    else  // Icono con dimensiones de 16px a 256px
+                    {
+                        data.sizes.Add(new Size(16, 16));
+                        data.sizes.Add(new Size(32, 32));
+                        data.sizes.Add(new Size(48, 48));
+                        data.sizes.Add(new Size(64, 64));
+                        data.sizes.Add(new Size(128, 128));
+                        data.sizes.Add(new Size(256, 256));
+                        data.keepAspect = true;
+                        return data;
+                    }
 
                 // Icono (tiny) con dimensiones de 16px a 48px
                 default:

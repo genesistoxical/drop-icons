@@ -97,7 +97,16 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Change Theme....
+        ///   Busca una cadena traducida similar a 🢔🢔   Back.
+        /// </summary>
+        public static string Back {
+            get {
+                return ResourceManager.GetString("Back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Change Theme.
         /// </summary>
         public static string ChangeTheme {
             get {
@@ -138,6 +147,15 @@ namespace DropIcons.Properties {
         public static string GenerateTinyIcon {
             get {
                 return ResourceManager.GetString("GenerateTinyIcon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Icons.
+        /// </summary>
+        public static string Icons {
+            get {
+                return ResourceManager.GetString("Icons", resourceCulture);
             }
         }
         
@@ -187,6 +205,24 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Multiple.
+        /// </summary>
+        public static string Multiple {
+            get {
+                return ResourceManager.GetString("Multiple", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Next   🢖🢖.
+        /// </summary>
+        public static string Next {
+            get {
+                return ResourceManager.GetString("Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a onvert.
         /// </summary>
         public static string onvert {
@@ -214,7 +250,7 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Utility to convert images to icons (.ico) - v2.0.0.
+        ///   Busca una cadena traducida similar a Utility to convert images to icons (.ico) - v2.1.1.
         /// </summary>
         public static string UtilityToConvertImagesToIcons {
             get {
