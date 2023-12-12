@@ -4,6 +4,6 @@ description: [(.ico)]
 show_downloads: true
 
 github:
-  zip_url: https://github.com/genesistoxical/drop-icons/releases/download/2.1.1/Drop-Icons.zip
-  tar_url: https://github.com/genesistoxical/drop-icons/releases/download/2.1.1/Drop-Icons-Installer.exe
+  zip_url: https://github.com/genesistoxical/drop-icons/releases/latest/download/Drop-Icons.zip
+  tar_url: https://github.com/genesistoxical/drop-icons/releases/latest/download/Drop-Icons-Installer.exe
   is_project_page: false

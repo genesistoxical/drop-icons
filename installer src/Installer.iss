@@ -1,5 +1,5 @@
 ﻿#define MyAppName "Drop Icons"
-#define MyAppVersion "2.1.1"
+#define MyAppVersion "2.1.2"
 #define MyAppPublisher "Génesis Toxical"
 #define MyAppURL "https://genesistoxical.github.io/drop-icons/"
 #define MyAppExeName "Drop Icons.exe"
@@ -8,7 +8,7 @@
 AppId={{A072B914-4E3D-4DAD-9F9B-D1D38965482E}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-VersionInfoVersion=2.1.1.0
+VersionInfoVersion=2.1.2.0
 AppPublisher={#MyAppPublisher}
 AppCopyright={#MyAppPublisher} © 2022 - 2023
 AppPublisherURL={#MyAppURL}

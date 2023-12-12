@@ -20,7 +20,7 @@ namespace DropIcons
             switch (slide.IsChecked)
             {
                 case false:  // Icono con dimensiones de 256px
-                    if (Config.size == "256")
+                    if (Config.format == "256")
                     {
                         data.sizes.Add(new Size(256, 256));
                         data.keepAspect = true;
@@ -73,4 +73,3 @@ namespace DropIcons
         }
     }
 }
-

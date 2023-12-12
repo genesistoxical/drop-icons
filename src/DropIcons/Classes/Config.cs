@@ -19,7 +19,7 @@ namespace DropIcons
         internal static string iniPath;
         internal static string[] iniLines;
         internal static bool restart = false;
-        internal static string size = "";
+        internal static string format = "";
 
         internal static void CheckPath()
         {
@@ -172,30 +172,30 @@ namespace DropIcons
         }
         #endregion
 
-        #region Size
+        #region Format
         internal static void GetSize()
         {
-            // Obtener la configuración del tamaño del icono
-            // y establecer el valor en un string
+            // Obtener la configuración del los tamaños que se incluirán
+            // en el icono y establecer el valor en un string
             switch (iniLines[8])
             {
-                case "Icons = multiple":
-                    size = "multiple";
+                case "Size = multiple":
+                    format = "multiple";
                     break;
 
-                case "Icons = 256":
-                    size = "256";
+                case "Size = 256":
+                    format = "256";
                     break;
             }
         }
 
-        internal static void SetSize(string type)
+        internal static void SetSize(string size)
         {
-            // Aplicar la configuración del tamaño del icono
-            // y actualizar el archivo Config.ini
-            size = type;
+            // Aplicar la configuración del los tamaños que se incluirán
+            // en el icono y actualizar el archivo Config.ini
+            format = size;
 
-            switch (type)
+            switch (size)
             {
                 case "multiple":
                     iniLines[8] = iniLines[8].Replace("256", "multiple");
@@ -208,7 +208,7 @@ namespace DropIcons
                     break;
             }
 
-            Console.WriteLine("Size is " + size);
+            Console.WriteLine("Format size: " + format + " - Formato de tamaño: " + format);
         }
         #endregion
     }

@@ -9,7 +9,7 @@ using System.Windows.Input;
 namespace DropIcons
 {
     /// <summary>
-    /// About, Licenses, Theme and Language
+    /// About, Licenses, Theme, Format and Language
     /// </summary>
     public partial class About : Window
     {
@@ -38,18 +38,17 @@ namespace DropIcons
             // Oculta todas las flechas y restaura la opacidad
             // para mostrar y cambiar la opacidad de la que se indique
             Arrw_1.Visibility = Visibility.Hidden;
+            Arrw_2.Visibility = Visibility.Hidden;
             Arrw_Folder.Visibility = Visibility.Hidden;
             Arrw_Handy.Visibility = Visibility.Hidden;
             Arrw_Iconizer.Visibility = Visibility.Hidden;
-            Arrw_Noto.Visibility = Visibility.Hidden;
             Arrw_Teeny.Visibility = Visibility.Hidden;
-            Arrw_Win.Visibility = Visibility.Hidden;
 
             Btn_1.Opacity = 1;
+            Btn_2.Opacity = 1;
             Btn_Folder.Opacity = 1;
             Btn_Handy.Opacity = 1;
             Btn_Iconizer.Opacity = 1;
-            Btn_2.Opacity = 1;
             Btn_Teeny.Opacity = 1;
 
             visibleArrw.Visibility = Visibility.Visible;
@@ -68,7 +67,7 @@ namespace DropIcons
             Config.Topmost(this);
             Config.GetSize();
 
-            switch (Config.size)
+            switch (Config.format)
             {
                 case "multiple":
                     Check_all.IsChecked = true; ;
@@ -116,7 +115,7 @@ namespace DropIcons
                     Description.Content = "Windows 11 Version Detection";
                     break;
             }
-            Arrows(Arrw_Noto, Btn_2);
+            Arrows(Arrw_2, Btn_2);
         }
 
         private void Btn_Teeny_MouseDown(object sender, MouseButtonEventArgs e)
@@ -149,9 +148,17 @@ namespace DropIcons
 
         private void Link_Click(object sender, RoutedEventArgs e)
         {
-            if (Arrw_Noto.Visibility == Visibility.Visible)
+            if (Arrw_2.Visibility == Visibility.Visible)
             {
-                _ = Process.Start("https://fonts.google.com/noto/specimen/Noto+Sans");
+                switch (Btn_2.Content)
+                {
+                    case "Noto Music":
+                        _ = Process.Start("https://fonts.google.com/noto/specimen/Noto+Sans");
+                        break;
+                    case "WinVersion":
+                        _ = Process.Start("https://github.com/shaovoon/win_version_detection");
+                        break;
+                }
             }
             else if (Arrw_Teeny.Visibility == Visibility.Visible)
             {
@@ -181,10 +188,6 @@ namespace DropIcons
             else if (Arrw_Handy.Visibility == Visibility.Visible)
             {
                 _ = Process.Start("https://github.com/ghost1372/HandyControls");
-            }
-            else if (Arrw_Win.Visibility == Visibility.Visible)
-            {
-                _ = Process.Start("https://github.com/shaovoon/win_version_detection");
             }
         }
 

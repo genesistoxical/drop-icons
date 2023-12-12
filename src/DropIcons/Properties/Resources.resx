@@ -148,7 +148,7 @@
     <value>Language: Español</value>
   </data>
   <data name="UtilityToConvertImagesToIcons" xml:space="preserve">
-    <value>Utility to convert images to icons (.ico) - v2.1.1</value>
+    <value>Utility to convert images to icons (.ico) - v2.1.2</value>
   </data>
   <data name="onvert" xml:space="preserve">
     <value>onvert</value>
@@ -169,7 +169,7 @@
     <value>Enable Topmost</value>
   </data>
   <data name="Icons" xml:space="preserve">
-    <value>Icons</value>
+    <value>Format</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>Next   🢖🢖</value>

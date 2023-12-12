@@ -151,7 +151,7 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Icons.
+        ///   Busca una cadena traducida similar a Format.
         /// </summary>
         public static string Icons {
             get {
@@ -250,7 +250,7 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Utility to convert images to icons (.ico) - v2.1.1.
+        ///   Busca una cadena traducida similar a Utility to convert images to icons (.ico) - v2.1.2.
         /// </summary>
         public static string UtilityToConvertImagesToIcons {
             get {

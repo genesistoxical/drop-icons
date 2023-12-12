@@ -151,7 +151,7 @@
     <value>Idioma: Español</value>
   </data>
   <data name="UtilityToConvertImagesToIcons" xml:space="preserve">
-    <value>Aplicación para convertir imágenes a iconos (.ico) - v2.1.1</value>
+    <value>Aplicación para convertir imágenes a iconos (.ico) - v2.1.2</value>
   </data>
   <data name="onvert" xml:space="preserve">
     <value>onvertir</value>
@@ -172,7 +172,7 @@
     <value>Habilitar Topmost</value>
   </data>
   <data name="Icons" xml:space="preserve">
-    <value>Icono</value>
+    <value>Formato</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>Siguiente   🢖🢖</value>
