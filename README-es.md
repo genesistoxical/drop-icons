@@ -17,16 +17,16 @@
 
 ## Características
 * Interfaz limpia e intuitiva.
-* Convertir rápidamente muchas imágenes en iconos a la vez, con la función de arrastrar y soltar.
-* Cambiar entre el idioma English y Español.
+* Convierte rápidamente muchas imágenes en iconos a la vez, con la función de arrastrar y soltar.
+* Cambia entre el idioma Inglés y Español.
 * Compatibilidad con imágenes .png .jpg .jpeg .jfif .bmp .gif y .svg
-* Personalizar el color del tema.
+* Personaliza el color del tema.
 * Número de las imágenes a convertir, restando tres que se muestran como vista previa.
 * Guarda la configuración en un archivo .ini, excepto para los switches.
-* Guardar los iconos en la misma carpeta (por defecto) o en una específica.
-* Habilitar y deshabilitar Topmost.
+* Guarda los iconos en la misma carpeta (por defecto) o en una específica.
+* Habilita y deshabilita Topmost.
 * Opciones de formato para elegir los tamaños incluidos dentro del icono, múltiple y 256 px. [𝐢](#details)
-* Evitar la duplicación de una imagen que se ha añadido previamente.
+* Evita la duplicación de una imagen que se ha añadido previamente.
 * Opción para generar un icono mini.
 * Esquinas adaptables (redondeadas o metro), dependiendo la versión del sistema operativo.
 
@@ -61,6 +61,9 @@ Para elegir que Drop Icons esté encima de todas las ventanas (Topmost) o no, da
 
 ## Instalador
 Para compilar el instalador es necesario [Inno Setup](https://jrsoftware.org/isinfo.php), los archivos se encuentran en la carpeta [installer src](/installer%20src). Solo debes abrir el proyecto (Installer.iss) y compilarlo, a menos que desees hacer una modificación. Al finalizar, en la misma ubicación dejará una carpeta llamada Output.
+
+>* Por favor, toma en cuenta que primero debes compilar el código de fuente en Visual Studio para tener los binarios, de lo contrario obtendrás un [📍Compiler Error](https://github.com/genesistoxical/drop-icons/issues/3).
+>* ⬇️ Si lo prefieres, puedes descargar la app compilada en la [página](https://genesistoxical.github.io/drop-icons/) de Drop Icons.
 
 **Portable with 7zip.bat** permite comprimir en .zip rápidamente la versión portable. Únicamente funciona con [7zip](https://www.7-zip.org/).
 
@@ -140,3 +143,10 @@ Se actualizó un problema con un enlace de atribución y se eliminó un control 
 **MIT License**
 
 Copyright (c) 2022 - 2023 Génesis Toxical ([read here](LICENSE)).
+
+<br>
+
+## Relacionado:
+`🩷 Image to Icon` Convertir imagen a icono online: [`imagetoicon.glitch.me`](https://imagetoicon.glitch.me/) o [`Repositorio`](https://github.com/genesistoxical/imagetoicon).
+
+`🩷 Pixie Folders` Set con seis diseños de iconos de carpetas minimalistas y editables: [`Descargar`](https://genesistoxical.github.io/pixie-folders/) o [`Repositorio`](https://github.com/genesistoxical/pixie-folders).
