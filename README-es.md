@@ -31,7 +31,7 @@
 * Esquinas adaptables (redondeadas o metro), dependiendo la versión del sistema operativo.
 
 ## Previa
-<a href="#"><img src="docs/assets/Drop-Icons-v2.gif"/></a>
+<a href="#"><img src="docs/assets/Drop-Icons-App-v2.gif"/></a>
 
 ## Uso
 Arrastra y suelta tus imágenes en el espacio vacío, obtendrás una vista previa de tres imágenes excepto si solo arrastras una o dos. Más abajo puedes ver la cantidad total de imágenes a convertir, restando tres de la previa. Si no puedes arrastrar, cliquea en `Agregar`.
@@ -63,7 +63,7 @@ Para elegir que Drop Icons esté encima de todas las ventanas (Topmost) o no, da
 Para compilar el instalador es necesario [Inno Setup](https://jrsoftware.org/isinfo.php), los archivos se encuentran en la carpeta [installer src](/installer%20src). Solo debes abrir el proyecto (Installer.iss) y compilarlo, a menos que desees hacer una modificación. Al finalizar, en la misma ubicación dejará una carpeta llamada Output.
 
 >* Por favor, toma en cuenta que primero debes compilar el código de fuente en Visual Studio para tener los binarios, de lo contrario obtendrás un [📍Compiler Error](https://github.com/genesistoxical/drop-icons/issues/3).
->* ⬇️ Si lo prefieres, puedes descargar la app compilada en la [página](https://genesistoxical.github.io/drop-icons/) de Drop Icons.
+>* Si lo prefieres, puedes descargar la app compilada en la [página](https://genesistoxical.github.io/drop-icons/) de Drop Icons.
 
 **Portable with 7zip.bat** permite comprimir en .zip rápidamente la versión portable. Únicamente funciona con [7zip](https://www.7-zip.org/).
 

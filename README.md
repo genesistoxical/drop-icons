@@ -1,7 +1,7 @@
 <p align="center"></p>
 <p align="center"><a href="#"><img width="115px" src="docs/assets/Logo-115px.png" align="center" alt="Drop Icons"/></a></p>
 <h1 align="center">Drop Icons</h1>
-<p align="center">Drop Icons is a utility to convert images to icons (.ico) for Windows, with a simple Drag and Drop feature.</p>
+<p align="center">Drop Icons is an app to convert images to icons (.ico) for Windows, with a simple Drag and Drop feature.</p>
 
 <p align="center">
  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-MIT-9280FF?style=flat-square&labelColor=343B45"/></a>
@@ -31,7 +31,7 @@
 * Adaptive corners (rounded or metro), depending on the OS version.
 
 ## Preview
-<a href="#"><img src="docs/assets/Drop-Icons-v2.gif"/></a>
+<a href="#"><img src="docs/assets/Drop-Icons-App-v2.gif"/></a>
 
 ## Usage
 Drag and drop your images into the empty space, you will preview three images except if you only drag one or two. Below you can see the total amount of images to convert, subtracting three from preview. If you cannot drag, click on `Add images`.
@@ -63,11 +63,11 @@ To choose whether Drop Icons is on top of all windows (Topmost) or not, right-cl
 To compile the installer you need [Inno Setup](https://jrsoftware.org/isinfo.php), the files are located in the [installer src](/installer%20src) folder. You just need to open the project (Installer.iss) and compile it, unless you want to make a change. When finished, it will leave a folder called Output in the same location.
 
 >* Please note that you must first compile the source code in Visual Studio to get the binaries, otherwise you will get a [📍Compiler Error](https://github.com/genesistoxical/drop-icons/issues/3).
->* ⬇️ Alternatively, you can download the compiled app from the Drop Icons [page](https://genesistoxical.github.io/drop-icons/).
+>* Alternatively, you can download the compiled app from the Drop Icons [page](https://genesistoxical.github.io/drop-icons/).
 
 **Portable with 7zip.bat** allows you to quickly zip the portable version. It only works with [7zip](https://www.7-zip.org/).
 
-Both .iss and .bat get the files that are needed within their folder and/or the Release folder (because of relative paths).
+Both .iss and .bat get the files that are needed within their folder and/or the Release folder (due to relative paths).
 
 ## Contributing
 * **HandyControls** package will no longer be updated (for now or permanently) as the latest version does not allow resizing of ToggleButtonSwitch.

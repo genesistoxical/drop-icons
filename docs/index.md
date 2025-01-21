@@ -1,4 +1,4 @@
-Drop Icons is a open source utility to convert images to icons (.ico) for Windows, with a simple Drag and Drop feature.
+Drop Icons is an open source app to convert images to icons (.ico) for Windows, with a simple Drag and Drop feature.
 
 ## Features
 * Clean and intuitive interface.
@@ -16,7 +16,7 @@ Drop Icons is a open source utility to convert images to icons (.ico) for Window
 * Adaptive corners (rounded or metro), depending on the OS version.
 
 ## Preview
-<picture><img alt="Drop Icons" src="assets/Drop-Icons-v2.gif"/></picture>
+<picture><img alt="Drop Icons convert images to icons" src="assets/Drop-Icons-App-v2.gif"/></picture>
 
 ## Usage
 Drag and drop your images into the empty space, you will preview three images except if you only drag one or two. Below you can see the total amount of images to convert, subtracting three from preview. If you cannot drag, click on `Add images`.
