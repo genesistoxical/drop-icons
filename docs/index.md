@@ -47,7 +47,7 @@ To choose whether Drop Icons is on top of all windows (Topmost) or not, right-cl
 ## Info
 * Drop Icons is based on [Iconizer](https://github.com/willnode/Iconizer){:target="_blank"}. Read more credits [here](https://github.com/genesistoxical/drop-icons#credits){:target="_blank"}.
 * This software is under **MIT License** ([read full text](https://github.com/genesistoxical/drop-icons/blob/master/LICENSE){:target="_blank"}).
-* Copyright (c) 2022 - 2023 Génesis Toxical.
+* Copyright (c) 2022 - 2025 Génesis Toxical.
 <br>
 <style>
     h2.project-tagline:before {content: "Utility to convert images to icons ";}

@@ -1,0 +1,19 @@
+The SVG package adds five dependencies during installation, which are:
+
+• ExCSS
+  https://www.nuget.org/packages/ExCSS/
+
+• System.Memory
+  https://www.nuget.org/packages/System.Memory/
+
+• System.Buffers
+  https://www.nuget.org/packages/System.Buffers/
+
+• System.Numerics.Vectors
+  https://www.nuget.org/packages/System.Numerics.Vectors/
+
+• System.Runtime.CompilerServices.Unsafe
+  https://www.nuget.org/packages/System.Runtime.CompilerServices.Unsafe/
+
+All under MIT license.
+https://licenses.nuget.org/MIT

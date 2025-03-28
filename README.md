@@ -75,7 +75,6 @@ Both .iss and .bat get the files that are needed within their folder and/or the 
 * Variable names must be in English.
 * If you open an **Issue**, it can be in English o Spanish.
 * **Pull request** in English, in the description you can add details in English or Spanish.
-* When converting **.svg** it is first converted to **.png** in a temporary folder and then from **.png** to icon. The priority would be **.svg** "directly" to icon.
   
 ## Config
 `Config.ini` file stores information about the language, theme color, icon format and whether or not the Topmost option is enabled.
@@ -108,27 +107,14 @@ Drop Icons is based on [Iconizer](https://github.com/willnode/Iconizer) under [M
 
 * Icons are part of [Teenyicons](https://github.com/teenyicons/teenyicons) under [MIT License](https://github.com/teenyicons/teenyicons/blob/master/LICENSE).
 
-* [SharpVectors](https://github.com/ElinamLLC/SharpVectors/) under [BSD 3-Clause](https://github.com/ElinamLLC/SharpVectors/blob/master/License.md).
+* [SVG](https://github.com/svg-net/SVG) under [MS-PL license](https://github.com/svg-net/SVG/blob/master/license.txt).
+<br><sub>This package includes five dependencies, read more details in this [file](/src/DropIcons/Docs/SVG%20%2B.txt).</sup>
 
 * [WinVersion](https://github.com/shaovoon/win_version_detection) detection under [MIT License](https://github.com/shaovoon/win_version_detection/blob/main/LICENSE).
 
 *You can find all licenses [here](/src/DropIcons/Docs).*
 
 ## What's new?
-`Version 1.0.0` was built on Windows Forms. Drop Icons will no longer be developed using that technology, however you can still find and/or download the latest official version here:
-<br>
-🏷️ [winforms-v1-final](https://github.com/genesistoxical/drop-icons/tree/winforms-v1-final)
-
-<br>
-
-`Version 2.0.0` is developed with Windows Presentation Foundation (WPF) to improve the interface and include adaptive rounded corners, depending on the OS version.
-
-In this second release the **About** window has been improved, the **Config.ini** file has been modified to use only theme color HEX and not RGB, also the color picker (for theme) has been replaced for a much more modern one.
-
-Due to this last change, **Colors.dat** was removed since there is no button to save the custom ones, instead there is a color palette.
-
-<br>
-
 `Version 2.1.1` allows you to convert three more formats; **.jfif .gif** and **.svg**, for the latter it was necessary to add compatibility [📍Can you add support to SVG file?](https://github.com/genesistoxical/drop-icons/issues/2). There are now size options for icons: **Multiple** and **256 px** [📍Icon Default 256x256](https://github.com/genesistoxical/drop-icons/discussions/1).
 
 In addition to other small improvements, a new page was implemented in the **About** window and a folder named **Libs** was added in the binaries for better organization of dll(s).
@@ -139,10 +125,16 @@ In addition to other small improvements, a new page was implemented in the **Abo
 
 Updated an issue with an attribution link and removed an unused control. As well as other small changes in code variables.
 
+<br>
+
+`Version 3.0.0` now has accurate vector conversion. Previously, empty margins weren't detected, resulting in an icon with scaled dimensions: [📍Image cropped](https://github.com/genesistoxical/drop-icons/issues/4).
+
+The loading spinner is displayed when one or more images larger than 2MB are added, preventing the interface from looking frozen.
+
 ## License
 **MIT License**
 
-Copyright (c) 2022 - 2023 Génesis Toxical ([read here](LICENSE)).
+Copyright (c) 2022 - 2025 Génesis Toxical ([read here](LICENSE)).
 
 <br>
 

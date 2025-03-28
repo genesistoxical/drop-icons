@@ -6,7 +6,7 @@
         xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:properties="clr-namespace:DropIcons.Properties"
         mc:Ignorable="d"
-        Title="Drop Icons" FontFamily="{DynamicResource NotoMusic}" FontSize="11" TextOptions.TextRenderingMode="ClearType" TextOptions.TextFormattingMode="Display" SizeToContent="WidthAndHeight" Loaded="Window_Loaded" AllowDrop="True" Drop="Window_Drop" Activated="Window_Activated" ResizeMode="NoResize" WindowStyle="None" MouseDown="Window_MouseDown" Height="263" Width="249" MouseRightButtonUp="Window_MouseRightButtonUp" Foreground="#FF131313" Background="{x:Null}" WindowStartupLocation="CenterScreen" UseLayoutRounding="True" AllowsTransparency="True" Icon="/Resources/Icon.ico">
+        Title="Drop Icons" FontFamily="{DynamicResource NotoMusic}" FontSize="11" TextOptions.TextRenderingMode="ClearType" TextOptions.TextFormattingMode="Display" SizeToContent="WidthAndHeight" Loaded="Window_Loaded" AllowDrop="True" Drop="Window_Drop" Activated="Window_Activated" ResizeMode="NoResize" WindowStyle="None" MouseDown="Window_MouseDown" Height="263" Width="249" MouseRightButtonUp="Window_MouseRightButtonUp" Foreground="#FF131313" Background="{x:Null}" WindowStartupLocation="CenterScreen" UseLayoutRounding="True" AllowsTransparency="True" Icon="/Resources/Icon.ico" Closing="Window_Closing">
     <Grid x:Name="Grid" Height="263" VerticalAlignment="Center" Width="249">
         <Border x:Name="Backg" Grid.Row="0" CornerRadius="0,0,8,8" BorderBrush="#FFE3E3E3" Background="White" Margin="0,5,0,0"/>
         <Border x:Name="Border" BorderThickness="1,0,1,1" Grid.Row="0" CornerRadius="0,0,7,7" BorderBrush="#FFE3E3E3" Margin="0,5,0,0"/>

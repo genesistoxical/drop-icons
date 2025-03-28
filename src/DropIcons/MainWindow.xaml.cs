@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
-using SharpVectors.Converters;
-using SharpVectors.Renderers.Wpf;
 
 namespace DropIcons
 {
@@ -18,9 +16,8 @@ namespace DropIcons
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<BitmapData> bitmaps = new List<BitmapData>();
-        private readonly string tmp = Path.GetTempPath() + "dp-output\\";
-        private bool svgdelete = false;
+        public List<BitmapData> bitmaps;
+        private readonly string tmp;
 
         // This trick is used for invalidating folder caches...
         private bool triggerInvalidating = false;
@@ -28,6 +25,11 @@ namespace DropIcons
         public MainWindow()
         {
             InitializeComponent();
+
+            bitmaps = new List<BitmapData>();
+            // Crear carpeta temporal para los PNG's convertidos de SVG's
+            tmp = Path.GetTempPath() + "dp-output\\";
+            _ = Directory.CreateDirectory(tmp);
         }
 
         private bool CheckIfExist(string path)
@@ -58,28 +60,14 @@ namespace DropIcons
 
         private void AddConvertedSVG(string path)
         {
-            // Rasterizar SVG (a PNG) y guardarlos en una carpeta temporal
-            svgdelete = true;
+            // Rasterizar SVG a PNG y guardarlos en una carpeta temporal
+            string name = Path.GetFileNameWithoutExtension(path) + ".png";
+            Svg.SvgDocument svg = Svg.SvgDocument.Open(path);
 
-            WpfDrawingSettings settings = new WpfDrawingSettings
+            using (Bitmap bitmap = svg.Draw())
             {
-                IncludeRuntime = true,
-                TextAsGeometry = false
-            };
-
-            using (ImageSvgConverter converter = new ImageSvgConverter(settings)
-            {
-                EncoderType = ImageEncoderType.PngBitmap
-            })
-            {
-                string name = Path.GetFileNameWithoutExtension(path) + ".png";
-                converter.Convert(path, tmp + name);
-
-                // Agregar los PNG de la carpeta temporal, conservando la ruta
-                // original de los SVG
+                bitmap.Save(tmp + name, ImageFormat.Png);
                 AddImage(Image.FromFile(tmp + name), path);
-
-                converter.Dispose();
             }
         }
 
@@ -126,13 +114,6 @@ namespace DropIcons
             }
 
             NoImages.Content = Properties.Resources.AddImages;
-
-            // Si la conversión fue SVG a ICO, borrar carpeta temporal de PNG's
-            if (svgdelete)
-            {
-                Directory.Delete(tmp, true);
-                svgdelete = false;
-            }
         }
 
         private void SaveIcons(string folder = default)
@@ -249,34 +230,66 @@ namespace DropIcons
             }
         }
 
-        private void Window_Drop(object sender, DragEventArgs e)
+        private async void Window_Drop(object sender, DragEventArgs e)
         {
+            // Agregar imágenes arrastrando y soltando
+            int totalSize = 0;
+
             if (e.Data.GetDataPresent(DataFormats.FileDrop) && CheckIfCompatible((string[])e.Data.GetData(DataFormats.FileDrop)))
             {
                 foreach (string path in (string[])e.Data.GetData(DataFormats.FileDrop))
                 {
+                    // Obtener el peso de cada imagen y sumar el total de todas.
+                    long imgSize = new FileInfo(path).Length;
+                    totalSize += (int)imgSize;
+                   
                     if (CheckIfExist(path)) { }
                     else if (CheckIfImage(path))
                     {
                         string ext = Path.GetExtension(path);
 
-                        if (ext == ".svg")
+                        switch (ext)
                         {
-                            AddConvertedSVG(path); // Agregar SVG convertido a PNG
-                        }
-                        else
-                        {
-                            AddImage(Image.FromFile(path), path);
+                            case ".svg":
+                                // Mostrar icono de cargando ya que se deben de
+                                // convertir a PNG y esto tardará tiempo.
+                                if (Loading.Visibility == Visibility.Hidden)
+                                {
+                                    Loading.Visibility = Visibility.Visible;
+                                }
+                                await Task.Delay(1);
+                                AddConvertedSVG(path); // Agregar SVG convertido a PNG.
+                                break;
+                            default:
+                                // Si el peso total de la o las imágenes es mayor
+                                //  a 2MB, mostrar icono de cargando.
+                                if (totalSize > 2097152)
+                                {
+                                    if (Loading.Visibility == Visibility.Hidden)
+                                    {
+                                        Loading.Visibility = Visibility.Visible;
+                                    }
+                                    await Task.Delay(1);
+                                }
+                                AddImage(Image.FromFile(path), path);
+                                break;
                         }
                     }
                 }
 
                 PreviewCount();
+                Console.WriteLine("Total size of all images (bytes): " + totalSize.ToString());
             }
             else
             {
                 e.Effects = DragDropEffects.None;
                 Console.WriteLine("No compatible");
+            }
+
+            // Ocultar icono de cargando si se utilizó.
+            if (Loading.Visibility == Visibility.Visible)
+            {
+                Loading.Visibility = Visibility.Hidden;
             }
         }
 
@@ -291,6 +304,7 @@ namespace DropIcons
 
         private async void Convert_Click(object sender, RoutedEventArgs e)
         {
+            // Convertir imágenes a icono:
             if (!bitmaps.Any())
             {
                 return;
@@ -354,9 +368,11 @@ namespace DropIcons
                 NoImages.Cursor = Cursors.Arrow;
         }
 
-        private void AddImages_MouseDown(object sender, MouseButtonEventArgs e)
+        private async void AddImages_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            // Label para agregar imágenes si no funciona el Drag and Drop
+            // Agregar imágenes desde dialogo si no funciona el Drag and Drop
+            int totalSize = 0;
+
             if (NoImages.Content.ToString() == Properties.Resources.AddImages)
             {
                 Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog
@@ -371,23 +387,52 @@ namespace DropIcons
                 {
                     foreach (string path in dlg.FileNames)
                     {
+                        // Obtener el peso de cada imagen y sumar el total de todas.
+                        long imgSize = new FileInfo(path).Length;
+                        totalSize += (int)imgSize;
+
                         if (CheckIfImage(path))
                         {
                             string ext = Path.GetExtension(path);
 
-                            if (ext == ".svg")
+                            switch (ext)
                             {
-                                AddConvertedSVG(path);
-                            }
-                            else
-                            {
-                                AddImage(Image.FromFile(path), path);
+                                case ".svg":
+                                    // Mostrar icono de cargando ya que se deben de
+                                    // convertir a PNG y esto tardará tiempo.
+                                    if (Loading.Visibility == Visibility.Hidden)
+                                    {
+                                        Loading.Visibility = Visibility.Visible;
+                                    }
+                                    await Task.Delay(1);
+                                    AddConvertedSVG(path); // Agregar SVG convertido a PNG.
+                                    break;
+                                default:
+                                    // Si el peso total de la o las imágenes es mayor
+                                    //  a 2MB, mostrar icono de cargando.
+                                    if (totalSize > 2097152)
+                                    {
+                                        if (Loading.Visibility == Visibility.Hidden)
+                                        {
+                                            Loading.Visibility = Visibility.Visible;
+                                        }
+                                        await Task.Delay(1);
+                                    }
+                                    AddImage(Image.FromFile(path), path);
+                                    break;
                             }
                         }
                     }
 
                     PreviewCount();
+                    Console.WriteLine("Total size of all images (bytes): " + totalSize.ToString());
                 }
+            }
+
+            // Ocultar icono de cargando si se utilizó.
+            if (Loading.Visibility == Visibility.Visible)
+            {
+                Loading.Visibility = Visibility.Hidden;
             }
         }
 
@@ -411,6 +456,17 @@ namespace DropIcons
             else
             {
                 MenuTopmost.Header = Properties.Resources.EnableTopmost;
+            }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            RemoveAll();
+
+            // Si la conversión fue SVG a ICO, borrar carpeta temporal de PNG's
+            if (Directory.Exists(tmp))
+            {
+                Directory.Delete(tmp, true);
             }
         }
     }

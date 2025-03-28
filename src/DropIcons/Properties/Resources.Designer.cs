@@ -250,7 +250,7 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Utility to convert images to icons (.ico) - v2.1.2.
+        ///   Busca una cadena traducida similar a Utility to convert images to icons (.ico) - v3.0.0.
         /// </summary>
         public static string UtilityToConvertImagesToIcons {
             get {
