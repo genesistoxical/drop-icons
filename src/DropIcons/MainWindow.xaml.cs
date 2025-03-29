@@ -210,7 +210,7 @@ namespace DropIcons
 
             NoImages.Content = count;
             string no = bitmaps.Count.ToString();
-            Console.WriteLine(no + " Images to convert - " + no + " Imágenes para convertir");
+            Console.WriteLine(no + " Images to convert - " + no + " Imágenes para convertir - " + no + " Bilder zu konvertieren");
         }
 
         // Events: ↓ ↓ ↓
@@ -337,7 +337,7 @@ namespace DropIcons
                         Loading.Visibility = Visibility.Visible;
                         await Task.Delay(1);
                         SaveIcons(result);
-                        Console.WriteLine("Icons saved in " + result + " - Iconos guardados en " + result);
+                        Console.WriteLine("Icons saved in " + result + " - Iconos guardados en " + result + " - Symbole gespeichert unter " + result);
                         RemoveAll();
                         Loading.Visibility = Visibility.Hidden;
                     }
@@ -348,7 +348,7 @@ namespace DropIcons
         private void Reload_Click(object sender, RoutedEventArgs e)
         {
             RemoveAll();
-            Console.WriteLine("Images removed - Imágenes eliminadas");
+            Console.WriteLine("Images removed - Imágenes eliminadas - Bilder entfernt");
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
