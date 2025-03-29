@@ -205,6 +205,15 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Language: German.
+        /// </summary>
+        public static string LanguageGerman {
+            get {
+                return ResourceManager.GetString("LanguageGerman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Multiple.
         /// </summary>
         public static string Multiple {
