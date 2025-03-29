@@ -33,7 +33,7 @@ namespace DropIcons
             iniPath = isIntalled ? appdata + "\\Config.ini" : "Config.ini";
             iniLines = File.ReadAllLines(iniPath);
 
-            Console.WriteLine("Drop Icons is installed? " + isIntalled + " - ¿Drop Icons está instalado? " + isIntalled);
+            Console.WriteLine("Drop Icons is installed? " + isIntalled + " - ¿Drop Icons está instalado? " + isIntalled + " - Drop Icons ist installiert? " + isIntalled);
         }
 
         #region Language
@@ -56,9 +56,15 @@ namespace DropIcons
                     currentLan = "es";
                     selecLan = "es";
                     break;
+                    
+                case "Language = de":
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de-DE");
+                    currentLan = "de";
+                    selecLan = "de";
+                    break;
             }
 
-            Console.WriteLine("Current language: " + currentLan + " - Idioma actual: " + currentLan);
+            Console.WriteLine("Current language: " + currentLan + " - Idioma actual: " + currentLan + " - Aktuelle Sprache: " + currentLan);
         }
 
         internal static void CheckLanguage()
@@ -70,21 +76,28 @@ namespace DropIcons
                 switch (selecLan)
                 {
                     case "en":
-                        iniLines[1] = iniLines[1].Replace("es", "en");
+                        iniLines[1] = iniLines[1].Replace("es", "en", "de");
                         File.WriteAllLines(iniPath, iniLines);
                         Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("");
                         currentLan = "en";
                         break;
 
                     case "es":
-                        iniLines[1] = iniLines[1].Replace("en", "es");
+                        iniLines[1] = iniLines[1].Replace("en", "es", "de");
                         File.WriteAllLines(iniPath, iniLines);
                         Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("es-419");
                         currentLan = "es";
                         break;
+                        
+                    case "de":
+                        iniLines[1] = iniLines[1].Replace("en", "es", "de");
+                        File.WriteAllLines(iniPath, iniLines);
+                        Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de-DE");
+                        currentLan = "de";
+                        break;
                 }
 
-                Console.WriteLine("Selected language: " + selecLan + " - Idioma seleccionado: " + selecLan);
+                Console.WriteLine("Selected language: " + selecLan + " - Idioma seleccionado: " + selecLan + " - Gewählte Sprache: " + selecLan);
                 restart = true;
             }
         }
@@ -208,7 +221,7 @@ namespace DropIcons
                     break;
             }
 
-            Console.WriteLine("Format size: " + format + " - Formato de tamaño: " + format);
+            Console.WriteLine("Format size: " + format + " - Formato de tamaño: " + format + " - Formatgröße: " + format);
         }
         #endregion
     }
