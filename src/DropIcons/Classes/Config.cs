@@ -50,13 +50,11 @@ namespace DropIcons
                     currentLan = "en";
                     selecLan = "en";
                     break;
-
                 case "Language = es":
                     Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("es-419");
                     currentLan = "es";
                     selecLan = "es";
                     break;
-                    
                 case "Language = de":
                     Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de-DE");
                     currentLan = "de";
@@ -71,35 +69,36 @@ namespace DropIcons
         {
             // Si el idioma seleccionado no es el mismo que el actual,
             // cambiarlo y modificar el archivo .ini
-            if (selecLan == currentLan == false)
+            if (selecLan != currentLan)
             {
                 switch (selecLan)
                 {
                     case "en":
-                        iniLines[1] = iniLines[1].Replace("es", "en", "de");
+                        iniLines[1] = iniLines[1].Replace(currentLan, "en");
                         File.WriteAllLines(iniPath, iniLines);
                         Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("");
                         currentLan = "en";
                         break;
-
                     case "es":
-                        iniLines[1] = iniLines[1].Replace("en", "es", "de");
+                        iniLines[1] = iniLines[1].Replace(currentLan, "es");
                         File.WriteAllLines(iniPath, iniLines);
                         Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("es-419");
                         currentLan = "es";
                         break;
-                        
                     case "de":
-                        iniLines[1] = iniLines[1].Replace("en", "es", "de");
+                        iniLines[1] = iniLines[1].Replace(currentLan, "de");
                         File.WriteAllLines(iniPath, iniLines);
                         Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de-DE");
                         currentLan = "de";
                         break;
                 }
 
-                Console.WriteLine("Selected language: " + selecLan + " - Idioma seleccionado: " + selecLan + " - Gewählte Sprache: " + selecLan);
+                Console.WriteLine("Selected language: " + selecLan + " - Idioma seleccionado: " + selecLan);
                 restart = true;
             }
+
+            Console.WriteLine("Selected language: " + selecLan + " - Idioma seleccionado: " + selecLan + " - Gewählte Sprache: " + selecLan);
+            restart = true;
         }
         #endregion
 

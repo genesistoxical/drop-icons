@@ -116,6 +116,7 @@
   </resheader>
   <data name="AddImages" xml:space="preserve">
     <value>Add Images</value>
+    <comment>Translations can be just "Add"</comment>
   </data>
   <data name="Images" xml:space="preserve">
     <value>Images</value>
@@ -152,12 +153,15 @@
   </data>
   <data name="onvert" xml:space="preserve">
     <value>onvert</value>
+    <comment>"Convert" without the first letter</comment>
   </data>
   <data name="pply" xml:space="preserve">
     <value>pply</value>
+    <comment>"Apply" without the first letter</comment>
   </data>
   <data name="ancel" xml:space="preserve">
     <value>ancel</value>
+    <comment>"Cancel" without the first letter</comment>
   </data>
   <data name="AboutTitle" xml:space="preserve">
     <value>About</value>
@@ -179,5 +183,23 @@
   </data>
   <data name="Multiple" xml:space="preserve">
     <value>Multiple</value>
+  </data>
+  <data name="LanguageGerman" xml:space="preserve">
+    <value>Language: Deutsch</value>
+  </data>
+  <data name="C_onvert" xml:space="preserve">
+    <value>C</value>
+    <comment>First letter of "Convert"</comment>
+  </data>
+  <data name="C_ancel" xml:space="preserve">
+    <value>C</value>
+    <comment>First letter of "Cancel"</comment>
+  </data>
+  <data name="A_pply" xml:space="preserve">
+    <value>A</value>
+    <comment>First letter of "Apply"</comment>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Color</value>
   </data>
 </root>

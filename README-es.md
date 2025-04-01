@@ -8,7 +8,7 @@
  <a href="https://github.com/genesistoxical/drop-icons/releases/latest"><img src="https://img.shields.io/github/v/release/genesistoxical/drop-icons.svg?color=9280FF&label=Release&style=flat-square&labelColor=343B45"/></a>
  <a href="#"><img alt="NET" src="https://img.shields.io/badge/.NET_Framework-4.8-9280FF?style=flat-square&labelColor=343B45"/></a> 
  <a href="/installer%20src"><img alt="Installer" src="https://img.shields.io/badge/Installer-ISS-9280FF?style=flat-square&labelColor=343B45"/></a>
- <a href="#"><img alt="Languages" src="https://img.shields.io/badge/Idiomas-2-9280FF?style=flat-square&labelColor=343B45"/></a>
+ <a href="#"><img alt="Languages" src="https://img.shields.io/badge/Idiomas-3-9280FF?style=flat-square&labelColor=343B45"/></a>
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@
 ## Características
 * Interfaz limpia e intuitiva.
 * Convierte rápidamente muchas imágenes en iconos a la vez, con la función de arrastrar y soltar.
-* Cambia entre el idioma Inglés y Español.
+* Cambia entre el idioma Inglés, Español y Alemán.
 * Compatibilidad con imágenes .png .jpg .jpeg .jfif .bmp .gif y .svg
 * Personaliza el color del tema.
 * Número de las imágenes a convertir, restando tres que se muestran como vista previa.
@@ -45,7 +45,7 @@ Dando click en el botón superior de Info, aparecerá una nueva ventana en la qu
 
 - **Cambiar el tema:** Haz clic sobre `Cambiar Tema` para abrir el selector de color y elegir uno personalizado, cuando lo tengas da clic en Aplicar. Para regresar al color por defecto repite los pasos anteriores y presiona el botón morado debajo del selector de tono, finalmente haz clic en Aplicar.
 
-- **Cambiar el idioma:** En la sección inferior **Idioma**, haz clic en el icono de las flechitas para cambiar entre English o Español, por último da clic en el botón de regresar para aplicar y ver los cambios.
+- **Cambiar el idioma:** En la sección inferior **Idioma**, haz clic en el icono de las flechitas para cambiar entre English, Español o Deutsch. Por último da clic en el botón de regresar para aplicar y ver los cambios.
  
 - **Formato:** Al hacer clic en `Formato` se desplegará un menú con dos opciones para elegir los tamaños que serán incluidos dentro del icono: **Múltiple** genera un icono de alta calidad que incluye todos los tamaños necesarios como 16, 32, 48, 64, 128 y 256 pixeles, aunque sus dimensiones mostrarán solo 16px. La ultima opción es **256 px** el cual genera un icono con un solo tamaño pero luce pixelado en la vista de detalles.
      >Nota: Si el switch **Generar icono mini** está activado, se creará un icono pequeño independientemente de su formato.
@@ -115,21 +115,17 @@ Drop Icons está basado en [Iconizer](https://github.com/willnode/Iconizer) bajo
 *Puedes encontrar todas las licencias [aquí](/src/DropIcons/Docs).*
 
 ## ¿Qué es lo nuevo?
-`Versión 2.1.1` permite convertir tres formatos más; **.jfif .gif** y **.svg**, para este último fue necesario agregar compatibilidad [📍Can you add support to SVG file?](https://github.com/genesistoxical/drop-icons/issues/2). Ahora hay opciones de tamaño para los iconos: **Múltiple** y **256 px** [📍Icon Default 256x256](https://github.com/genesistoxical/drop-icons/discussions/1).
-
-Además de otras pequeñas mejoras, se implementó una nueva página en la ventana **Acerca de** y se agregó una carpeta con el nombre **Libs** en los binarios para una mejor organización de dll(s).
-
-<br>
-
-`Versión 2.1.2` incluye actualizaciones menores en la ventana **Acerca de**: la opción para elegir los tamaños que serán incluidos dentro del icono se reenombró a **Formato** en vez de **Icono**. Esto para evitar confusiones.
-
-Se actualizó un problema con un enlace de atribución y se eliminó un control que no era utilizado. Así como otros pequeños cambios en las variables del código.
-
-<br>
-
 `Versión 3.0.0` ahora tiene una conversión de vectores precisa. Anteriormente los márgenes vacíos no eran detectados, lo que daba como resultado un icono con dimensiones escaladas: [📍Image cropped](https://github.com/genesistoxical/drop-icons/issues/4).
 
 El circulo de cargando aparece cuando se agrega una o varias imágenes con un peso mayor a 2MB, evitando que la interfaz parezca congelada.
+
+<br>
+
+`Versión 3.1.0` incluye un idioma más: [📍German translation](https://github.com/genesistoxical/drop-icons/pull/6) tanto en la aplicación como en el instalador. Para evitar problemas con la interfaz, se han deshabilitado las actualizaciones para el paquete **HandyControls**.
+
+<br>
+
+>✨ Un agradecimiento especial a **uDEV2019**, quien agregó la traducción a Alemán a la app.
 
 ## Licencia
 **MIT License**

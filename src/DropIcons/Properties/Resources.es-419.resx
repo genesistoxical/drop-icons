@@ -183,4 +183,19 @@
   <data name="Multiple" xml:space="preserve">
     <value>Múltiple</value>
   </data>
+  <data name="LanguageGerman" xml:space="preserve">
+    <value>Idioma: Deutsch</value>
+  </data>
+  <data name="C_onvert" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="C_ancel" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="A_pply" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
 </root>

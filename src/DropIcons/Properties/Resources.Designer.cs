@@ -61,6 +61,15 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a A.
+        /// </summary>
+        public static string A_pply {
+            get {
+                return ResourceManager.GetString("A_pply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a About:.
         /// </summary>
         public static string About {
@@ -106,6 +115,24 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a C.
+        /// </summary>
+        public static string C_ancel {
+            get {
+                return ResourceManager.GetString("C_ancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a C.
+        /// </summary>
+        public static string C_onvert {
+            get {
+                return ResourceManager.GetString("C_onvert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Change Theme.
         /// </summary>
         public static string ChangeTheme {
@@ -120,6 +147,15 @@ namespace DropIcons.Properties {
         public static string ChooseSameFolder {
             get {
                 return ResourceManager.GetString("ChooseSameFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Color.
+        /// </summary>
+        public static string Color {
+            get {
+                return ResourceManager.GetString("Color", resourceCulture);
             }
         }
         
@@ -205,7 +241,7 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Language: German.
+        ///   Busca una cadena traducida similar a Language: Deutsch.
         /// </summary>
         public static string LanguageGerman {
             get {

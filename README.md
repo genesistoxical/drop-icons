@@ -8,7 +8,7 @@
  <a href="https://github.com/genesistoxical/drop-icons/releases/latest"><img src="https://img.shields.io/github/v/release/genesistoxical/drop-icons.svg?color=9280FF&label=Release&style=flat-square&labelColor=343B45"/></a>
  <a href="#"><img alt="NET" src="https://img.shields.io/badge/.NET_Framework-4.8-9280FF?style=flat-square&labelColor=343B45"/></a> 
  <a href="/installer%20src"><img alt="Installer" src="https://img.shields.io/badge/Installer-ISS-9280FF?style=flat-square&labelColor=343B45"/></a>
- <a href="#"><img alt="Languages" src="https://img.shields.io/badge/Languages-2-9280FF?style=flat-square&labelColor=343B45"/></a>
+ <a href="#"><img alt="Languages" src="https://img.shields.io/badge/Languages-3-9280FF?style=flat-square&labelColor=343B45"/></a>
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@
 ## Features
 * Clean and intuitive interface.
 * Quickly convert multiple images to icons at once, with Drag and Drop feature.
-* Switch between English and Spanish language.
+* Switch between English, Spanish and German language.
 * Support for .png .jpg .jpeg .jfif .bmp .gif and .svg images.
 * Customize theme color.
 * Number of images to convert, subtracting three that are displayed as preview.
@@ -45,7 +45,7 @@ By clicking on the upper Info button, a new window will appear in which you can:
 
 - **Change theme:** Click on `Change Theme` to open the color picker and choose a custom one, then click Apply. To return to default values, repeat the previous steps and press the purple button below the tone selector. Finally click Apply.
 
-- **Change language:** In the **Language** section below, click on the little arrows icon to change between English or Español, finally click on the return button to apply and see changes.
+- **Change language:** In the **Language** section below, click on the little arrows icon to change between English, Español or Deutsch. Finally click on the return button to apply and see changes.
 
 - **Format:** Clicking on `Format` will display a menu with two options to choose the sizes that will be included within the icon: **Multiple** generates a high quality icon that include all necessary sizes such as 16, 32, 48, 64, 128 and 256 pixels, although the output dimensions will be 16px. The last option is **256 px** which generates an icon with a single size but look pixelated in the details view.
      >Note: If the **Generate tiny icon** switch is on, a small icon will be created regardless of its format.
@@ -115,21 +115,17 @@ Drop Icons is based on [Iconizer](https://github.com/willnode/Iconizer) under [M
 *You can find all licenses [here](/src/DropIcons/Docs).*
 
 ## What's new?
-`Version 2.1.1` allows you to convert three more formats; **.jfif .gif** and **.svg**, for the latter it was necessary to add compatibility [📍Can you add support to SVG file?](https://github.com/genesistoxical/drop-icons/issues/2). There are now size options for icons: **Multiple** and **256 px** [📍Icon Default 256x256](https://github.com/genesistoxical/drop-icons/discussions/1).
-
-In addition to other small improvements, a new page was implemented in the **About** window and a folder named **Libs** was added in the binaries for better organization of dll(s).
-
-<br>
-
-`Version 2.1.2` includes minor updates to the **About** window: the option to choose the sizes that will be included within the icon has been renamed to **Format** instead of **Icons**. This to avoid confusion.
-
-Updated an issue with an attribution link and removed an unused control. As well as other small changes in code variables.
-
-<br>
-
 `Version 3.0.0` now has accurate vector conversion. Previously, empty margins weren't detected, resulting in an icon with scaled dimensions: [📍Image cropped](https://github.com/genesistoxical/drop-icons/issues/4).
 
 The loading spinner is displayed when one or more images larger than 2MB are added, preventing the interface from looking frozen.
+
+<br>
+
+`Version 3.1.0` includes one more language: [📍German translation](https://github.com/genesistoxical/drop-icons/pull/6) for both the application and installer. To avoid interface issues, updates for **HandyControls** package have been disabled.
+
+<br>
+
+>✨ Special thanks to **uDEV2019**, who added German translation to the app.
 
 ## License
 **MIT License**

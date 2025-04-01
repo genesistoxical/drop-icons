@@ -53,7 +53,7 @@
                 <ImageBrush ImageSource="/Resources/edit-small.png"/>
             </Rectangle.OpacityMask>
         </Rectangle>
-        <Button x:Name="ChangeTheme" Content="{x:Static properties:Resources.ChangeTheme}" HorizontalAlignment="Left" Margin="430,312,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="20" Width="79" BorderThickness="0,0,0,0" Foreground="#FF8E8E8E" FontSize="11" Background="{x:Null}" HorizontalContentAlignment="Left" Click="ChangeTheme_Click" Cursor="Hand"/>
+        <Button x:Name="ChangeTheme" Content="{x:Static properties:Resources.ChangeTheme}" HorizontalAlignment="Left" Margin="430,312,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="20" BorderThickness="0,0,0,0" Foreground="#FF8E8E8E" FontSize="11" Background="{x:Null}" HorizontalContentAlignment="Left" Click="ChangeTheme_Click" Cursor="Hand"/>
         <Menu DockPanel.Dock="Top" Margin="364,316,317,23"/>
         <Button x:Name="Icons" Content="{x:Static properties:Resources.Icons}" HorizontalAlignment="Left" Margin="364,312,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="20" Width="45" BorderThickness="0,0,0,0" Foreground="#FF8E8E8E" FontSize="11" Background="{x:Null}" HorizontalContentAlignment="Right" Click="Icons_Click" Cursor="Hand">
             <Button.ContextMenu>

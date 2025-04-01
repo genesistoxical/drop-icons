@@ -58,9 +58,17 @@ namespace DropIcons
         {
             // Elegir el idioma, bordes redondeados y TopMost
             // dependiendo del archivo Config.ini
-            if (Config.currentLan == "es")
+            switch (Config.currentLan)
             {
-                Lang.Content = Properties.Resources.LanguageEspañol;
+                case "es":
+                    Lang.Content = Properties.Resources.LanguageEspañol;
+                    break;
+                case "en":
+                    Lang.Content = Properties.Resources.LanguageEnglish;
+                    break;
+                case "de":
+                    Lang.Content = Properties.Resources.LanguageGerman;
+                    break;
             }
             Config.RoundCorners(Backg, Border, Decoration);
             Config.Topmost(this);
@@ -208,18 +216,22 @@ namespace DropIcons
 
         private void Caret_Click(object sender, RoutedEventArgs e)
         {
+            // Cambiar y/o mostrar los tres lenguajes al cliquear flechitas.
             string LangText = Lang.Content.ToString();
 
             switch (LangText)
             {
-                case string _ when LangText.Contains("Español"):
-                    Lang.Content = Properties.Resources.LanguageEnglish;
-                    Config.selecLan = "en";
-                    break;
-
                 case string _ when LangText.Contains("English"):
                     Lang.Content = Properties.Resources.LanguageEspañol;
                     Config.selecLan = "es";
+                    break;
+                case string _ when LangText.Contains("Español"):
+                    Lang.Content = Properties.Resources.LanguageGerman;
+                    Config.selecLan = "de";
+                    break;
+                case string _ when LangText.Contains("Deutsch"):
+                    Lang.Content = Properties.Resources.LanguageEnglish;
+                    Config.selecLan = "en";
                     break;
             }
         }

@@ -3,7 +3,7 @@ Drop Icons is an open source app to convert images to icons (.ico) for Windows, 
 ## Features
 * Clean and intuitive interface.
 * Quickly convert multiple images to icons at once, with Drag and Drop feature.
-* Switch between English and Spanish language.
+* Switch between English, Spanish and German language.
 * Support for .png .jpg .jpeg .jfif .bmp .gif and .svg images.
 * Customize theme color.
 * Number of images to convert, subtracting three that are displayed as preview.
@@ -30,7 +30,7 @@ By clicking on the upper Info button, a new window will appear in which you can:
 
 - **Change theme:** Click on `Change Theme` to open the color picker and choose a custom one, then click Apply. To return to default values, repeat the previous steps and press the purple button below the tone selector. Finally click Apply.
 
-- **Change language:** In the **Language** section below, click on the little arrows icon to change between English or Español, finally click on the return button to apply and see changes.
+- **Change language:** In the **Language** section below, click on the little arrows icon to change between English, Español or Deutsch. Finally click on the return button to apply and see changes.
 
 - **Format:** Clicking on `Format` will display a menu with two options to choose the sizes that will be included within the icon: **Multiple** generates a high quality icon that include all necessary sizes such as 16, 32, 48, 64, 128 and 256 pixels, although the output dimensions will be 16px. The last option is **256 px** which generates an icon with a single size but look pixelated in the details view.
      >Note: If the **Generate tiny icon** switch is on, a small icon will be created regardless of its format.

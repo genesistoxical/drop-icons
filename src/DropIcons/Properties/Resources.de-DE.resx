@@ -115,7 +115,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddImages" xml:space="preserve">
-    <value>Bilder hinzufügen</value>
+    <value>Hinzufügen</value>
   </data>
   <data name="Images" xml:space="preserve">
     <value>Bilder</value>
@@ -133,10 +133,10 @@
     <value>Kleines Symbol erzeugen</value>
   </data>
   <data name="LanguageEnglish" xml:space="preserve">
-    <value>Sprache: Englisch</value>
+    <value>Sprache: English</value>
   </data>
   <data name="ChangeTheme" xml:space="preserve">
-    <value>Thema ändern</value>
+    <value>Thema Ändern</value>
   </data>
   <data name="Options" xml:space="preserve">
     <value>Optionen:</value>
@@ -145,7 +145,7 @@
     <value>Über:</value>
   </data>
   <data name="LanguageEspañol" xml:space="preserve">
-    <value>Sprache: Spanisch</value>
+    <value>Sprache: Español</value>
   </data>
   <data name="LanguageGerman" xml:space="preserve">
     <value>Sprache: Deutsch</value>
@@ -154,13 +154,13 @@
     <value>Utility to convert images to icons (.ico) - v3.0.0</value>
   </data>
   <data name="onvert" xml:space="preserve">
-    <value>Konvertieren</value>
+    <value>onvertieren</value>
   </data>
   <data name="pply" xml:space="preserve">
-    <value>Übernehmen</value>
+    <value>bernehmen</value>
   </data>
   <data name="ancel" xml:space="preserve">
-    <value>Abbrechen</value>
+    <value>bbrechen</value>
   </data>
   <data name="AboutTitle" xml:space="preserve">
     <value>Über</value>
@@ -182,5 +182,17 @@
   </data>
   <data name="Multiple" xml:space="preserve">
     <value>Mehrere</value>
+  </data>
+  <data name="C_onvert" xml:space="preserve">
+    <value>K</value>
+  </data>
+  <data name="A_pply" xml:space="preserve">
+    <value>Ü</value>
+  </data>
+  <data name="C_ancel" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Farbe</value>
   </data>
 </root>

@@ -29,16 +29,16 @@
         <Image x:Name="Img1" HorizontalAlignment="Left" Height="63" Margin="21,46,0,0" VerticalAlignment="Top" Width="63" SnapsToDevicePixels="True" UseLayoutRounding="True"/>
         <Image x:Name="Img2" HorizontalAlignment="Left" Height="63" Margin="93,46,0,0" VerticalAlignment="Top" Width="63" SnapsToDevicePixels="True" UseLayoutRounding="True"/>
         <Image x:Name="Img3" HorizontalAlignment="Left" Height="63" Margin="165,46,0,0" VerticalAlignment="Top" Width="63" SnapsToDevicePixels="True" UseLayoutRounding="True"/>
-        <Label x:Name="NoImages" Content="{x:Static properties:Resources.AddImages}" HorizontalAlignment="Left" Margin="143,117,0,0" BorderThickness="0,0,0,0" Height="24" Padding="0,0,0,0" Width="82" HorizontalContentAlignment="Right" Background="{x:Null}" Foreground="#FF747474" MouseEnter="AddImages_MouseEnter" MouseLeave="AddImages_MouseLeave" MouseDown="AddImages_MouseDown" VerticalAlignment="Top"/>
+        <Label x:Name="NoImages" Content="{x:Static properties:Resources.AddImages}" HorizontalAlignment="Right" Margin="0,117,24,0" BorderThickness="0,0,0,0" Height="24" Padding="0,0,0,0" HorizontalContentAlignment="Right" Background="{x:Null}" Foreground="#FF747474" MouseEnter="AddImages_MouseEnter" MouseLeave="AddImages_MouseLeave" MouseDown="AddImages_MouseDown" VerticalAlignment="Top"/>
         <Button x:Name="Convert" Style="{StaticResource ButtonPrimary}" Margin="0,151,0,0" VerticalAlignment="Top" Width="209" Click="Convert_Click" Height="24" Padding="10,-1,10,7" BorderThickness="0,0,0,0" Foreground="White" FontSize="11">
             <TextBlock>
-                <Run FontSize="12" Text="C"/><Run Text="{x:Static properties:Resources.onvert}" FontSize="11"/>
+                <Run FontSize="12" Text="{x:Static properties:Resources.C_onvert}"/><Run Text="{x:Static properties:Resources.onvert}" FontSize="11"/>
             </TextBlock>
         </Button>
         <ToggleButton x:Name="SlideTiny" Content="" Style="{StaticResource ToggleButtonSwitch}" HorizontalAlignment="Left" Margin="19,223,0,0" VerticalAlignment="Top" Height="18" Width="27" Foreground="#FF212121"/>
         <ToggleButton x:Name="SlideFolder" Content="" Style="{StaticResource ToggleButtonSwitch}" HorizontalAlignment="Left" Margin="19,194,0,0" VerticalAlignment="Top" Height="18" Width="27" Foreground="#FF212121" IsChecked="True"/>
-        <Label Content="{x:Static properties:Resources.ChooseSameFolder}" HorizontalAlignment="Left" Margin="56,192,0,0" BorderThickness="0,0,0,0" Height="18" Padding="0,0,0,0" Width="120" HorizontalContentAlignment="Left" Background="{x:Null}" VerticalAlignment="Top" Foreground="#FF131313"/>
-        <Label Content="{x:Static properties:Resources.GenerateTinyIcon}" HorizontalAlignment="Left" Margin="56,221,0,0" BorderThickness="0,0,0,0" Height="18" Padding="0,0,0,0" Width="118" HorizontalContentAlignment="Left" Background="{x:Null}" VerticalAlignment="Top" Foreground="#FF131313"/>
+        <Label Content="{x:Static properties:Resources.ChooseSameFolder}" HorizontalAlignment="Left" Margin="56,192,0,0" BorderThickness="0,0,0,0" Height="18" Padding="0,0,0,0" HorizontalContentAlignment="Left" Background="{x:Null}" VerticalAlignment="Top" Foreground="#FF131313"/>
+        <Label Content="{x:Static properties:Resources.GenerateTinyIcon}" HorizontalAlignment="Left" Margin="56,221,0,0" BorderThickness="0,0,0,0" Height="18" Padding="0,0,0,0" HorizontalContentAlignment="Left" Background="{x:Null}" VerticalAlignment="Top" Foreground="#FF131313"/>
         <Rectangle x:Name="Loading" HorizontalAlignment="Left" Height="27" Margin="201,213,0,0" VerticalAlignment="Top" Width="28" StrokeThickness="0" Fill="LightGray" Visibility="Hidden">
             <Rectangle.OpacityMask>
                 <ImageBrush ImageSource="/Resources/Wait.png" Stretch="None"/>
