@@ -40,6 +40,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoWarn>
+    </NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -158,6 +160,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx" />
     <Resource Include="Resources\Color.png" />
     <Content Include="Docs\Noto Music\OFL.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -244,8 +247,9 @@
   <PropertyGroup>
     <PostBuildEvent>if not exist "$(TargetDir)Libs" mkdir "$(TargetDir)Libs";
 del "$(TargetDir)*.pdb" "$(TargetDir)*.xml"
-move "$(TargetDir)*.dll" "$(TargetDir)Libs"
-rename "$(TargetDir)es-419" "Es-419"
-rename "$(TargetDir)de-DE" "De-DE"</PostBuildEvent>
+move "$(TargetDir)*.dll" "$(TargetDir)Libs"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableImplicitLocalizationAnalyzers>false</EnableImplicitLocalizationAnalyzers>
   </PropertyGroup>
 </Project>

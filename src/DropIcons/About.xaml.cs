@@ -24,12 +24,13 @@ namespace DropIcons
         private void DI_info()
         {
             License.Text = File.ReadAllText(@"Docs\Drop Icons.txt");
-            Description.Content = Properties.Resources.UtilityToConvertImagesToIcons;
+            Description.Content = Properties.Resources.UtilityToConvertImagesToIcons + " - v" + Properties.Resources.Ver;
         }
 
         public About()
         {
             InitializeComponent();
+            Description.Content = Properties.Resources.UtilityToConvertImagesToIcons + " - v" + Properties.Resources.Ver;
         }
 
         private void Arrows(Label visibleArrw, Label opacityBtn)
@@ -68,6 +69,9 @@ namespace DropIcons
                     break;
                 case "de":
                     Lang.Content = Properties.Resources.LanguageGerman;
+                    break;
+                case "zh":
+                    Lang.Content = Properties.Resources.LanguageChinese;
                     break;
             }
             Config.RoundCorners(Backg, Border, Decoration);
@@ -230,6 +234,10 @@ namespace DropIcons
                     Config.selecLan = "de";
                     break;
                 case string _ when LangText.Contains("Deutsch"):
+                    Lang.Content = Properties.Resources.LanguageChinese;
+                    Config.selecLan = "zh";
+                    break;
+                case string _ when LangText.Contains("简体中文"):
                     Lang.Content = Properties.Resources.LanguageEnglish;
                     Config.selecLan = "en";
                     break;

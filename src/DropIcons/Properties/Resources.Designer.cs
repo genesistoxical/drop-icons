@@ -223,6 +223,15 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Language: 简体中文.
+        /// </summary>
+        public static string LanguageChinese {
+            get {
+                return ResourceManager.GetString("LanguageChinese", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Language: English.
         /// </summary>
         public static string LanguageEnglish {
@@ -295,11 +304,20 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Utility to convert images to icons (.ico) - v3.0.0.
+        ///   Busca una cadena traducida similar a Utility to convert images to icons (.ico).
         /// </summary>
         public static string UtilityToConvertImagesToIcons {
             get {
                 return ResourceManager.GetString("UtilityToConvertImagesToIcons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a 3.2.0.
+        /// </summary>
+        public static string Ver {
+            get {
+                return ResourceManager.GetString("Ver", resourceCulture);
             }
         }
     }

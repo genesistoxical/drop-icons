@@ -8,7 +8,7 @@
  <a href="https://github.com/genesistoxical/drop-icons/releases/latest"><img src="https://img.shields.io/github/v/release/genesistoxical/drop-icons.svg?color=9280FF&label=Release&style=flat-square&labelColor=343B45"/></a>
  <a href="#"><img alt="NET" src="https://img.shields.io/badge/.NET_Framework-4.8-9280FF?style=flat-square&labelColor=343B45"/></a> 
  <a href="/installer%20src"><img alt="Installer" src="https://img.shields.io/badge/Installer-ISS-9280FF?style=flat-square&labelColor=343B45"/></a>
- <a href="#"><img alt="Languages" src="https://img.shields.io/badge/Languages-3-9280FF?style=flat-square&labelColor=343B45"/></a>
+ <a href="#"><img alt="Languages" src="https://img.shields.io/badge/Languages-4-9280FF?style=flat-square&labelColor=343B45"/></a>
 </p>
 
 <p align="center">
@@ -125,7 +125,12 @@ The loading spinner is displayed when one or more images larger than 2MB are add
 
 <br>
 
->✨ Special thanks to **uDEV2019**, who added German translation to the app.
+`Version 3.2.0` includes another language: [📍Simplified Chinese language](https://github.com/genesistoxical/drop-icons/issues/8), for app only.
+
+<br>
+
+>✨ Special thanks to **uDEV2019**, who added German translation.
+>✨ And to **huqiu2** for adding Simplified Chinese.
 
 ## License
 **MIT License**

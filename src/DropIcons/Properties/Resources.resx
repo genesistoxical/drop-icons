@@ -149,7 +149,7 @@
     <value>Language: Español</value>
   </data>
   <data name="UtilityToConvertImagesToIcons" xml:space="preserve">
-    <value>Utility to convert images to icons (.ico) - v3.0.0</value>
+    <value>Utility to convert images to icons (.ico)</value>
   </data>
   <data name="onvert" xml:space="preserve">
     <value>onvert</value>
@@ -201,5 +201,12 @@
   </data>
   <data name="Color" xml:space="preserve">
     <value>Color</value>
+  </data>
+  <data name="LanguageChinese" xml:space="preserve">
+    <value>Language: 简体中文</value>
+  </data>
+  <data name="Ver" xml:space="preserve">
+    <value>3.2.0</value>
+    <comment>@Invariant</comment>
   </data>
 </root>

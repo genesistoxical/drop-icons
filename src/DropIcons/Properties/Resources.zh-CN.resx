@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,88 +117,95 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>Acerca de:</value>
-  </data>
   <data name="AddImages" xml:space="preserve">
-    <value>Agregar</value>
-  </data>
-  <data name="ChangeTheme" xml:space="preserve">
-    <value>Cambiar Tema</value>
-  </data>
-  <data name="ChooseSameFolder" xml:space="preserve">
-    <value>Elegir misma carpeta</value>
-  </data>
-  <data name="GenerateTinyIcon" xml:space="preserve">
-    <value>Generar icono mini</value>
-  </data>
-  <data name="Image" xml:space="preserve">
-    <value>Imagen</value>
-  </data>
-  <data name="ImageFiles" xml:space="preserve">
-    <value>Archivos de Imagen</value>
+    <value>添加图</value>
+    <comment>Translations can be just "Add"</comment>
   </data>
   <data name="Images" xml:space="preserve">
-    <value>Imágenes</value>
+    <value>图片</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>图片</value>
+  </data>
+  <data name="ImageFiles" xml:space="preserve">
+    <value>图片文件</value>
+  </data>
+  <data name="ChooseSameFolder" xml:space="preserve">
+    <value>选择相同文件夹</value>
+  </data>
+  <data name="GenerateTinyIcon" xml:space="preserve">
+    <value>生成小图标</value>
   </data>
   <data name="LanguageEnglish" xml:space="preserve">
-    <value>Idioma: English</value>
+    <value>语言: English</value>
+  </data>
+  <data name="ChangeTheme" xml:space="preserve">
+    <value>更改主题</value>
   </data>
   <data name="Options" xml:space="preserve">
-    <value>Opciones:</value>
+    <value>选项:</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>关于:</value>
   </data>
   <data name="LanguageEspañol" xml:space="preserve">
-    <value>Idioma: Español</value>
+    <value>语言: Español</value>
   </data>
   <data name="UtilityToConvertImagesToIcons" xml:space="preserve">
-    <value>Aplicación para convertir imágenes a iconos (.ico)</value>
+    <value>将图片转换为图标的工具 (.ico)</value>
   </data>
   <data name="onvert" xml:space="preserve">
-    <value>onvertir</value>
+    <value></value>
+    <comment>"Convert" without the first letter</comment>
   </data>
   <data name="pply" xml:space="preserve">
-    <value>plicar</value>
+    <value>应用</value>
+    <comment>"Apply" without the first letter</comment>
   </data>
   <data name="ancel" xml:space="preserve">
-    <value>ancelar</value>
+    <value>取消</value>
+    <comment>"Cancel" without the first letter</comment>
   </data>
   <data name="AboutTitle" xml:space="preserve">
-    <value>Acerca de</value>
+    <value>关于</value>
   </data>
   <data name="DisableTopmost" xml:space="preserve">
-    <value>Deshabilitar Topmost</value>
+    <value>禁用置顶</value>
   </data>
   <data name="EnableTopmost" xml:space="preserve">
-    <value>Habilitar Topmost</value>
+    <value>启用置顶</value>
   </data>
   <data name="Icons" xml:space="preserve">
-    <value>Formato</value>
+    <value>格式</value>
   </data>
   <data name="Next" xml:space="preserve">
-    <value>Siguiente   🢖🢖</value>
+    <value>下一步   🢖🢖</value>
   </data>
   <data name="Back" xml:space="preserve">
-    <value>🢔🢔   Regresar</value>
+    <value>🢔🢔   上一步</value>
   </data>
   <data name="Multiple" xml:space="preserve">
-    <value>Múltiple</value>
+    <value>多个</value>
   </data>
   <data name="LanguageGerman" xml:space="preserve">
-    <value>Idioma: Deutsch</value>
+    <value>语言: Deutsch</value>
   </data>
   <data name="C_onvert" xml:space="preserve">
-    <value>C</value>
+    <value>转换</value>
+    <comment>First letter of "Convert"</comment>
   </data>
   <data name="C_ancel" xml:space="preserve">
-    <value>C</value>
+    <value></value>
+    <comment>First letter of "Cancel"</comment>
   </data>
   <data name="A_pply" xml:space="preserve">
-    <value>A</value>
+    <value></value>
+    <comment>First letter of "Apply"</comment>
   </data>
   <data name="Color" xml:space="preserve">
-    <value>Color</value>
+    <value>颜色</value>
   </data>
   <data name="LanguageChinese" xml:space="preserve">
-    <value>Idioma: 简体中文</value>
+    <value>语言: 简体中文</value>
   </data>
 </root>
