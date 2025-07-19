@@ -18,7 +18,7 @@
 ## Features
 * Clean and intuitive interface.
 * Quickly convert multiple images to icons at once, with Drag and Drop feature.
-* Switch between English, Spanish and German language.
+* Translation into English, Spanish, German and Simplified Chinese.
 * Support for .png .jpg .jpeg .jfif .bmp .gif and .svg images.
 * Customize theme color.
 * Number of images to convert, subtracting three that are displayed as preview.
@@ -129,8 +129,7 @@ The loading spinner is displayed when one or more images larger than 2MB are add
 
 <br>
 
->✨ Special thanks to **uDEV2019**, who added German translation.
->✨ And to **huqiu2** for adding Simplified Chinese.
+>✨ Special thanks to **uDEV2019**, who added German translation and to **huqiu2** for adding Simplified Chinese.
 
 ## License
 **MIT License**

@@ -3,7 +3,7 @@ Drop Icons es una aplicación para convertir imágenes a iconos (.ico) para Wind
 ## Características
 * Interfaz limpia e intuitiva.
 * Convierte rápidamente muchas imágenes en iconos a la vez, con la función de arrastrar y soltar.
-* Cambia entre el idioma Inglés, Español y Alemán.
+* Traducción al Inglés, Español, Alemán y Chino Simplificado.
 * Compatibilidad con imágenes .png .jpg .jpeg .jfif .bmp .gif y .svg
 * Personaliza el color del tema.
 * Número de las imágenes a convertir, restando tres que se muestran como vista previa.

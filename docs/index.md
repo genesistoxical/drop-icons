@@ -3,7 +3,7 @@ Drop Icons is an open source app to convert images to icons (.ico) for Windows, 
 ## Features
 * Clean and intuitive interface.
 * Quickly convert multiple images to icons at once, with Drag and Drop feature.
-* Switch between English, Spanish and German language.
+* Translation into English, Spanish, German and Simplified Chinese.
 * Support for .png .jpg .jpeg .jfif .bmp .gif and .svg images.
 * Customize theme color.
 * Number of images to convert, subtracting three that are displayed as preview.

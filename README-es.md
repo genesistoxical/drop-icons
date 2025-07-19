@@ -18,7 +18,7 @@
 ## Características
 * Interfaz limpia e intuitiva.
 * Convierte rápidamente muchas imágenes en iconos a la vez, con la función de arrastrar y soltar.
-* Cambia entre el idioma Inglés, Español y Alemán.
+* Traducción al Inglés, Español, Alemán y Chino Simplificado.
 * Compatibilidad con imágenes .png .jpg .jpeg .jfif .bmp .gif y .svg
 * Personaliza el color del tema.
 * Número de las imágenes a convertir, restando tres que se muestran como vista previa.
@@ -129,8 +129,7 @@ El circulo de cargando aparece cuando se agrega una o varias imágenes con un pe
 
 <br>
 
->✨ Un agradecimiento especial a **uDEV2019**, quien agregó la traducción a Alemán.
->✨ Y a **huqiu2** por el agregar el Chino Simplificado.
+>✨ Un agradecimiento especial a **uDEV2019**, quien agregó la traducción a Alemán y a **huqiu2** por el agregar el Chino Simplificado.
 
 ## Licencia
 **MIT License**
