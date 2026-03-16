@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -75,6 +75,9 @@ namespace DropIcons
                     break;
                 case "zh":
                     Lang.Content = Properties.Resources.LanguageChinese;
+                    break;
+                case "ja":
+                    Lang.Content = Properties.Resources.LanguageJapanese;
                     break;
                 case "fr":
                     Lang.Content = Properties.Resources.LanguageFrench;
@@ -422,6 +425,12 @@ namespace DropIcons
         {
             Lang.Content = Properties.Resources.LanguageFrench;
             Config.selecLan = "fr";
+        }
+
+        private void JA_JP_Click(object sender, RoutedEventArgs e)
+        {
+            Lang.Content = Properties.Resources.LanguageJapanese;
+            Config.selecLan = "ja";
         }
         #endregion
     }

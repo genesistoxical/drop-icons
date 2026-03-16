@@ -1,4 +1,4 @@
-﻿using HandyControl.Themes;
+using HandyControl.Themes;
 using System;
 using System.Globalization;
 using System.IO;
@@ -70,6 +70,11 @@ namespace DropIcons
                     currentLan = "fr";
                     selecLan = "fr";
                     break;
+                case "Language = ja":
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ja-JP");
+                    currentLan = "ja";
+                    selecLan = "ja";
+                    break;
             }
 
             Console.WriteLine("Current language: " + currentLan + " - Idioma actual: " + currentLan + " - Aktuelle Sprache: " + currentLan);
@@ -112,6 +117,12 @@ namespace DropIcons
                         File.WriteAllLines(iniPath, iniLines);
                         Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr-FR");
                         currentLan = "fr";
+                        break;
+                    case "ja":
+                        iniLines[1] = iniLines[1].Replace(currentLan, "ja");
+                        File.WriteAllLines(iniPath, iniLines);
+                        Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ja-JP");
+                        currentLan = "ja";
                         break;
                 }
 
