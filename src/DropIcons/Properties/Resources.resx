@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -204,6 +204,9 @@
   </data>
   <data name="LanguageChinese" xml:space="preserve">
     <value>Language: 简体中文</value>
+  </data>
+  <data name="LanguageJapanese" xml:space="preserve">
+    <value>Language: 日本語</value>
   </data>
   <data name="Ver" xml:space="preserve">
     <value>3.6.1</value>
