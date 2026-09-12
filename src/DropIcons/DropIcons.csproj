@@ -151,6 +151,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.fr-FR.resx" />
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
     <EmbeddedResource Include="Properties\Resources.zh-CN.resx" />
     <Resource Include="Resources\Color.png" />
     <Content Include="Docs\Noto Music\OFL.txt">

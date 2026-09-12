@@ -33,6 +33,7 @@ UsedUserAreasWarning=no
 Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
 Name: "german"; MessagesFile: "compiler:Languages\German.isl"
+Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 
 [InstallDelete]
 Type: files; Name: "{userappdata}\Drop Icons\Colors.dat";

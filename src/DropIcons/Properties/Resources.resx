@@ -212,4 +212,7 @@
   <data name="LanguageFrench" xml:space="preserve">
     <value>Language: French</value>
   </data>
+  <data name="LanguagePortuguese" xml:space="preserve">
+    <value>Language: Português (Brasil)</value>
+  </data>
 </root>

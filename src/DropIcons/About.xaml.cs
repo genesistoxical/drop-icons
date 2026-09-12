@@ -79,6 +79,9 @@ namespace DropIcons
                 case "fr":
                     Lang.Content = Properties.Resources.LanguageFrench;
                     break;
+                case "pt":
+                    Lang.Content = Properties.Resources.LanguagePortuguese;
+                    break;
             }
             Config.RoundCorners(Backg, Border, Decoration);
             Config.Topmost(this);
@@ -422,6 +425,12 @@ namespace DropIcons
         {
             Lang.Content = Properties.Resources.LanguageFrench;
             Config.selecLan = "fr";
+        }
+
+        private void PT_BR_Click(object sender, RoutedEventArgs e)
+        {
+            Lang.Content = Properties.Resources.LanguagePortuguese;
+            Config.selecLan = "pt";
         }
         #endregion
     }

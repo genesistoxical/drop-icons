@@ -211,4 +211,7 @@
   <data name="LanguageFrench" xml:space="preserve">
     <value>语言: French</value>
   </data>
+  <data name="LanguagePortuguese" xml:space="preserve">
+    <value>语言: Português (Brasil)</value>
+  </data>
 </root>

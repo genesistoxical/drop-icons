@@ -268,6 +268,15 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Language: Português (Brasil).
+        /// </summary>
+        public static string LanguagePortuguese {
+            get {
+                return ResourceManager.GetString("LanguagePortuguese", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Busca una cadena traducida similar a Multiple.
         /// </summary>
         public static string Multiple {

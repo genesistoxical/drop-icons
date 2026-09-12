@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Microsoft ResX Schema
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of a byte array]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddImages" xml:space="preserve">
+    <value>Adicionar</value>
+    <comment>Translations can be just "Add"</comment>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Imagens</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Imagem</value>
+  </data>
+  <data name="ImageFiles" xml:space="preserve">
+    <value>Arquivos de imagem</value>
+  </data>
+  <data name="ChooseSameFolder" xml:space="preserve">
+    <value>Usar a mesma pasta</value>
+  </data>
+  <data name="GenerateTinyIcon" xml:space="preserve">
+    <value>Gerar ícone mini</value>
+  </data>
+  <data name="LanguageEnglish" xml:space="preserve">
+    <value>Idioma: English</value>
+  </data>
+  <data name="ChangeTheme" xml:space="preserve">
+    <value>Alterar tema</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Opções:</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>Sobre:</value>
+  </data>
+  <data name="LanguageEspañol" xml:space="preserve">
+    <value>Idioma: Español</value>
+  </data>
+  <data name="UtilityToConvertImagesToIcons" xml:space="preserve">
+    <value>Utilitário para converter imagens em ícones (.ico)</value>
+  </data>
+  <data name="onvert" xml:space="preserve">
+    <value>onverter</value>
+    <comment>"Convert" without the first letter</comment>
+  </data>
+  <data name="pply" xml:space="preserve">
+    <value>plicar</value>
+    <comment>"Apply" without the first letter</comment>
+  </data>
+  <data name="ancel" xml:space="preserve">
+    <value>ancelar</value>
+    <comment>"Cancel" without the first letter</comment>
+  </data>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="DisableTopmost" xml:space="preserve">
+    <value>Desativar sempre no topo</value>
+  </data>
+  <data name="EnableTopmost" xml:space="preserve">
+    <value>Ativar sempre no topo</value>
+  </data>
+  <data name="Icons" xml:space="preserve">
+    <value>Formato</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Avançar   🢖🢖</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>🢔🢔   Voltar</value>
+  </data>
+  <data name="Multiple" xml:space="preserve">
+    <value>Múltiplos</value>
+  </data>
+  <data name="LanguageGerman" xml:space="preserve">
+    <value>Idioma: Deutsch</value>
+  </data>
+  <data name="C_onvert" xml:space="preserve">
+    <value>C</value>
+    <comment>First letter of "Convert"</comment>
+  </data>
+  <data name="C_ancel" xml:space="preserve">
+    <value>C</value>
+    <comment>First letter of "Cancel"</comment>
+  </data>
+  <data name="A_pply" xml:space="preserve">
+    <value>A</value>
+    <comment>First letter of "Apply"</comment>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Cor</value>
+  </data>
+  <data name="LanguageChinese" xml:space="preserve">
+    <value>Idioma: 简体中文</value>
+  </data>
+  <data name="LanguageFrench" xml:space="preserve">
+    <value>Idioma: French</value>
+  </data>
+  <data name="LanguagePortuguese" xml:space="preserve">
+    <value>Idioma: Português (Brasil)</value>
+  </data>
+</root>
