@@ -248,5 +248,129 @@ namespace DropIcons
             Console.WriteLine("Format size: " + format + " - Formato de tamaño: " + format + " - Formatgröße: " + format);
         }
         #endregion
+        
+        #region Window
+
+        internal enum WindowPosition
+        {
+            TopLeft,
+            TopRight,
+            BottomLeft,
+            BottomRight,
+            Center
+        }
+
+        // Valores por defecto para configuraciones antiguas.
+        internal static WindowPosition StartupPosition = WindowPosition.BottomRight;
+        internal static double WindowMargin = 16;
+
+        /// <summary>
+        /// Lee una clave de una sección INI sin depender
+        /// de su posición dentro del archivo.
+        /// </summary>
+        private static string GetIniValue(string section, string key)
+        {
+            bool inSection = false;
+
+            foreach (string rawLine in iniLines)
+            {
+                string line = rawLine.Trim();
+
+                if (line.StartsWith("[") && line.EndsWith("]"))
+                {
+                    inSection = string.Equals(
+                        line,
+                        "[" + section + "]",
+                        StringComparison.OrdinalIgnoreCase
+                    );
+                    continue;
+                }
+
+                if (!inSection || line.StartsWith(";") || line.StartsWith("#"))
+                    continue;
+
+                int separator = line.IndexOf('=');
+
+                if (separator < 0)
+                    continue;
+
+                string currentKey = line.Substring(0, separator).Trim();
+
+                if (string.Equals(currentKey, key, StringComparison.OrdinalIgnoreCase))
+                    return line.Substring(separator + 1).Trim();
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Carga la posición inicial y el margen de la ventana.
+        /// Mantiene los valores por defecto si falta alguna clave.
+        /// </summary>
+        internal static void LoadWindowSettings()
+        {
+            string position = GetIniValue("Window", "StartupPosition");
+
+            if (Enum.TryParse(position, true, out WindowPosition parsedPosition) &&
+                Enum.IsDefined(typeof(WindowPosition), parsedPosition))
+            {
+                StartupPosition = parsedPosition;
+            }
+
+            string margin = GetIniValue("Window", "Margin");
+
+            if (double.TryParse(
+                    margin,
+                    NumberStyles.Float,
+                    CultureInfo.InvariantCulture,
+                    out double parsedMargin) &&
+                !double.IsNaN(parsedMargin) &&
+                !double.IsInfinity(parsedMargin) &&
+                parsedMargin >= 0)
+            {
+                WindowMargin = parsedMargin;
+            }
+        }
+
+        /// <summary>
+        /// Posiciona una ventana dentro del área de trabajo
+        /// del monitor principal, respetando la barra de tareas.
+        /// </summary>
+        internal static void PositionWindow(Window window)
+        {
+            var area = SystemParameters.WorkArea;
+            double margin = WindowMargin;
+
+            switch (StartupPosition)
+            {
+                case WindowPosition.TopLeft:
+                    window.Left = area.Left + margin;
+                    window.Top = area.Top + margin;
+                    break;
+
+                case WindowPosition.TopRight:
+                    window.Left = area.Right - window.ActualWidth - margin;
+                    window.Top = area.Top + margin;
+                    break;
+
+                case WindowPosition.BottomLeft:
+                    window.Left = area.Left + margin;
+                    window.Top = area.Bottom - window.ActualHeight - margin;
+                    break;
+
+                case WindowPosition.BottomRight:
+                    window.Left = area.Right - window.ActualWidth - margin;
+                    window.Top = area.Bottom - window.ActualHeight - margin;
+                    break;
+
+                case WindowPosition.Center:
+                    window.Left = area.Left + (area.Width - window.ActualWidth) / 2;
+                    window.Top = area.Top + (area.Height - window.ActualHeight) / 2;
+                    break;
+            }
+        }
+
+        #endregion
+
     }
 }
