@@ -201,4 +201,7 @@
   <data name="LanguageFrench" xml:space="preserve">
     <value>Sprache: French</value>
   </data>
+  <data name="LanguagePortuguese" xml:space="preserve">
+    <value>Sprache: Português (Brasil)</value>
+  </data>
 </root>

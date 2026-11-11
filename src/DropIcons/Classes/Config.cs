@@ -70,6 +70,11 @@ namespace DropIcons
                     currentLan = "fr";
                     selecLan = "fr";
                     break;
+                case "Language = pt":
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("pt-BR");
+                    currentLan = "pt";
+                    selecLan = "pt";
+                    break;
             }
 
             Console.WriteLine("Current language: " + currentLan + " - Idioma actual: " + currentLan + " - Aktuelle Sprache: " + currentLan);
@@ -112,6 +117,12 @@ namespace DropIcons
                         File.WriteAllLines(iniPath, iniLines);
                         Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr-FR");
                         currentLan = "fr";
+                        break;
+                    case "pt":
+                        iniLines[1] = iniLines[1].Replace(currentLan, "pt");
+                        File.WriteAllLines(iniPath, iniLines);
+                        Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("pt-BR");
+                        currentLan = "pt";
                         break;
                 }
 

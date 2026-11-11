@@ -48,6 +48,7 @@
                             </ToolTip>
                         </MenuItem.ToolTip>
                     </MenuItem>
+                    <MenuItem x:Name="PT_BR" Header="Português (Brasil)" Height="Auto" Padding="-13,2,0,4" Margin="0,0,0,2" Click="PT_BR_Click"/>
                 </ContextMenu>
             </Button.ContextMenu>
         </Button>
