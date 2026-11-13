@@ -46,13 +46,26 @@
         </Rectangle>
     </Grid>
     <Window.ContextMenu>
-        <ContextMenu Width="186">
+        <ContextMenu Width="Auto" >
             <ContextMenu.Resources>
+                <Style TargetType="MenuItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="MenuItem">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
+                                    <Grid VerticalAlignment="Center">
+                                        <ContentPresenter Content="{TemplateBinding Header}" Margin="{TemplateBinding Padding}"/>
+                                    </Grid>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
                 <DataTemplate x:Key="HeaderControlTemplate">
                     <TextBlock HorizontalAlignment="Center" Text="{Binding}"/>
                 </DataTemplate>
             </ContextMenu.Resources>
-            <MenuItem Name="MenuTopmost" HeaderTemplate="{StaticResource HeaderControlTemplate}" Header="{x:Static properties:Resources.DisableTopmost}" Height="Auto" Padding="0,3,0,3" Click="Topmost_Click" Margin="-22,0,0,2"/>
+            <MenuItem Name="MenuTopmost" HeaderTemplate="{StaticResource HeaderControlTemplate}" Header="{x:Static properties:Resources.DisableTopmost}" Height="Auto" Padding="17,5,18,7" Click="Topmost_Click"/>
         </ContextMenu>
     </Window.ContextMenu>
 </Window>

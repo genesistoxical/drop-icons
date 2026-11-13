@@ -109,10 +109,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddImages" xml:space="preserve">
     <value>Ajouter images</value>
@@ -171,7 +171,7 @@
   <data name="EnableTopmost" xml:space="preserve">
     <value>Activer au premier plan</value>
   </data>
-  <data name="Icons" xml:space="preserve">
+  <data name="Format" xml:space="preserve">
     <value>Format</value>
   </data>
   <data name="Next" xml:space="preserve">
@@ -199,7 +199,10 @@
     <value>Langue: 简体中文</value>
   </data>
   <data name="LanguageFrench" xml:space="preserve">
-    <value>Langue: French</value>
+    <value>Langue: Français</value>
+  </data>
+  <data name="LanguageCatalan" xml:space="preserve">
+    <value>Langue: Català</value>
   </data>
   <data name="LanguagePortuguese" xml:space="preserve">
     <value>Langue: Português (Brasil)</value>

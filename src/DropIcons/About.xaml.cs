@@ -79,6 +79,9 @@ namespace DropIcons
                 case "fr":
                     Lang.Content = Properties.Resources.LanguageFrench;
                     break;
+                case "ca":
+                    Lang.Content = Properties.Resources.LanguageCatalan;
+                    break;
                 case "pt":
                     Lang.Content = Properties.Resources.LanguagePortuguese;
                     break;
@@ -387,7 +390,7 @@ namespace DropIcons
             icoisOpen = false;
         }
 
-        private CustomPopupPlacement[] ToolTipPlacement(Size popupSize, Size targetSize, Point offset)
+        private CustomPopupPlacement[] ToolTipPlacement(Size _, Size targetSize, Point _1)
         {
             // Ayuda a que el Tooltip se muestre correctamente a la derecha en cualquier PC.
             return new[]
@@ -425,6 +428,12 @@ namespace DropIcons
         {
             Lang.Content = Properties.Resources.LanguageFrench;
             Config.selecLan = "fr";
+        }
+
+        private void CA_Click(object sender, RoutedEventArgs e)
+        {
+            Lang.Content = Properties.Resources.LanguageCatalan;
+            Config.selecLan = "ca";
         }
 
         private void PT_BR_Click(object sender, RoutedEventArgs e)

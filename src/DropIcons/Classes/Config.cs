@@ -70,6 +70,11 @@ namespace DropIcons
                     currentLan = "fr";
                     selecLan = "fr";
                     break;
+                case "Language = ca":
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ca");
+                    currentLan = "ca";
+                    selecLan = "ca";
+                    break;
                 case "Language = pt":
                     Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("pt-BR");
                     currentLan = "pt";
@@ -117,6 +122,12 @@ namespace DropIcons
                         File.WriteAllLines(iniPath, iniLines);
                         Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr-FR");
                         currentLan = "fr";
+                        break;
+                    case "ca":
+                        iniLines[1] = iniLines[1].Replace(currentLan, "ca");
+                        File.WriteAllLines(iniPath, iniLines);
+                        Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ca");
+                        currentLan = "ca";
                         break;
                     case "pt":
                         iniLines[1] = iniLines[1].Replace(currentLan, "pt");

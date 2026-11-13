@@ -172,9 +172,6 @@
   <data name="EnableTopmost" xml:space="preserve">
     <value>Ativar sempre no topo</value>
   </data>
-  <data name="Icons" xml:space="preserve">
-    <value>Formato</value>
-  </data>
   <data name="Next" xml:space="preserve">
     <value>Avançar   🢖🢖</value>
   </data>
@@ -210,5 +207,11 @@
   </data>
   <data name="LanguagePortuguese" xml:space="preserve">
     <value>Idioma: Português (Brasil)</value>
+  </data>
+  <data name="LanguageCatalan" xml:space="preserve">
+    <value>Idioma: Català</value>
+  </data>
+  <data name="Format" xml:space="preserve">
+    <value>Formato</value>
   </data>
 </root>

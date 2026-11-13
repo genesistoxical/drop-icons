@@ -41,14 +41,27 @@
                             </ToolTip>
                         </MenuItem.ToolTip>
                     </MenuItem>
-                    <MenuItem x:Name="FR_FR" Header="French" Height="Auto" Padding="-13,2,0,4" Margin="0,0,0,2" Click="FR_FR_Click">
+                    <MenuItem x:Name="FR_FR" Header="Français" Height="Auto" Padding="-13,2,0,4" Margin="0,0,0,2" Click="FR_FR_Click">
                         <MenuItem.ToolTip>
                             <ToolTip Placement="Custom" CustomPopupPlacementCallback="ToolTipPlacement" VerticalOffset="-7">
                                 by logounet
                             </ToolTip>
                         </MenuItem.ToolTip>
                     </MenuItem>
-                    <MenuItem x:Name="PT_BR" Header="Português (Brasil)" Height="Auto" Padding="-13,2,0,4" Margin="0,0,0,2" Click="PT_BR_Click"/>
+                    <MenuItem x:Name="CA" Header="Català" Height="Auto" Padding="-13,2,0,4" Margin="0,0,0,2" Click="CA_Click">
+                        <MenuItem.ToolTip>
+                            <ToolTip Placement="Custom" CustomPopupPlacementCallback="ToolTipPlacement" VerticalOffset="-7">
+                                by gg21kiy, JTE-19
+                            </ToolTip>
+                        </MenuItem.ToolTip>
+                    </MenuItem>
+                    <MenuItem x:Name="PT_BR" Header="Português" Height="Auto" Padding="-13,2,0,4" Margin="0,0,0,2" Click="PT_BR_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip Placement="Custom" CustomPopupPlacementCallback="ToolTipPlacement" VerticalOffset="-7">
+                            by 0xCHANDA
+                        </ToolTip>
+                    </MenuItem.ToolTip>
+                    </MenuItem>
                 </ContextMenu>
             </Button.ContextMenu>
         </Button>
@@ -83,7 +96,7 @@
         </Rectangle>
         <Button x:Name="ChangeTheme" Content="{x:Static properties:Resources.ChangeTheme}" HorizontalAlignment="Left" Margin="430,312,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="20" BorderThickness="0,0,0,0" Foreground="#FF8E8E8E" FontSize="11" Background="{x:Null}" HorizontalContentAlignment="Left" Click="ChangeTheme_Click" Cursor="Hand"/>
         <Menu DockPanel.Dock="Top" Margin="364,316,317,23"/>
-        <Button x:Name="Icons" Content="{x:Static properties:Resources.Icons}" HorizontalAlignment="Left" Margin="364,312,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="20" Width="45" BorderThickness="0,0,0,0" Foreground="#FF8E8E8E" FontSize="11" Background="{x:Null}" HorizontalContentAlignment="Right" Click="Icons_Click" Cursor="Hand">
+        <Button x:Name="Icons" Content="{x:Static properties:Resources.Format}" HorizontalAlignment="Left" Margin="364,312,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="20" Width="45" BorderThickness="0,0,0,0" Foreground="#FF8E8E8E" FontSize="11" Background="{x:Null}" HorizontalContentAlignment="Right" Click="Icons_Click" Cursor="Hand">
             <Button.ContextMenu>
                 <ContextMenu Closed="IconsMenu_Closed" Width="136">
                     <MenuItem Header="{x:Static properties:Resources.Multiple}" Height="Auto" Padding="0,3,0,3" Margin="13,0,0,2" Click="Check_all_Click">

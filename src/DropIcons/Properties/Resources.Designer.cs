@@ -178,20 +178,20 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Format.
+        /// </summary>
+        public static string Format {
+            get {
+                return ResourceManager.GetString("Format", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Generate tiny icon.
         /// </summary>
         public static string GenerateTinyIcon {
             get {
                 return ResourceManager.GetString("GenerateTinyIcon", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Format.
-        /// </summary>
-        public static string Icons {
-            get {
-                return ResourceManager.GetString("Icons", resourceCulture);
             }
         }
         
@@ -223,6 +223,15 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Language: Català.
+        /// </summary>
+        public static string LanguageCatalan {
+            get {
+                return ResourceManager.GetString("LanguageCatalan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Language: 简体中文.
         /// </summary>
         public static string LanguageChinese {
@@ -250,7 +259,7 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Language: French.
+        ///   Busca una cadena traducida similar a Language: Français.
         /// </summary>
         public static string LanguageFrench {
             get {
@@ -275,7 +284,7 @@ namespace DropIcons.Properties {
                 return ResourceManager.GetString("LanguagePortuguese", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Busca una cadena traducida similar a Multiple.
         /// </summary>

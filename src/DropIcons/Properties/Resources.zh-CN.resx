@@ -175,7 +175,7 @@
   <data name="EnableTopmost" xml:space="preserve">
     <value>启用置顶</value>
   </data>
-  <data name="Icons" xml:space="preserve">
+  <data name="Format" xml:space="preserve">
     <value>格式</value>
   </data>
   <data name="Next" xml:space="preserve">
@@ -209,7 +209,10 @@
     <value>语言: 简体中文</value>
   </data>
   <data name="LanguageFrench" xml:space="preserve">
-    <value>语言: French</value>
+    <value>语言: Français</value>
+  </data>
+  <data name="LanguageCatalan" xml:space="preserve">
+    <value>语言: Català</value>
   </data>
   <data name="LanguagePortuguese" xml:space="preserve">
     <value>语言: Português (Brasil)</value>
