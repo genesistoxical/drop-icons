@@ -219,6 +219,12 @@ namespace DropIcons
         {
             Config.RoundCorners(Backg, Border, Decoration);
             Config.Topmost(this);
+
+            // Cargar y aplicar la configuración de posición.
+            Config.LoadWindowSettings();
+
+            WindowStartupLocation = WindowStartupLocation.Manual;
+            Config.PositionWindow(this);
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
