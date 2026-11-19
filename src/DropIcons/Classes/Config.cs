@@ -1,4 +1,5 @@
 ﻿using HandyControl.Themes;
+using HandyControl.Tools;
 using System;
 using System.Globalization;
 using System.IO;
@@ -19,7 +20,6 @@ namespace DropIcons
         internal static string iniPath;
         internal static string[] iniLines;
         internal static bool restart = false;
-        internal static string format = "";
 
         internal static void CheckPath()
         {
@@ -36,6 +36,16 @@ namespace DropIcons
             Console.WriteLine("Drop Icons is installed? " + isIntalled + " - ¿Drop Icons está instalado? " + isIntalled + " - Drop Icons ist installiert? " + isIntalled);
         }
 
+        /// <summary>
+        /// iniLines[1]: LanguageㅤㅤiniLines[2]: TopmostㅤㅤiniLines[5]: Colorㅤ
+        /// iniLines[8]: SizeㅤㅤiniLines[11]: StartupPositionㅤㅤiniLines[12]: Margin
+        /// </summary>
+        private static string GetIniValue(string line)
+        {
+            int separator = line.IndexOf('=');
+            return line.Substring(separator + 1).Trim();
+        }
+
         #region Language
         internal static string currentLan, selecLan;
 
@@ -43,45 +53,36 @@ namespace DropIcons
         {
             // Modificar el idioma de la aplicación en base a Config.ini y establecer
             // el idioma actual en un string para no volveer a leer el archivo
-            switch (iniLines[1])
+
+            string lang = GetIniValue(iniLines[1]);
+
+            switch (lang)
             {
-                case "Language = en":
+                case "en":
                     Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("");
-                    currentLan = "en";
-                    selecLan = "en";
                     break;
-                case "Language = es":
+                case "es":
                     Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("es-419");
-                    currentLan = "es";
-                    selecLan = "es";
                     break;
-                case "Language = de":
+                case "de":
                     Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de-DE");
-                    currentLan = "de";
-                    selecLan = "de";
                     break;
-                case "Language = zh":
+                case "zh":
                     Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
-                    currentLan = "zh";
-                    selecLan = "zh";
                     break;
-                case "Language = fr":
+                case "fr":
                     Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr-FR");
-                    currentLan = "fr";
-                    selecLan = "fr";
                     break;
-                case "Language = ca":
+                case "ca":
                     Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ca");
-                    currentLan = "ca";
-                    selecLan = "ca";
                     break;
-                case "Language = pt":
+                case "pt":
                     Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("pt-BR");
-                    currentLan = "pt";
-                    selecLan = "pt";
                     break;
             }
 
+            currentLan = lang;
+            selecLan = lang;
             Console.WriteLine("Current language: " + currentLan + " - Idioma actual: " + currentLan + " - Aktuelle Sprache: " + currentLan);
         }
 
@@ -91,51 +92,35 @@ namespace DropIcons
             // cambiarlo y modificar el archivo .ini
             if (selecLan != currentLan)
             {
+                iniLines[1] = iniLines[1].Replace(currentLan, selecLan);
+                File.WriteAllLines(iniPath, iniLines);
+
                 switch (selecLan)
                 {
                     case "en":
-                        iniLines[1] = iniLines[1].Replace(currentLan, "en");
-                        File.WriteAllLines(iniPath, iniLines);
                         Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("");
-                        currentLan = "en";
                         break;
                     case "es":
-                        iniLines[1] = iniLines[1].Replace(currentLan, "es");
-                        File.WriteAllLines(iniPath, iniLines);
                         Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("es-419");
-                        currentLan = "es";
                         break;
                     case "de":
-                        iniLines[1] = iniLines[1].Replace(currentLan, "de");
-                        File.WriteAllLines(iniPath, iniLines);
                         Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("de-DE");
-                        currentLan = "de";
                         break;
                     case "zh":
-                        iniLines[1] = iniLines[1].Replace(currentLan, "zh");
-                        File.WriteAllLines(iniPath, iniLines);
                         Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
-                        currentLan = "zh";
                         break;
                     case "fr":
-                        iniLines[1] = iniLines[1].Replace(currentLan, "fr");
-                        File.WriteAllLines(iniPath, iniLines);
                         Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr-FR");
-                        currentLan = "fr";
                         break;
                     case "ca":
-                        iniLines[1] = iniLines[1].Replace(currentLan, "ca");
-                        File.WriteAllLines(iniPath, iniLines);
                         Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ca");
-                        currentLan = "ca";
                         break;
                     case "pt":
-                        iniLines[1] = iniLines[1].Replace(currentLan, "pt");
-                        File.WriteAllLines(iniPath, iniLines);
                         Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("pt-BR");
-                        currentLan = "pt";
                         break;
                 }
+
+                currentLan = selecLan;
 
                 Console.WriteLine("Selected language: " + selecLan + " - Idioma seleccionado: " + selecLan + " - Gewählte Sprache: " + selecLan);
                 restart = true;
@@ -151,7 +136,7 @@ namespace DropIcons
         internal static void GetTheme()
         {
             // Obtiene el color HEX de Config.ini
-            HEX = iniLines[5];
+            HEX = GetIniValue(iniLines[5]);
 
             // Crear brush de nuevo color y aplicarlo al tema
             colorBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString(HEX));
@@ -189,7 +174,9 @@ namespace DropIcons
         {
             // Modificar la propiedad TopMost en base a Config.ini y
             // establecer el valor en un bool para no volver a leer el archivo 
-            if (iniLines[2].Contains("Topmost = true"))
+            string top = GetIniValue(iniLines[2]);
+
+            if (top == "true")
             {
                 window.Topmost = true;
                 isTopmost = true;
@@ -226,22 +213,12 @@ namespace DropIcons
         #endregion
 
         #region Format
+        internal static string format = "";
+
         internal static void GetSize()
         {
-            // Obtener la configuración del los tamaños que se incluirán
-            // en el icono y establecer el valor en un string
-            switch (iniLines[8])
-            {
-                case "Size = multiple":
-                    format = "multiple";
-                    break;
-                case "Size = 256":
-                    format = "256";
-                    break;
-                case "Size = 512":
-                    format = "512";
-                    break;
-            }
+            // Obtener los tamaños que se incluirán en el icono
+            format = GetIniValue(iniLines[8]);
         }
 
         internal static void SetSize(string size)
@@ -250,88 +227,30 @@ namespace DropIcons
             // en el icono y actualizar el archivo Config.ini
             string oldSize = format;
             format = size;
-
-            switch (size)
-            {
-                case "multiple":
-                    iniLines[8] = iniLines[8].Replace(oldSize, "multiple");
-                    File.WriteAllLines(iniPath, iniLines);
-                    break;
-                case "256":
-                    iniLines[8] = iniLines[8].Replace(oldSize, "256");
-                    File.WriteAllLines(iniPath, iniLines);
-                    break;
-                case "512":
-                    iniLines[8] = iniLines[8].Replace(oldSize, "512");
-                    File.WriteAllLines(iniPath, iniLines);
-                    break;
-            }
+            iniLines[8] = iniLines[8].Replace(oldSize, size);
+            File.WriteAllLines(iniPath, iniLines);
 
             Console.WriteLine("Format size: " + format + " - Formato de tamaño: " + format + " - Formatgröße: " + format);
         }
         #endregion
-        
+
         #region Window
+        internal static WindowPosition StartupPosition;
+        internal static double WindowMargin = 56;
 
         internal enum WindowPosition
         {
-            TopLeft,
-            TopRight,
-            BottomLeft,
-            BottomRight,
-            Center
+            topleft,
+            topright,
+            bottomleft,
+            bottomright,
+            center
         }
 
-        // Valores por defecto para configuraciones antiguas.
-        internal static WindowPosition StartupPosition = WindowPosition.BottomRight;
-        internal static double WindowMargin = 16;
-
-        /// <summary>
-        /// Lee una clave de una sección INI sin depender
-        /// de su posición dentro del archivo.
-        /// </summary>
-        private static string GetIniValue(string section, string key)
-        {
-            bool inSection = false;
-
-            foreach (string rawLine in iniLines)
-            {
-                string line = rawLine.Trim();
-
-                if (line.StartsWith("[") && line.EndsWith("]"))
-                {
-                    inSection = string.Equals(
-                        line,
-                        "[" + section + "]",
-                        StringComparison.OrdinalIgnoreCase
-                    );
-                    continue;
-                }
-
-                if (!inSection || line.StartsWith(";") || line.StartsWith("#"))
-                    continue;
-
-                int separator = line.IndexOf('=');
-
-                if (separator < 0)
-                    continue;
-
-                string currentKey = line.Substring(0, separator).Trim();
-
-                if (string.Equals(currentKey, key, StringComparison.OrdinalIgnoreCase))
-                    return line.Substring(separator + 1).Trim();
-            }
-
-            return null;
-        }
-
-        /// <summary>
-        /// Carga la posición inicial y el margen de la ventana.
-        /// Mantiene los valores por defecto si falta alguna clave.
-        /// </summary>
         internal static void LoadWindowSettings()
         {
-            string position = GetIniValue("Window", "StartupPosition");
+            // Carga la posición inicial y el margen de la ventana.
+            string position = GetIniValue(iniLines[11]);
 
             if (Enum.TryParse(position, true, out WindowPosition parsedPosition) &&
                 Enum.IsDefined(typeof(WindowPosition), parsedPosition))
@@ -339,53 +258,38 @@ namespace DropIcons
                 StartupPosition = parsedPosition;
             }
 
-            string margin = GetIniValue("Window", "Margin");
-
-            if (double.TryParse(
-                    margin,
-                    NumberStyles.Float,
-                    CultureInfo.InvariantCulture,
-                    out double parsedMargin) &&
-                !double.IsNaN(parsedMargin) &&
-                !double.IsInfinity(parsedMargin) &&
-                parsedMargin >= 0)
-            {
-                WindowMargin = parsedMargin;
-            }
+            double margin = GetIniValue(iniLines[12]).ConvertToInt();
+            WindowMargin = margin;
         }
 
-        /// <summary>
-        /// Posiciona una ventana dentro del área de trabajo
-        /// del monitor principal, respetando la barra de tareas.
-        /// </summary>
         internal static void PositionWindow(Window window)
         {
-            var area = SystemParameters.WorkArea;
+            Rect area = SystemParameters.WorkArea;
             double margin = WindowMargin;
 
             switch (StartupPosition)
             {
-                case WindowPosition.TopLeft:
+                case WindowPosition.topleft:
                     window.Left = area.Left + margin;
                     window.Top = area.Top + margin;
                     break;
 
-                case WindowPosition.TopRight:
+                case WindowPosition.topright:
                     window.Left = area.Right - window.ActualWidth - margin;
                     window.Top = area.Top + margin;
                     break;
 
-                case WindowPosition.BottomLeft:
+                case WindowPosition.bottomleft:
                     window.Left = area.Left + margin;
                     window.Top = area.Bottom - window.ActualHeight - margin;
                     break;
 
-                case WindowPosition.BottomRight:
+                case WindowPosition.bottomright:
                     window.Left = area.Right - window.ActualWidth - margin;
                     window.Top = area.Bottom - window.ActualHeight - margin;
                     break;
 
-                case WindowPosition.Center:
+                case WindowPosition.center:
                     window.Left = area.Left + (area.Width - window.ActualWidth) / 2;
                     window.Top = area.Top + (area.Height - window.ActualHeight) / 2;
                     break;

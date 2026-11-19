@@ -221,7 +221,6 @@ namespace DropIcons
             Config.Topmost(this);
 
             // Cargar y aplicar la configuración de posición.
-            Config.LoadWindowSettings();
 
             WindowStartupLocation = WindowStartupLocation.Manual;
             Config.PositionWindow(this);

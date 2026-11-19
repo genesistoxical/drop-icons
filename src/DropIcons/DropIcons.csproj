@@ -56,8 +56,8 @@
     <ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExCSS, Version=4.3.1.0, Culture=neutral, PublicKeyToken=bdbe16be9b936b9a, processorArchitecture=MSIL">
-      <HintPath>..\packages\ExCSS.4.3.1\lib\net48\ExCSS.dll</HintPath>
+    <Reference Include="ExCSS, Version=4.3.2.0, Culture=neutral, PublicKeyToken=bdbe16be9b936b9a, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExCSS.4.3.2\lib\net48\ExCSS.dll</HintPath>
     </Reference>
     <Reference Include="FolderBrowserEx, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FolderBrowserEx.1.0.1\lib\net48\FolderBrowserEx.dll</HintPath>
@@ -66,7 +66,7 @@
       <HintPath>..\packages\HandyControls.3.4.4\lib\net48\HandyControl.dll</HintPath>
     </Reference>
     <Reference Include="Svg, Version=3.4.0.0, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
-      <HintPath>..\packages\Svg.3.4.7\lib\net472\Svg.dll</HintPath>
+      <HintPath>..\packages\Svg.3.4.8\lib\net472\Svg.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -150,10 +150,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Properties\Resources.ca.resx" />
-    <EmbeddedResource Include="Properties\Resources.fr-FR.resx" />
-    <EmbeddedResource Include="Properties\Resources.pt-BR.resx" />
-    <EmbeddedResource Include="Properties\Resources.zh-CN.resx" />
+    <EmbeddedResource Include="Properties\Resources.ca.resx">
+      <LastGenOutput>Resources.ca.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr-FR.resx">
+      <LastGenOutput>Resources.fr-FR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.pt-BR.resx">
+      <LastGenOutput>Resources.pt-BR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx">
+      <LastGenOutput>Resources.zh-CN.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <Resource Include="Resources\Color.png" />
     <Content Include="Docs\Noto Music\OFL.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -169,11 +177,9 @@
     </Content>
     <Resource Include="Resources\Icon.ico" />
     <EmbeddedResource Include="Properties\Resources.es-419.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.es-419.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.de-DE.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.de-DE.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -240,7 +246,13 @@
   <PropertyGroup>
     <PostBuildEvent>if not exist "$(TargetDir)Libs" mkdir "$(TargetDir)Libs";
 del "$(TargetDir)*.pdb" "$(TargetDir)*.xml"
-move "$(TargetDir)*.dll" "$(TargetDir)Libs"</PostBuildEvent>
+move "$(TargetDir)*.dll" "$(TargetDir)Libs"
+rmdir /s /q "$(TargetDir)Languages"
+mkdir "$(TargetDir)Languages";
+for /d %25%25D in ("$(TargetDir)*") do (
+
+if /I not "%25%25~nxD"=="Docs" if /I not "%25%25~nxD"=="Libs" if /I not "%25%25~nxD"=="Languages" move "%25%25D" "$(TargetDir)Languages"
+)</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <EnableImplicitLocalizationAnalyzers>false</EnableImplicitLocalizationAnalyzers>

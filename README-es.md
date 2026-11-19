@@ -12,9 +12,9 @@
 </p>
 
 <p align="center">
-<b>• Lenguajes Compatibles •</b>
+<b>• Idiomas Compatibles •</b>
 </BR>
-<img width="21" height="15" alt="US" src="https://github.com/user-attachments/assets/b5e6447c-6845-4b8d-b3df-ee45bb465706"/>‎ ‎ ‎ <img width="21" height="15" alt="MX" src="https://github.com/user-attachments/assets/0bc0851a-228a-4df2-aa0d-ba2bdc4c7b18"/>‎ ‎ ‎ <img width="21" height="15" alt="CN" src="https://github.com/user-attachments/assets/64983f24-791e-4141-a256-032940058f65"/>‎ ‎ ‎ <img width="21" height="15" alt="DE" src="https://github.com/user-attachments/assets/c07cb917-60c3-4aed-88ae-82e223ea7c49"/>‎ ‎ ‎ <img width="21" height="15" alt="FR" src="https://github.com/user-attachments/assets/14a3b116-da55-40b6-9a78-71a75fa4de4a"/>
+<img width="21" height="15" alt="US" src="https://github.com/user-attachments/assets/b5e6447c-6845-4b8d-b3df-ee45bb465706"/>‎ ‎ ‎ <img width="21" height="15" alt="MX" src="https://github.com/user-attachments/assets/0bc0851a-228a-4df2-aa0d-ba2bdc4c7b18"/>‎ ‎ ‎ <img width="21" height="15" alt="CN" src="https://github.com/user-attachments/assets/64983f24-791e-4141-a256-032940058f65"/>‎ ‎ ‎ <img width="21" height="15" alt="DE" src="https://github.com/user-attachments/assets/c07cb917-60c3-4aed-88ae-82e223ea7c49"/>‎ ‎ ‎ <img width="21" height="15" alt="FR" src="https://github.com/user-attachments/assets/14a3b116-da55-40b6-9a78-71a75fa4de4a"/>‎ ‎ <img width="21" height="15" alt="CT" src="https://github.com/user-attachments/assets/b19b2c79-a025-4c3d-bec4-3513e425be13"/> ‎ ‎ <img width="21" height="15" alt="CT" src="https://github.com/user-attachments/assets/422baa46-3b8e-4ff8-8ad6-0001dde4e4c0"/>
 </p>
 
 <p align="center">
@@ -32,12 +32,12 @@
   previa.
 - Guarda la configuración en un archivo .ini, excepto para los switches.
 - Guarda los iconos en la misma carpeta (por defecto) o en una específica.
-- Habilita y deshabilita Topmost.
-- Personalización de la posición inicial y el margen de la ventana.
+- Activar y desactivar mantener encima.
 - Opciones de formato para elegir los tamaños incluidos dentro del icono,
   múltiple y 256 px. [𝐢](#details)
 - Evita la duplicación de una imagen que se ha añadido previamente.
 - Opción para generar un icono mini.
+- Personalización de la posición inicial y márgen de la ventana a través de Config.ini
 - Esquinas adaptables (redondeadas o metro), dependiendo la versión del sistema
   operativo.
 
@@ -93,9 +93,13 @@ Dando click en el botón superior de Info, aparecerá una nueva ventana en la qu
 
 <br>
 
-Para elegir que Drop Icons esté encima de todas las ventanas (Topmost) o no, da
-clic derecho en cualquier lugar de la ventana principal y elige Habilitar
-Topmost o Deshabilitar Topmost.
+Para elegir que Drop Icons esté encima de todas las ventanas o no, da clic derecho
+en cualquier lugar de la ventana principal y elige Activar mantener encima o Desactivar
+mantener encima..
+
+También puedes personalizar la posición y margen de la ventana editando el
+archivo `Config.ini`. Dale un vistazo a [Configuración](#configuración) para las
+opciones disponibles.
 
 ## Opciones
 
@@ -135,7 +139,15 @@ y/o la carpeta Release (debido a las rutas relativas).
 ## Configuración
 
 El archivo `Config.ini` almacena información del lenguaje, color del tema,
-format de icono y si está activada o no la opción TopMost.
+formato de icono, si está activada o no la opción de mantener encima y la
+posición inicial de la ventana.
+
+- Ubicación en la versión instalable: _%AppData%\Drop Icons_
+- La versión portable lo incluye en la misma carpeta.
+
+**StartupPosition** opciones: `topleft`, `topright`, `bottomleft`, `bottomright` o `center`.
+<br>
+**Margin** también es configurable.
 
 ```
 [Options]
@@ -143,17 +155,14 @@ Language = en
 Topmost = false
 
 [Theme]
-#FF9280FF
+Color = #FF9280FF
 
 [Format]
 Size = multiple
 
 [Window]
-; Posición inicial: TopLeft, TopRight, BottomLeft, BottomRight, Center
-StartupPosition = BottomRight
-
-; Distancia respecto a los bordes de la pantalla (unidades WPF)
-Margin = 16
+StartupPosition = center
+Margin = 56
 ```
 
 Para posicionar la ventana usa las medidas del monitor, ignorando la barra de
@@ -203,6 +212,8 @@ _Puedes encontrar todas las licencias [aquí](/src/DropIcons/Docs)._
 - German Translation por **uDEV2019**.
 - Simplified Chinese Translation por **huqiu2**.
 - French Translation por **logounet**.
+- Catalan Translation por **gg21kiy**, **JTE-19**.
+- Portuguese Translation por **0xCHANDA**.
 
 ## ¿Qué es lo nuevo?
 
@@ -212,15 +223,11 @@ tanto en la aplicación como en el instalador. Para evitar problemas con la
 interfaz, se han deshabilitado las actualizaciones para el paquete
 **HandyControls**.
 
-<br>
-
-`Versión 3.2.0` incluye otro idioma:
+<br>`Versión 3.2.0` incluye otro idioma:
 [📍Simplified Chinese language](https://github.com/genesistoxical/drop-icons/issues/8),
 solo para la aplicación.
 
-<br>
-
-`Version 3.6.0` se agregó otra traducción (Wow, gracias):
+<br>`Version 3.6.0` se agregó otra traducción (Wow, gracias):
 [📍French language](https://github.com/genesistoxical/drop-icons/issues/9), solo
 para la aplicación. También se incluyó la opción para crear íconos de 512px en
 **Formato**
@@ -229,10 +236,20 @@ para la aplicación. También se incluyó la opción para crear íconos de 512px
 Ahora la opción **Lenguaje** se despliega y aparece un tooltip al mantener
 encima el cursor, para mostrar los créditos.
 
-<br>
-
-`Versión 3.6.1` se arregló un problema donde los menús contextuales tenían una
+<br>`Versión 3.6.1` se arregló un problema donde los menús contextuales tenían una
 posición incorrecta en algunas computadoras.
+
+<br>`Versión 4.0.0` nuevas traducciones:
+[📍Catalan language pack](https://github.com/genesistoxical/drop-icons/issues/13) y 
+[📍Brazilian Portuguese localization](https://github.com/genesistoxical/drop-icons/pull/14).
+
+Se han ordenado los idiomas en una sola carpeta, código optimizado, problemas del commit
+anterior solucionados, paquetes de NuGet actualizados y las vistas previas de la página
+principal han sido arregladas.
+
+Opciones de posición de inicio en el **Config.ini** 
+[📍Configurable window startup position and margin](https://github.com/genesistoxical/drop-icons/pull/16) 
+y solución con errores en las traducciones [📍Fix language name inconsistencies and translation errors](https://github.com/genesistoxical/drop-icons/issues/15).
 
 ## Licencia
 

@@ -340,7 +340,7 @@ namespace DropIcons.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a 3.6.1.
+        ///   Busca una cadena traducida similar a 4.0.0.
         /// </summary>
         public static string Ver {
             get {

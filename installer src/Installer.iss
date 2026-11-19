@@ -1,6 +1,6 @@
-ï»¿#define MyAppName "Drop Icons"
-#define MyAppVersion "3.6.1"
-#define MyAppPublisher "GÃ©nesis Toxical"
+#define MyAppName "Drop Icons"
+#define MyAppVersion "4.0.0"
+#define MyAppPublisher "Génesis Toxical"
 #define MyAppURL "https://genesistoxical.github.io/drop-icons/"
 #define MyAppExeName "Drop Icons.exe"
 
@@ -8,9 +8,9 @@
 AppId={{A072B914-4E3D-4DAD-9F9B-D1D38965482E}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-VersionInfoVersion=3.6.1.0
+VersionInfoVersion=4.0.0.0
 AppPublisher={#MyAppPublisher}
-AppCopyright={#MyAppPublisher} Â© 2022 - 2026
+AppCopyright={#MyAppPublisher} © 2022 - 2026
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
@@ -24,7 +24,7 @@ SolidCompression=no
 WizardStyle=modern      
 WizardSmallImageFile=Wizard Small Image.bmp
 WizardImageFile=Wizard Image File.bmp
-WizardSizePercent=110,100 
+WizardSizePercent=110,100
 DisableProgramGroupPage=yes
 UninstallDisplayIcon={uninstallexe}
 UsedUserAreasWarning=no                                    

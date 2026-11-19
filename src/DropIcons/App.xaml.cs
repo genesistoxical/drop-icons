@@ -13,6 +13,7 @@ namespace DropIcons
         {
             Config.CheckPath();
             Config.Language();
+            Config.LoadWindowSettings();
 
             if (WinVersion.GetVersion(out VersionInfo info))
             {
